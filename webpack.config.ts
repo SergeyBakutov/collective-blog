@@ -16,7 +16,7 @@ export default (env: TEnvVariables) => {
   const config = getConfig({
     mode,
     paths: {
-      entry: path.resolve(__dirname, 'src', 'index.ts'),
+      entry: path.resolve(__dirname, 'src', 'index.tsx'),
       output: path.resolve(__dirname, 'build'),
       htmlTemplate: path.resolve(__dirname, 'public', 'index.html'),
     },
