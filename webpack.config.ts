@@ -1,18 +1,29 @@
 import path from 'path'
 
-import { getConfig } from './configs/webpack/getConfig'
+import { TConfigOptions, getConfig } from './configs/webpack/getConfig'
 
-const mode = 'development'
-const isDev = mode === 'development'
+type TEnvVariables = {
+  mode: TConfigOptions['mode']
+  port: TConfigOptions['port']
+}
 
-const config = getConfig({
-  mode,
-  paths: {
-    entry: path.resolve(__dirname, 'src', 'index.ts'),
-    output: path.resolve(__dirname, 'build'),
-    htmlTemplate: path.resolve(__dirname, 'public', 'index.html'),
-  },
-  isDev,
-})
+export default (env: TEnvVariables) => {
 
-export default config
+  const mode = env.mode || 'development'
+  const isDev = mode === 'development'
+  const PORT = env.port || 3000
+
+  const config = getConfig({
+    mode,
+    paths: {
+      entry: path.resolve(__dirname, 'src', 'index.ts'),
+      output: path.resolve(__dirname, 'build'),
+      htmlTemplate: path.resolve(__dirname, 'public', 'index.html'),
+    },
+    isDev,
+    port: PORT
+  })
+
+
+  return config
+}

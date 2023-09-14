@@ -1,11 +1,11 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-type TGetPluginsOptions = {
+type TPluginsOptions = {
   htmlTemplatePath: string
 }
 
-export function getPlugins(options: TGetPluginsOptions): webpack.WebpackPluginInstance[] {
+export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
   const { htmlTemplatePath } = options
 
   return [
