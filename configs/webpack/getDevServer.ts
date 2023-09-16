@@ -9,6 +9,7 @@ export function getDevServer(options: TDevServerOptions): DevServerConfiguration
 
   return {
     port,
-    open: true
+    open: true,
+    historyApiFallback: true
   }
 }
