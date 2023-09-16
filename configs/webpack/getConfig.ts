@@ -35,7 +35,9 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
       htmlTemplatePath: paths.htmlTemplate
     }),
     module: {
-      rules: getLoaders(),
+      rules: getLoaders({
+        isDev,
+      }),
     },
     resolve: getResolvers(),
     devtool: isDev ? 'inline-source-map' : undefined,

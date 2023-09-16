@@ -1,5 +1,6 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 type TPluginsOptions = {
   htmlTemplatePath: string
@@ -10,6 +11,10 @@ export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInsta
 
   return [
     new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin({ template: htmlTemplatePath })
+    new HtmlWebpackPlugin({ template: htmlTemplatePath }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash].css',
+      chunkFilename: 'css/[name].[contenthash].css'
+    })
   ]
 }
