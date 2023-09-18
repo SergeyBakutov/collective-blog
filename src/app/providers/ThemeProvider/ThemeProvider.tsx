@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 
-import { LOCAL_STORAGE_THEME_KEY, TTheme, ThemeContext } from './ThemeContext'
+import { LOCAL_STORAGE_THEME_KEY, TTheme, ThemeContext } from 'shared/hooks/useTheme'
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as TTheme || 'light'
 

@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 
-import { classNames } from './helpers/classNames/classNames'
-import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy'
-import { MainPageLazy } from './pages/MainPage/MainPage.lazy'
-import { useTheme } from './theme/useTheme'
+import { AboutPage } from 'pages/AboutPage'
+import { MainPage } from 'pages/MainPage'
+import { useTheme } from 'shared/hooks/useTheme'
+import { classNames } from 'shared/utils/classNames'
 
 import './styles/index.scss'
 
@@ -21,8 +21,8 @@ export const App: React.FC = () => {
 
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<MainPageLazy />} />
-          <Route path="/about" element={<AboutPageLazy />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Suspense>
     </div>

@@ -11,6 +11,7 @@ type TPaths = {
   entry: string
   output: string
   htmlTemplate: string
+  src: string
 }
 
 export type TConfigOptions = {
@@ -39,7 +40,9 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
         isDev,
       }),
     },
-    resolve: getResolvers(),
+    resolve: getResolvers({
+      srcPath: paths.src,
+    }),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? getDevServer({ port }) : undefined,
   }
