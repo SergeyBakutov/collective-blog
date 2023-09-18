@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
-
 import { useTheme } from 'shared/hooks/useTheme'
 import { classNames } from 'shared/utils/classNames'
+import { Navbar } from 'widgets/Navbar'
 
 import { AppRouter } from './router/AppRouter'
 
@@ -12,12 +11,11 @@ export const App: React.FC = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <button onClick={toggleTheme}>TOGGLE</button>
-
-      <Link to="/">Main</Link>
-      <Link to="/about">About</Link>
+      <Navbar />
 
       <AppRouter />
+
+      <button onClick={toggleTheme}>TOGGLE</button>
     </div>
   )
 }
