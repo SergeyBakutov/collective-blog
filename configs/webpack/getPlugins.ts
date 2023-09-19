@@ -4,10 +4,11 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 type TPluginsOptions = {
   htmlTemplatePath: string
+  isDev: boolean
 }
 
 export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
-  const { htmlTemplatePath } = options
+  const { htmlTemplatePath, isDev } = options
 
   return [
     new webpack.ProgressPlugin(),
@@ -15,6 +16,9 @@ export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInsta
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
       chunkFilename: 'css/[name].[contenthash].css'
+    }),
+    new webpack.DefinePlugin({
+      __IS_DEV__: isDev
     })
   ]
 }

@@ -34,7 +34,8 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
       clean: true
     },
     plugins: getPlugins({
-      htmlTemplatePath: paths.htmlTemplate
+      htmlTemplatePath: paths.htmlTemplate,
+      isDev
     }),
     module: {
       rules: getLoaders({
