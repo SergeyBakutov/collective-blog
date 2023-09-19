@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 type TPluginsOptions = {
   htmlTemplatePath: string
@@ -9,8 +10,7 @@ type TPluginsOptions = {
 
 export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
   const { htmlTemplatePath, isDev } = options
-
-  return [
+  const plugins: webpack.WebpackPluginInstance[] = [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: htmlTemplatePath }),
     new MiniCssExtractPlugin({
@@ -21,4 +21,10 @@ export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInsta
       __IS_DEV__: isDev
     })
   ]
+
+  if (isDev) {
+    plugins.push(new ReactRefreshWebpackPlugin())
+  }
+
+  return plugins
 }
