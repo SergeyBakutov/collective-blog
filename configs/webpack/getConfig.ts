@@ -30,6 +30,7 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
     output: {
       filename: '[name].[contenthash].js',
       path: paths.output,
+      assetModuleFilename: 'assets/[contenthash][ext]',
       clean: true
     },
     plugins: getPlugins({
