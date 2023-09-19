@@ -1,6 +1,7 @@
 import { useTheme } from 'shared/hooks/useTheme'
 import { classNames } from 'shared/utils/classNames'
 import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
 
 import { AppRouter } from './router/AppRouter'
 
@@ -12,7 +13,10 @@ export const App: React.FC = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <AppRouter />
+      <div className="content">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   )
 }
