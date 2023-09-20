@@ -1,4 +1,4 @@
-import webpack from 'webpack'
+import type webpack from 'webpack'
 
 import { getDevServer } from './getDevServer'
 import { getLoaders } from './getLoaders'
@@ -7,21 +7,21 @@ import { getResolvers } from './getResolvers'
 
 type TMode = 'development' | 'production'
 
-type TPaths = {
+interface TPaths {
   entry: string
   output: string
   htmlTemplate: string
   src: string
 }
 
-export type TConfigOptions = {
+export interface TConfigOptions {
   mode: TMode
   paths: TPaths
   isDev: boolean
   port: number
 }
 
-export function getConfig(options: TConfigOptions): webpack.Configuration {
+export function getConfig (options: TConfigOptions): webpack.Configuration {
   const { mode, paths, isDev, port } = options
 
   return {
@@ -39,13 +39,13 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
     }),
     module: {
       rules: getLoaders({
-        isDev,
-      }),
+        isDev
+      })
     },
     resolve: getResolvers({
-      srcPath: paths.src,
+      srcPath: paths.src
     }),
     devtool: isDev ? 'inline-source-map' : undefined,
-    devServer: isDev ? getDevServer({ port }) : undefined,
+    devServer: isDev ? getDevServer({ port }) : undefined
   }
 }

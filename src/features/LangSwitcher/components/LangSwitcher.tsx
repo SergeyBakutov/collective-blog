@@ -11,7 +11,7 @@ export const LangSwitcher: React.FC<ILangSwitcherProps> = (props) => {
   const { className } = props
   const { t, i18n } = useTranslation()
 
-  const onToggleLanguage = () => {
+  const onToggleLanguage = (): void => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
   }
 

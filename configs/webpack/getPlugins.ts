@@ -3,12 +3,12 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
-type TPluginsOptions = {
+interface TPluginsOptions {
   htmlTemplatePath: string
   isDev: boolean
 }
 
-export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
+export function getPlugins (options: TPluginsOptions): webpack.WebpackPluginInstance[] {
   const { htmlTemplatePath, isDev } = options
   const plugins: webpack.WebpackPluginInstance[] = [
     new webpack.ProgressPlugin(),

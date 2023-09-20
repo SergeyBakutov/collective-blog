@@ -1,14 +1,14 @@
 import path from 'path'
+import type { Configuration } from 'webpack'
 
-import { TConfigOptions, getConfig } from './configs/webpack/getConfig'
+import { type TConfigOptions, getConfig } from './configs/webpack/getConfig'
 
-type TEnvVariables = {
+interface TEnvVariables {
   mode: TConfigOptions['mode']
   port: TConfigOptions['port']
 }
 
-export default (env: TEnvVariables) => {
-
+export default (env: TEnvVariables): Configuration => {
   const mode = env.mode || 'development'
   const isDev = mode === 'development'
   const PORT = env.port || 3000
@@ -24,7 +24,6 @@ export default (env: TEnvVariables) => {
     isDev,
     port: PORT
   })
-
 
   return config
 }

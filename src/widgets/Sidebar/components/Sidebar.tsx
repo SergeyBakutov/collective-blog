@@ -14,7 +14,7 @@ export const Sidebar: React.FC<ISidebarProps> = (props) => {
   const { className } = props
   const [isCollapsed, setIsCollapsed] = useState(false)
 
-  const onToggleIsCollapsed = () => {
+  const onToggleIsCollapsed = (): void => {
     setIsCollapsed(prev => !prev)
   }
 

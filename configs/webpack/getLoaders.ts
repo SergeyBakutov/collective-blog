@@ -1,12 +1,12 @@
-import webpack from 'webpack'
+import type webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
 
-type TLoadersOptions = {
+interface TLoadersOptions {
   isDev: boolean
 }
 
-export function getLoaders(options: TLoadersOptions): webpack.RuleSetRule[] {
+export function getLoaders (options: TLoadersOptions): webpack.RuleSetRule[] {
   const { isDev } = options
 
   const typescriptLoader = {
@@ -17,12 +17,12 @@ export function getLoaders(options: TLoadersOptions): webpack.RuleSetRule[] {
         loader: require.resolve('ts-loader'),
         options: {
           getCustomTransformers: () => ({
-            before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+            before: [isDev && ReactRefreshTypeScript()].filter(Boolean)
           }),
-          transpileOnly: isDev,
-        },
-      },
-    ],
+          transpileOnly: isDev
+        }
+      }
+    ]
   }
 
   const cssLoader = {
@@ -38,13 +38,13 @@ export function getLoaders(options: TLoadersOptions): webpack.RuleSetRule[] {
           }
         }
       },
-      'sass-loader',
-    ],
+      'sass-loader'
+    ]
   }
 
   const svgLoader = {
     test: /\.svg$/,
-    use: ['@svgr/webpack'],
+    use: ['@svgr/webpack']
   }
 
   const fileLoader = {
