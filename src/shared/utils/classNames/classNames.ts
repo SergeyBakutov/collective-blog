@@ -1,6 +1,11 @@
 type TMods = Record<string, boolean>
 
-export function classNames (className: string, mods: TMods, additional: Array<string | undefined> = []): string {
+// eslint-disable-next-line @typescript-eslint/space-before-function-paren
+export function classNames(
+  className: string,
+  mods: TMods = {},
+  additional: Array<string | undefined> = []
+): string {
   return [
     className,
     ...additional.filter(Boolean),
