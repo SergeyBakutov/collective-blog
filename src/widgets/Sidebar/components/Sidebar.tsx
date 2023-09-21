@@ -19,8 +19,16 @@ export const Sidebar: React.FC<ISidebarProps> = (props) => {
   }
 
   return (
-    <div className={classNames(classes.sidebar, { [classes.collapsed]: isCollapsed }, [className])}>
-      <button onClick={onToggleIsCollapsed}>toggle</button>
+    <div
+      data-testid="sidebar"
+      className={classNames(classes.sidebar, { [classes.collapsed]: isCollapsed }, [className])}
+    >
+      <button
+        data-testid="collapsed-button"
+        onClick={onToggleIsCollapsed}
+      >
+        toggle
+      </button>
       <div className={classes.switchers}>
         <ThemeSwitcher />
         <LangSwitcher />
