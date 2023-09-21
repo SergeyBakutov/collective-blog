@@ -8,7 +8,7 @@ interface TPluginsOptions {
   isDev: boolean
 }
 
-export function getPlugins (options: TPluginsOptions): webpack.WebpackPluginInstance[] {
+export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
   const { htmlTemplatePath, isDev } = options
   const plugins: webpack.WebpackPluginInstance[] = [
     new webpack.ProgressPlugin(),
@@ -23,7 +23,9 @@ export function getPlugins (options: TPluginsOptions): webpack.WebpackPluginInst
   ]
 
   if (isDev) {
-    plugins.push(new ReactRefreshWebpackPlugin())
+    plugins.push(new ReactRefreshWebpackPlugin({
+      overlay: false
+    }))
   }
 
   return plugins

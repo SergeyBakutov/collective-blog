@@ -2,5 +2,7 @@
   "Language": "Language",
   "About": "About",
   "Main": "Main",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Unexpected error": "An unexpected error has occurred",
+  "Reload page": "Reload page"
 }

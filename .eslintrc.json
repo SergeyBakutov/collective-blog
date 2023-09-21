@@ -34,6 +34,7 @@
         "@typescript-eslint/strict-boolean-expressions": "off",
         "react/prop-types": "off",
         "@typescript-eslint/no-floating-promises": "warn",
-        "@typescript-eslint/naming-convention": "off"
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/space-before-function-paren": "off"
     }
 }
