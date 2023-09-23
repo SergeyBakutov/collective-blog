@@ -18,6 +18,7 @@ export const LangSwitcher: React.FC<ILangSwitcherProps> = (props) => {
   return (
     <Button
       className={classNames('', {}, [className])}
+      color='clearInverted'
       onClick={onToggleLanguage}
     >
       {t('Language')}

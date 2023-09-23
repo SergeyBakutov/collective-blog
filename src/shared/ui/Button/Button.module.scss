@@ -2,10 +2,22 @@
   cursor: pointer;
 }
 
-.clear {
+@mixin clear {
   padding: 0;
   background: none;
   outline: none;
   border: none;
   appearance: none;
+}
+
+.clear {
+  @include clear;
+
+  color: var(--primary-color);
+}
+
+.clearInverted {
+  @include clear;
+
+  color: var(--inverted-primary-color);
 }

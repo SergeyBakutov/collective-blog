@@ -2,7 +2,7 @@ import { classNames } from 'shared/utils/classNames'
 
 import classes from './Button.module.scss'
 
-type TButtonColor = 'clear'
+type TButtonColor = 'clear' | 'clearInverted'
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
