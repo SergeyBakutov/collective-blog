@@ -20,15 +20,15 @@ export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInsta
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: isDev
-    }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false
     })
   ]
 
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin({
       overlay: false
+    }))
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: false
     }))
   }
 
