@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { LangSwitcher } from 'features/LangSwitcher'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
@@ -13,6 +14,7 @@ interface ISidebarProps {
 export const Sidebar: React.FC<ISidebarProps> = (props) => {
   const { className } = props
   const [isCollapsed, setIsCollapsed] = useState(false)
+  const { t } = useTranslation()
 
   const onToggleIsCollapsed = (): void => {
     setIsCollapsed(prev => !prev)
@@ -27,7 +29,7 @@ export const Sidebar: React.FC<ISidebarProps> = (props) => {
         data-testid="collapsed-button"
         onClick={onToggleIsCollapsed}
       >
-        toggle
+        {isCollapsed ? t('Unroll') : t('Roll up')}
       </button>
       <div className={classes.switchers}>
         <ThemeSwitcher />
