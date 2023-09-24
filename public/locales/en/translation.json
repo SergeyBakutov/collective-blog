@@ -1,10 +1,9 @@
 {
-  "Language": "Language",
+  "Language": "English",
+  "Language (short)": "EN",
   "About": "About",
   "Main": "Main",
   "Page not found": "Page not found",
   "Unexpected error": "An unexpected error has occurred",
-  "Reload page": "Reload page",
-  "Roll up": "Roll up",
-  "Unroll": "Unroll"
+  "Reload page": "Reload page"
 }

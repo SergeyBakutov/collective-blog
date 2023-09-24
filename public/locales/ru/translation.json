@@ -1,10 +1,9 @@
 {
-  "Language": "Язык",
+  "Language": "Русский",
+  "Language (short)": "RU",
   "About": "О блоге",
   "Main": "Главная",
   "Page not found": "Страница не найдена",
   "Unexpected error": "Произошла непредвиденная ошибка",
-  "Reload page": "Перезагрузить страницу",
-  "Roll up": "Свернуть",
-  "Unroll": "Развернуть"
+  "Reload page": "Перезагрузить страницу"
 }

@@ -1,11 +1,22 @@
 :root {
+  /* Размеры */
+  --size-m: 24px;
+  --size-l: 32px;
+  --size-xl: 40px;
+
+  /* Шрифты */
   --font-family: 'Courier New', courier, monospace;
-  --font-size-m: 16px;
-  --line-height-m: 24px;
+  --font-size-m: calc(var(--size-m) - 8px);
+  --line-height-m: var(--size-m);
   --font-m: var(--font-size-m) / var(--line-height-m) var(--font-family);
-  --font-size-l: 24px;
-  --line-height-l: 32px;
+  --font-size-l: calc(var(--size-l) - 8px);
+  --line-height-l: var(--size-l);
   --font-l: var(--font-size-l) / var(--line-height-l) var(--font-family);
+  --font-size-xl: calc(var(--size-xl) - 8px);
+  --line-height-xl: var(--size-xl);
+  --font-xl: var(--font-size-xl) / var(--line-height-xl) var(--font-family);
+
+  /* Размеры главных составляющих страницы */
   --navbar-height: 100px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 100px;

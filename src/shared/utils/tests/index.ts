@@ -1,1 +1,1 @@
-export { renderWithTranslation } from './test-utils'
+export { renderComponent } from './test-utils'

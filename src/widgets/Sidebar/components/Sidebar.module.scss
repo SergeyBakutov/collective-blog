@@ -5,17 +5,52 @@
   background-color: var(--background-inverted-color);
   color: var(--inverted-primary-color);
   transition: width 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkIcon {
+  fill: var(--inverted-primary-color);
 }
 
 .switchers {
-  position: absolute;
-  bottom: 20px;
+  margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.collapsedButton {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link > span {
+    display: none;
+  }
 }

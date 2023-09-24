@@ -31,16 +31,84 @@ export const ClearDark: Story = {
   decorators: [ThemeDecorator('dark')]
 }
 
-export const ClearInvertedLight: Story = {
+export const OutlineLight: Story = {
   args: {
-    color: 'clearInverted'
-  },
-  decorators: [ThemeDecorator('light', { backgroundInverted: true })]
+    color: 'outline'
+  }
 }
 
-export const ClearInvertedDark: Story = {
+export const OutlineDark: Story = {
   args: {
-    color: 'clearInverted'
+    color: 'outline'
   },
-  decorators: [ThemeDecorator('dark', { backgroundInverted: true })]
+  decorators: [ThemeDecorator('dark')]
+}
+
+export const BackgroundInvertedLight: Story = {
+  args: {
+    color: 'backgroundInverted'
+  }
+}
+
+export const BackgroundInvertedDark: Story = {
+  args: {
+    color: 'backgroundInverted'
+  },
+  decorators: [ThemeDecorator('dark')]
+}
+
+export const Square: Story = {
+  args: {
+    color: 'backgroundInverted',
+    square: true,
+    children: '>'
+  }
+}
+
+export const SquareSizeM: Story = {
+  args: {
+    color: 'backgroundInverted',
+    square: true,
+    size: 'm',
+    children: '>'
+  }
+}
+
+export const SquareSizeL: Story = {
+  args: {
+    color: 'backgroundInverted',
+    square: true,
+    size: 'l',
+    children: '>'
+  }
+}
+
+export const SquareSizeXL: Story = {
+  args: {
+    color: 'backgroundInverted',
+    square: true,
+    size: 'xl',
+    children: '>'
+  }
+}
+
+export const OutlineSizeM: Story = {
+  args: {
+    color: 'outline',
+    size: 'm'
+  }
+}
+
+export const OutlineSizeL: Story = {
+  args: {
+    color: 'outline',
+    size: 'l'
+  }
+}
+
+export const OutlineSizeXL: Story = {
+  args: {
+    color: 'outline',
+    size: 'xl'
+  }
 }
