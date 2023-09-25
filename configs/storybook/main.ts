@@ -1,5 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
 import path from 'path'
+import webpack from 'webpack'
 
 const config: StorybookConfig = {
   stories: ['../../src/**/*.mdx', '../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -16,6 +17,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag'
   },
+  staticDirs: ['../../public'],
   webpackFinal: async (config) => {
     config.resolve?.modules?.push(path.resolve(__dirname, '../../src'))
     config.resolve?.extensions?.push('.tsx', '.ts')
@@ -54,6 +56,10 @@ const config: StorybookConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack']
     })
+
+    config.plugins?.push(new webpack.DefinePlugin({
+      __IS_DEV__: true
+    }))
 
     return config
   }

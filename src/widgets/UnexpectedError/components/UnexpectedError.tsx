@@ -20,7 +20,7 @@ export const UnexpectedError: React.FC<IUnexpectedErrorProps> = (props) => {
   return (
     <div className={classNames(classes.wrapper, {}, [className])}>
       <h1>{t('Unexpected error')}</h1>
-      <Button onClick={onReload}>
+      <Button color="outline" onClick={onReload}>
         {t('Reload page')}
       </Button>
     </div>
