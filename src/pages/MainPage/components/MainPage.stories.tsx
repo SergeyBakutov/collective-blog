@@ -14,7 +14,9 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Light: Story = {}
+export const Light: Story = {
+  decorators: [ThemeDecorator('light')]
+}
 
 export const Dark: Story = {
   decorators: [ThemeDecorator('dark')]

@@ -16,12 +16,15 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = {
+  decorators: [ThemeDecorator('light')]
+}
 
 export const ClearLight: Story = {
   args: {
     color: 'clear'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const ClearDark: Story = {
@@ -34,7 +37,8 @@ export const ClearDark: Story = {
 export const OutlineLight: Story = {
   args: {
     color: 'outline'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const OutlineDark: Story = {
@@ -47,7 +51,8 @@ export const OutlineDark: Story = {
 export const BackgroundInvertedLight: Story = {
   args: {
     color: 'backgroundInverted'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const BackgroundInvertedDark: Story = {
@@ -62,7 +67,8 @@ export const Square: Story = {
     color: 'backgroundInverted',
     square: true,
     children: '>'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const SquareSizeM: Story = {
@@ -71,7 +77,8 @@ export const SquareSizeM: Story = {
     square: true,
     size: 'm',
     children: '>'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const SquareSizeL: Story = {
@@ -80,7 +87,8 @@ export const SquareSizeL: Story = {
     square: true,
     size: 'l',
     children: '>'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const SquareSizeXL: Story = {
@@ -89,26 +97,30 @@ export const SquareSizeXL: Story = {
     square: true,
     size: 'xl',
     children: '>'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const OutlineSizeM: Story = {
   args: {
     color: 'outline',
     size: 'm'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const OutlineSizeL: Story = {
   args: {
     color: 'outline',
     size: 'l'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
 export const OutlineSizeXL: Story = {
   args: {
     color: 'outline',
     size: 'xl'
-  }
+  },
+  decorators: [ThemeDecorator('light')]
 }
