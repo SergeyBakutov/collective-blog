@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --env port=3000",
+    "start:server": "node ./server/index.js",
     "build:dev": "npx webpack --env mode=development",
     "build:prod": "npx webpack --env mode=production",
     "lint:ts": "npx eslint '**/*.{ts,tsx}'",
@@ -61,6 +62,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "json-server": "^0.17.4",
     "loki": "^0.32.0",
     "mini-css-extract-plugin": "^2.7.6",
     "react-refresh": "^0.14.0",
