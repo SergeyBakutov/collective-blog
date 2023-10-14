@@ -6,8 +6,8 @@ import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import AboutPageIcon from 'shared/assets/icons/about-page-icon.svg'
 import MainPageIcon from 'shared/assets/icons/main-page-icon.svg'
 import { APP_ROUTES } from 'shared/router'
-import { AppLink } from 'shared/ui/AppLink'
-import { Button } from 'shared/ui/Button'
+import { AppLink } from 'shared/components/AppLink'
+import { Button } from 'shared/components/Button'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Sidebar.module.scss'
@@ -28,7 +28,7 @@ export const Sidebar: React.FC<ISidebarProps> = (props) => {
   return (
     <div
       data-testid="sidebar"
-      className={classNames(classes.sidebar, { [classes.collapsed]: isCollapsed }, [className])}
+      className={classNames(classes.wrapper, { [classes.collapsed]: isCollapsed }, [className])}
     >
       <div className={classes.links}>
         <AppLink className={classes.link} color="inverted" to={APP_ROUTES.main}>

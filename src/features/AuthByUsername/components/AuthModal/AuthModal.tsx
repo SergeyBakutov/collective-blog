@@ -1,4 +1,4 @@
-import { Modal } from 'shared/ui/Modal'
+import { Modal } from 'shared/components/Modal'
 import { classNames } from 'shared/utils/classNames'
 
 import { AuthForm } from '../AuthForm/AuthForm'

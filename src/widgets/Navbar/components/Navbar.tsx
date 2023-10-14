@@ -5,7 +5,7 @@ import { AuthModal } from 'features/AuthByUsername'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Navbar.module.scss'
-import { Button } from 'shared/ui/Button'
+import { Button } from 'shared/components/Button'
 
 interface INavbarProps {
   className?: string
@@ -25,7 +25,7 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
   }, [])
 
   return (
-    <div className={classNames(classes.navbar, {}, [className])}>
+    <div className={classNames(classes.wrapper, {}, [className])}>
       <Button color="clearInverted" onClick={onLoginClickHandler}>
         {t('Login')}
       </Button>

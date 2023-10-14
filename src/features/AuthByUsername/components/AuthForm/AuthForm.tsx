@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
-import { Button } from 'shared/ui/Button'
-import { Input } from 'shared/ui/Input'
+import { Button } from 'shared/components/Button'
+import { Input } from 'shared/components/Input'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './AuthForm.module.scss'

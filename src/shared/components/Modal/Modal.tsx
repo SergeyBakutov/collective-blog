@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-import { Portal } from 'shared/ui/Portal'
+import { Portal } from 'shared/components/Portal'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Modal.module.scss'
