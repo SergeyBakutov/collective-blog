@@ -24,14 +24,12 @@ export const AuthForm: React.FC<IAuthFormProps> = (props) => {
   return (
     <div className={classNames(classes.wrapper, {}, [className])}>
       <Input
-        type="text"
         value={value}
         label={t('Username')}
-        autoFocus
+        // autoFocus
         onChange={onChange}
       />
       <Input
-        type="text"
         value={''}
         label={t('Password')}
         onChange={() => undefined}
