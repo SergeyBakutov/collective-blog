@@ -1,9 +1,7 @@
-/* eslint-disable i18next/no-literal-string */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Modal } from 'shared/ui/Modal'
+import { AuthModal } from 'features/AuthByUsername'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Navbar.module.scss'
@@ -31,9 +29,7 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
       <Button color="clearInverted" onClick={onLoginClickHandler}>
         {t('Login')}
       </Button>
-      <Modal isOpen={isOpenAuthModal} onClose={onCloseAuthModalHandler}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, deleniti asperiores voluptates, ipsam voluptate impedit quae distinctio itaque corrupti illum tempora nihil aliquam! Recusandae id aliquam necessitatibus molestiae earum harum labore quod optio distinctio, delectus itaque fugit corrupti impedit voluptatibus odit. Ullam aperiam dolore sint illum similique corporis obcaecati eaque.
-      </Modal>
+      <AuthModal isOpen={isOpenAuthModal} onClose={onCloseAuthModalHandler} />
     </div>
   )
 }
