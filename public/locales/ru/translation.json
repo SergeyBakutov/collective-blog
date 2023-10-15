@@ -7,6 +7,9 @@
   "Unexpected error": "Произошла непредвиденная ошибка",
   "Reload page": "Перезагрузить страницу",
   "Login": "Войти",
+  "Logout": "Выйти",
   "Username": "Имя пользователя",
-  "Password": "Пароль"
+  "Password": "Пароль",
+  "Authorization": "Авторизация",
+  "Invalid username or password": "Некорректное имя пользователя или пароль"
 }

@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font: var(--font-l);
+}
+
+.description {
+  font: var(--font-m);
+}
+
+.default {
+  .title {
+    color: var(--primary-color);
+  }
+
+  .description {
+    color: var(--secondary-color);
+  }
+}
+
+.error {
+  .title {
+    color: var(--error-primary-color);
+  }
+
+  .description {
+    color: var(--error-secondary-color);
+  }
+}

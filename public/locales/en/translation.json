@@ -7,6 +7,9 @@
   "Unexpected error": "An unexpected error has occurred",
   "Reload page": "Reload page",
   "Login": "Login",
+  "Logout": "Logout",
   "Username": "Username",
-  "Password": "Password"
+  "Password": "Password",
+  "Authorization": "Authorization",
+  "Invalid username or password": "Invalid username or password"
 }

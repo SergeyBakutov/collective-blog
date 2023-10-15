@@ -1,11 +1,14 @@
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 
+import { getAuthData, userActions } from 'entities/User'
 import { AuthModal } from 'features/AuthByUsername'
+import { Button } from 'shared/components/Button'
+import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Navbar.module.scss'
-import { Button } from 'shared/components/Button'
 
 interface INavbarProps {
   className?: string
@@ -15,21 +18,37 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
   const { className } = props
   const { t } = useTranslation()
   const [isOpenAuthModal, setIsOpenAuthModal] = useState(false)
+  const authData = useSelector(getAuthData)
+  const dispatch = useAppDispatch()
 
-  const onLoginClickHandler = useCallback(() => {
+  const onLoginClick = useCallback(() => {
     setIsOpenAuthModal(true)
   }, [])
 
-  const onCloseAuthModalHandler = useCallback(() => {
+  const onCloseAuthModal = useCallback(() => {
     setIsOpenAuthModal(false)
   }, [])
 
+  const onLogoutClick = useCallback(() => {
+    dispatch(userActions.logout())
+  }, [dispatch])
+
+  if (authData) {
+    return (
+      <div className={classNames(classes.wrapper, {}, [className])}>
+        <Button color="clearInverted" onClick={onLogoutClick}>
+          {t('Logout')}
+        </Button>
+      </div>
+    )
+  }
+
   return (
     <div className={classNames(classes.wrapper, {}, [className])}>
-      <Button color="clearInverted" onClick={onLoginClickHandler}>
+      <Button color="clearInverted" onClick={onLoginClick}>
         {t('Login')}
       </Button>
-      <AuthModal isOpen={isOpenAuthModal} onClose={onCloseAuthModalHandler} />
+      <AuthModal isOpen={isOpenAuthModal} onClose={onCloseAuthModal} />
     </div>
   )
 }

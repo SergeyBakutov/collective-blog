@@ -124,3 +124,11 @@ export const OutlineSizeXL: Story = {
   },
   decorators: [ThemeDecorator('light')]
 }
+
+export const Disabled: Story = {
+  args: {
+    color: 'outline',
+    disabled: true
+  },
+  decorators: [ThemeDecorator('light')]
+}

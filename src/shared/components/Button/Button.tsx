@@ -19,16 +19,19 @@ export const Button: React.FC<React.PropsWithChildren<IButtonProps>> = (props) =
     color = 'clear',
     size = 'm',
     square = false,
+    disabled = false,
     ...otherProps
   } = props
 
   const mods: Record<string, boolean> = {
-    [classes.square]: square
+    [classes.square]: square,
+    [classes.disabled]: disabled
   }
 
   return (
     <button
       className={classNames(classes.button, mods, [className, classes[color], classes[size]])}
+      disabled={disabled}
       {...otherProps}
     >
       {children}
