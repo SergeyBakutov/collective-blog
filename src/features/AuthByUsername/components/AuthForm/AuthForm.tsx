@@ -6,6 +6,7 @@ import { Button } from 'shared/components/Button'
 import { Input } from 'shared/components/Input'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
+import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 import { classNames } from 'shared/utils/classNames'
 
 import { getError } from '../../model/selectors/getError/getError'
@@ -13,7 +14,7 @@ import { getIsLoading } from '../../model/selectors/getIsLoading/getIsLoading'
 import { getUsername } from '../../model/selectors/getUsername/getUsername'
 import { getPassword } from '../../model/selectors/getPassword/getPassword'
 import { authByUsername } from '../../model/services/authByUsername/authByUsername'
-import { authActions } from '../../model/slice/authSlice'
+import { authActions, authReducer } from '../../model/slice/authSlice'
 
 import classes from './AuthForm.module.scss'
 
@@ -21,7 +22,11 @@ interface IAuthFormProps {
   className?: string
 }
 
-export const AuthForm: React.FC<IAuthFormProps> = (props) => {
+const reducers: TReducersList = {
+  auth: authReducer
+}
+
+const AuthForm: React.FC<IAuthFormProps> = (props) => {
   const { className } = props
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -29,6 +34,8 @@ export const AuthForm: React.FC<IAuthFormProps> = (props) => {
   const password = useSelector(getPassword)
   const error = useSelector(getError)
   const isLoading = useSelector(getIsLoading)
+
+  useAsyncReducer({ reducers, removeAfterUnmount: true })
 
   const onChangeUsername = useCallback((value: string) => {
     dispatch(authActions.setUsername(value))
@@ -68,3 +75,5 @@ export const AuthForm: React.FC<IAuthFormProps> = (props) => {
     </div>
   )
 }
+
+export default AuthForm

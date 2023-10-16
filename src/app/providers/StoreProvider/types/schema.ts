@@ -5,5 +5,9 @@ import { type IAuthStateSchema } from 'features/AuthByUsername'
 export interface IStateSchema {
   counter: ICounterStateSchema
   user: IUserStateSchema
-  auth: IAuthStateSchema
+
+  // Асинхронные редьюсеры
+  auth?: IAuthStateSchema
 }
+
+export type TStateSchemaKey = keyof IStateSchema

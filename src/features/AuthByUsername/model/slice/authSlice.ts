@@ -3,7 +3,7 @@ import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { authByUsername } from '../services/authByUsername/authByUsername'
 import { type IAuthStateSchema } from '../types/schema'
 
-const initialState: IAuthStateSchema = {
+export const initialState: IAuthStateSchema = {
   username: '',
   password: '',
   isLoading: false

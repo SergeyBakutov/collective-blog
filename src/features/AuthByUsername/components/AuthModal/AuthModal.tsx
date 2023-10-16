@@ -1,7 +1,10 @@
+import { Suspense } from 'react'
+
+import { Loader } from 'shared/components/Loader'
 import { Modal } from 'shared/components/Modal'
 import { classNames } from 'shared/utils/classNames'
 
-import { AuthForm } from '../AuthForm/AuthForm'
+import { AuthFormLazy as AuthForm } from '../AuthForm/AuthForm.lazy'
 
 import classes from './AuthModal.module.scss'
 
@@ -20,7 +23,9 @@ export const AuthModal: React.FC<IAuthModalProps> = (props) => {
       isOpen={isOpen}
       onClose={onClose}
     >
-      <AuthForm />
+      <Suspense fallback={<Loader />}>
+        <AuthForm />
+      </Suspense>
     </Modal>
   )
 }

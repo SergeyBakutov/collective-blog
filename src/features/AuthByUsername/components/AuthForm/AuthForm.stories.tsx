@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
 
-import { AuthForm } from './AuthForm'
+import AuthForm from './AuthForm'
 
 const meta = {
   title: 'features/AuthByUsername/AuthForm',
@@ -16,19 +16,19 @@ type Story = StoryObj<typeof meta>
 
 export const Light: Story = {
   decorators: [ThemeDecorator('light'), StoreDecorator({
-    auth: { username: 'admin', password: '123' }
+    auth: { username: 'admin', password: '123', isLoading: false }
   })]
 }
 
 export const Dark: Story = {
-  decorators: [ThemeDecorator('dark'), StoreDecorator({
-    auth: { username: 'admin', password: '123' }
-  })]
+  decorators: [ThemeDecorator('dark'), StoreDecorator(
+    { auth: { username: 'admin', password: '123', isLoading: false } }
+  )]
 }
 
 export const Error: Story = {
   decorators: [ThemeDecorator('light'), StoreDecorator({
-    auth: { username: 'qwerty', password: '111', error: 'Error' }
+    auth: { username: 'qwerty', password: '111', error: 'Error', isLoading: false }
   })]
 }
 
