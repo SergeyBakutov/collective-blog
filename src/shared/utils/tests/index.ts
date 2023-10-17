@@ -1,1 +1,2 @@
-export { renderComponent } from './test-utils'
+export { renderComponent } from './renderComponent/renderComponent'
+export { TestAsyncThunk } from './TestAsyncThunk/TestAsyncThunk'
