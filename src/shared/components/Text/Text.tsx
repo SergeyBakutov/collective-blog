@@ -1,3 +1,5 @@
+import { memo } from 'react'
+
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Text.module.scss'
@@ -11,7 +13,7 @@ interface ITextProps {
   description?: string
 }
 
-export const Text: React.FC<ITextProps> = (props) => {
+export const Text: React.FC<ITextProps> = memo((props) => {
   const { className, color = 'default', title, description } = props
 
   return (
@@ -20,4 +22,6 @@ export const Text: React.FC<ITextProps> = (props) => {
       {description && <p className={classes.description}>{description}</p>}
     </div>
   )
-}
+})
+
+Text.displayName = 'Text'

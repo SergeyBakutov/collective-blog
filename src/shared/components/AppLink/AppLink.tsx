@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Link, type LinkProps } from 'react-router-dom'
 
 import { classNames } from 'shared/utils/classNames'
@@ -11,7 +12,7 @@ interface IAppLinkProps extends LinkProps {
   color?: TAppLinkColor
 }
 
-export const AppLink: React.FC<React.PropsWithChildren<IAppLinkProps>> = (props) => {
+export const AppLink: React.FC<React.PropsWithChildren<IAppLinkProps>> = memo((props) => {
   const {
     children,
     className,
@@ -27,4 +28,6 @@ export const AppLink: React.FC<React.PropsWithChildren<IAppLinkProps>> = (props)
       {children}
     </Link>
   )
-}
+})
+
+AppLink.displayName = 'AppLink'

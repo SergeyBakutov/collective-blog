@@ -1,25 +1,21 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { memo, useState } from 'react'
 
 import { LangSwitcher } from 'features/LangSwitcher'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
-import AboutPageIcon from 'shared/assets/icons/about-page-icon.svg'
-import MainPageIcon from 'shared/assets/icons/main-page-icon.svg'
-import { APP_ROUTES } from 'shared/router'
-import { AppLink } from 'shared/components/AppLink'
 import { Button } from 'shared/components/Button'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Sidebar.module.scss'
+import { sidebarItems } from 'widgets/Sidebar/model/items'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
 
 interface ISidebarProps {
   className?: string
 }
 
-export const Sidebar: React.FC<ISidebarProps> = (props) => {
+export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
   const { className } = props
   const [isCollapsed, setIsCollapsed] = useState(false)
-  const { t } = useTranslation()
 
   const onToggleIsCollapsed = (): void => {
     setIsCollapsed(prev => !prev)
@@ -31,14 +27,9 @@ export const Sidebar: React.FC<ISidebarProps> = (props) => {
       className={classNames(classes.wrapper, { [classes.collapsed]: isCollapsed }, [className])}
     >
       <div className={classes.links}>
-        <AppLink className={classes.link} color="inverted" to={APP_ROUTES.main}>
-          <MainPageIcon className={classes.linkIcon} />
-          <span>{t('Main')}</span>
-        </AppLink>
-        <AppLink className={classes.link} color="inverted" to={APP_ROUTES.about}>
-          <AboutPageIcon className={classes.linkIcon} />
-          <span>{t('About')}</span>
-        </AppLink>
+        {sidebarItems.map((item) =>
+          <SidebarItem key={item.path} item={item} collapsed={isCollapsed} />
+        )}
       </div>
       <Button
         className={classes.collapsedButton}
@@ -56,4 +47,6 @@ export const Sidebar: React.FC<ISidebarProps> = (props) => {
       </div>
     </div>
   )
-}
+})
+
+Sidebar.displayName = 'Sidebar'

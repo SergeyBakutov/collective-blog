@@ -20,6 +20,7 @@ import classes from './AuthForm.module.scss'
 
 interface IAuthFormProps {
   className?: string
+  onSuccessAuth: () => void
 }
 
 const reducers: TReducersList = {
@@ -27,7 +28,7 @@ const reducers: TReducersList = {
 }
 
 const AuthForm: React.FC<IAuthFormProps> = (props) => {
-  const { className } = props
+  const { className, onSuccessAuth } = props
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const username = useSelector(getUsername)
@@ -46,9 +47,15 @@ const AuthForm: React.FC<IAuthFormProps> = (props) => {
   }, [dispatch])
 
   const onLoginClick = useCallback(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     dispatch(authByUsername({ username, password }))
-  }, [dispatch, password, username])
+      .then((result) => {
+        if (result.meta.requestStatus === 'fulfilled') {
+          onSuccessAuth()
+        }
+      }).catch(error => {
+        console.log(error)
+      })
+  }, [dispatch, onSuccessAuth, password, username])
 
   return (
     <div className={classNames(classes.wrapper, {}, [className])}>

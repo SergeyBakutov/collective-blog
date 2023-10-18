@@ -24,7 +24,7 @@ export const AuthModal: React.FC<IAuthModalProps> = (props) => {
       onClose={onClose}
     >
       <Suspense fallback={<Loader />}>
-        <AuthForm />
+        <AuthForm onSuccessAuth={onClose} />
       </Suspense>
     </Modal>
   )
