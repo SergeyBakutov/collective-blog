@@ -12,5 +12,9 @@
   "Username": "Имя пользователя",
   "Password": "Пароль",
   "Authorization": "Авторизация",
-  "Invalid username or password": "Некорректное имя пользователя или пароль"
+  "Invalid username or password": "Некорректное имя пользователя или пароль",
+  "User profile": "Профиль пользователя",
+  "Edit": "Редактировать",
+  "Firstname": "Имя",
+  "Lastname": "Фамилия"
 }
