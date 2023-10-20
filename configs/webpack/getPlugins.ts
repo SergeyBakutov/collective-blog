@@ -7,10 +7,11 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 interface TPluginsOptions {
   htmlTemplatePath: string
   isDev: boolean
+  apiUrl: string
 }
 
 export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
-  const { htmlTemplatePath, isDev } = options
+  const { htmlTemplatePath, isDev, apiUrl } = options
   const plugins: webpack.WebpackPluginInstance[] = [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: htmlTemplatePath }),
@@ -19,7 +20,8 @@ export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInsta
       chunkFilename: 'css/[name].[contenthash].css'
     }),
     new webpack.DefinePlugin({
-      __IS_DEV__: isDev
+      __IS_DEV__: isDev,
+      __API__: JSON.stringify(apiUrl)
     })
   ]
 

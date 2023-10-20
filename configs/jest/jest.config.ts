@@ -11,7 +11,8 @@ const config: Config = {
     '/node_modules/'
   ],
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: ''
   },
   moduleDirectories: [
     'node_modules',

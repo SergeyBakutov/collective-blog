@@ -19,10 +19,11 @@ export interface TConfigOptions {
   paths: TPaths
   isDev: boolean
   port: number
+  apiUrl: string
 }
 
-export function getConfig (options: TConfigOptions): webpack.Configuration {
-  const { mode, paths, isDev, port } = options
+export function getConfig(options: TConfigOptions): webpack.Configuration {
+  const { mode, paths, isDev, port, apiUrl } = options
 
   return {
     mode,
@@ -35,7 +36,8 @@ export function getConfig (options: TConfigOptions): webpack.Configuration {
     },
     plugins: getPlugins({
       htmlTemplatePath: paths.htmlTemplate,
-      isDev
+      isDev,
+      apiUrl
     }),
     module: {
       rules: getLoaders({

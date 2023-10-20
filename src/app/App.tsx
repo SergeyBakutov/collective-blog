@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+
+import { userActions } from 'entities/User'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { useTheme } from 'shared/hooks/useTheme'
 import { classNames } from 'shared/utils/classNames'
@@ -7,8 +10,6 @@ import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from './router/AppRouter'
 
 import './styles/index.scss'
-import { useEffect } from 'react'
-import { userActions } from 'entities/User'
 
 export const App: React.FC = () => {
   const { theme } = useTheme()
