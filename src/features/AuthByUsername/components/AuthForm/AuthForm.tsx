@@ -9,10 +9,10 @@ import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 import { classNames } from 'shared/utils/classNames'
 
-import { getError } from '../../model/selectors/getError/getError'
-import { getIsLoading } from '../../model/selectors/getIsLoading/getIsLoading'
-import { getUsername } from '../../model/selectors/getUsername/getUsername'
-import { getPassword } from '../../model/selectors/getPassword/getPassword'
+import { getAuthError } from '../../model/selectors/getAuthError/getAuthError'
+import { getAuthIsLoading } from '../../model/selectors/getAuthIsLoading/getAuthIsLoading'
+import { getAuthUsername } from '../../model/selectors/getAuthUsername/getAuthUsername'
+import { getAuthPassword } from '../../model/selectors/getAuthPassword/getAuthPassword'
 import { authByUsername } from '../../model/services/authByUsername/authByUsername'
 import { authActions, authReducer } from '../../model/slice/authSlice'
 
@@ -31,10 +31,10 @@ const AuthForm: React.FC<IAuthFormProps> = (props) => {
   const { className, onSuccessAuth } = props
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const username = useSelector(getUsername)
-  const password = useSelector(getPassword)
-  const error = useSelector(getError)
-  const isLoading = useSelector(getIsLoading)
+  const username = useSelector(getAuthUsername)
+  const password = useSelector(getAuthPassword)
+  const error = useSelector(getAuthError)
+  const isLoading = useSelector(getAuthIsLoading)
 
   useAsyncReducer({ reducers, removeAfterUnmount: true })
 

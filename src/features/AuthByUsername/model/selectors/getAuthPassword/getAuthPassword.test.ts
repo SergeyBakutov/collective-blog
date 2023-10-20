@@ -2,9 +2,9 @@ import { type DeepPartial } from '@reduxjs/toolkit'
 
 import { type IStateSchema } from 'app/providers/StoreProvider'
 
-import { getPassword } from './getPassword'
+import { getAuthPassword } from './getAuthPassword'
 
-describe('getPassword:', () => {
+describe('getAuthPassword:', () => {
   it('should return correct data', () => {
     const state: DeepPartial<IStateSchema> = {
       auth: {
@@ -14,12 +14,12 @@ describe('getPassword:', () => {
       }
     }
 
-    expect(getPassword(state as IStateSchema)).toBe('123')
+    expect(getAuthPassword(state as IStateSchema)).toBe('123')
   })
 
   it('should return initial value if empty state', () => {
     const state: DeepPartial<IStateSchema> = {}
 
-    expect(getPassword(state as IStateSchema)).toBe('')
+    expect(getAuthPassword(state as IStateSchema)).toBe('')
   })
 })

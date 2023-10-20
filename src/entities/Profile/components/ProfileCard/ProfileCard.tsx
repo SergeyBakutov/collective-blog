@@ -5,7 +5,7 @@ import { Input } from 'shared/components/Input'
 import { Text } from 'shared/components/Text'
 
 import { useSelector } from 'react-redux'
-import { getData } from '../../model/selectors/getData/getData'
+import { getProfileData } from '../../model/selectors/getProfileData/getProfileData'
 
 import classes from './ProfileCard.module.scss'
 
@@ -15,7 +15,7 @@ interface IProfileCardProps {
 
 export const ProfileCard: React.FC<IProfileCardProps> = (props) => {
   const { t } = useTranslation()
-  const data = useSelector(getData)
+  const data = useSelector(getProfileData)
 
   return (
     <div className={classes.wrapper}>

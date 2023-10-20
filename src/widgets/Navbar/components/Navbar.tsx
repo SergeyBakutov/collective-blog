@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { getAuthData, userActions } from 'entities/User'
+import { getUserAuthData, userActions } from 'entities/User'
 import { AuthModal } from 'features/AuthByUsername'
 import { Button } from 'shared/components/Button'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
@@ -18,7 +18,7 @@ export const Navbar: React.FC<INavbarProps> = memo((props) => {
   const { className } = props
   const { t } = useTranslation()
   const [isOpenAuthModal, setIsOpenAuthModal] = useState(false)
-  const authData = useSelector(getAuthData)
+  const authData = useSelector(getUserAuthData)
   const dispatch = useAppDispatch()
 
   const onLoginClick = useCallback(() => {

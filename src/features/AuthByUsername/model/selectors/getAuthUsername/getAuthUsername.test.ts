@@ -2,9 +2,9 @@ import { type DeepPartial } from '@reduxjs/toolkit'
 
 import { type IStateSchema } from 'app/providers/StoreProvider'
 
-import { getIsLoading } from './getIsLoading'
+import { getAuthUsername } from './getAuthUsername'
 
-describe('getIsLoading:', () => {
+describe('getAuthUsername:', () => {
   it('should return correct data', () => {
     const state: DeepPartial<IStateSchema> = {
       auth: {
@@ -14,12 +14,12 @@ describe('getIsLoading:', () => {
       }
     }
 
-    expect(getIsLoading(state as IStateSchema)).toBeTruthy()
+    expect(getAuthUsername(state as IStateSchema)).toBe('test')
   })
 
   it('should return initial value if empty state', () => {
     const state: DeepPartial<IStateSchema> = {}
 
-    expect(getIsLoading(state as IStateSchema)).toBeFalsy()
+    expect(getAuthUsername(state as IStateSchema)).toBe('')
   })
 })
