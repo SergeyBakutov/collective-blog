@@ -10,9 +10,9 @@ import { createReducerManager } from './createReducerManager'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function createStore(
+  navigate: NavigateFunction,
   initialState?: IStateSchema,
-  asyncReducers?: ReducersMapObject<IStateSchema>,
-  navigate?: NavigateFunction
+  asyncReducers?: ReducersMapObject<IStateSchema>
 ) {
   const rootReducers: ReducersMapObject<IStateSchema> = {
     ...asyncReducers,

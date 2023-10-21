@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 
 import { ProfileCard, fetchProfileData, profileReducer } from 'entities/Profile'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
@@ -10,7 +9,6 @@ const reducers: TReducersList = {
 }
 
 const ProfilePage: React.FC = () => {
-  const { t } = useTranslation()
   const dispatch = useAppDispatch()
 
   useAsyncReducer({ reducers, removeAfterUnmount: true })

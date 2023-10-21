@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { I18nextProvider } from 'react-i18next'
-import { type DeepPartial } from '@reduxjs/toolkit'
 
 import { type IStateSchema, StoreProvider } from 'app/providers/StoreProvider'
 import i18nForTests from 'shared/config/i18n/i18nForTests'
@@ -12,11 +11,11 @@ interface IRenderComponentOptions {
 
 export const renderComponent = (element: React.ReactElement, options?: IRenderComponentOptions): ReturnType<typeof render> =>
   render(
-    <StoreProvider initialState={options?.initialState as IStateSchema}>
-      <MemoryRouter>
+    <MemoryRouter>
+      <StoreProvider initialState={options?.initialState as IStateSchema}>
         <I18nextProvider i18n={i18nForTests}>
           {element}
         </I18nextProvider>
-      </MemoryRouter>
-    </StoreProvider>
+      </StoreProvider>
+    </MemoryRouter>
   )

@@ -1,5 +1,3 @@
-import { type DeepPartial } from '@reduxjs/toolkit'
-
 import { type IStateSchema } from 'app/providers/StoreProvider'
 
 import { getAuthUsername } from './getAuthUsername'

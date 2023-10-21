@@ -16,19 +16,19 @@ type Story = StoryObj<typeof meta>
 
 export const Light: Story = {
   decorators: [ThemeDecorator('light'), StoreDecorator({
-    auth: { username: 'admin', password: '123', isLoading: false }
+    auth: { username: 'admin', password: '123' }
   })]
 }
 
 export const Dark: Story = {
   decorators: [ThemeDecorator('dark'), StoreDecorator(
-    { auth: { username: 'admin', password: '123', isLoading: false } }
+    { auth: { username: 'admin', password: '123' } }
   )]
 }
 
 export const Error: Story = {
   decorators: [ThemeDecorator('light'), StoreDecorator({
-    auth: { username: 'qwerty', password: '111', error: 'Error', isLoading: false }
+    auth: { username: 'qwerty', password: '111', error: 'Error' }
   })]
 }
 
