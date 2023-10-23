@@ -75,3 +75,30 @@ export const OnlyDescriptionDark: Story = {
   },
   decorators: [ThemeDecorator('dark')]
 }
+
+export const AlignLeft: Story = {
+  args: {
+    title: 'Title',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet.',
+    align: 'left'
+  },
+  decorators: [ThemeDecorator('light')]
+}
+
+export const AlignCenter: Story = {
+  args: {
+    title: 'Title',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet.',
+    align: 'center'
+  },
+  decorators: [ThemeDecorator('light')]
+}
+
+export const AlignRight: Story = {
+  args: {
+    title: 'Title',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet.',
+    align: 'right'
+  },
+  decorators: [ThemeDecorator('light')]
+}

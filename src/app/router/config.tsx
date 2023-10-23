@@ -6,7 +6,11 @@ import { NotFoundPage } from 'pages/NotFoundPage'
 import { ProfilePage } from 'pages/ProfilePage'
 import { APP_ROUTES } from 'shared/router'
 
-export const routes: RouteProps[] = [
+type TAppRouteProps = RouteProps & {
+  authOnly?: boolean
+}
+
+export const routes: TAppRouteProps[] = [
   {
     path: APP_ROUTES.main,
     element: <MainPage />
@@ -17,7 +21,8 @@ export const routes: RouteProps[] = [
   },
   {
     path: APP_ROUTES.profile,
-    element: <ProfilePage />
+    element: <ProfilePage />,
+    authOnly: true
   },
   {
     path: APP_ROUTES['not-found'],

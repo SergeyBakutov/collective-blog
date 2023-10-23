@@ -13,8 +13,6 @@
   "Password": "Password",
   "Authorization": "Authorization",
   "Invalid username or password": "Invalid username or password",
-  "User profile": "User profile",
-  "Edit": "Edit",
-  "Firstname": "Firstname",
-  "Lastname": "Lastname"
+  "Currency": "Currency",
+  "Country": "Country"
 }

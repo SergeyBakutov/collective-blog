@@ -19,6 +19,7 @@ export const sidebarItems: ISidebarItem[] = [
   {
     path: APP_ROUTES.profile,
     text: 'Profile',
-    Icon: ProfilePageIcon
+    Icon: ProfilePageIcon,
+    authOnly: true
   }
 ]

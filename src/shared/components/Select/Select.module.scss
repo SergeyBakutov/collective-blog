@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.readonly {
+  opacity: 0.75;
+}
+
+.select {
+  background: none;
+  outline: none;
+  border: 1px solid var(--background-inverted-color);
+  color: var(--primary-color);
+  padding-right: 10px;
+}

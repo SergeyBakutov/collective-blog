@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { ProfileCard, fetchProfileData, profileReducer } from 'entities/Profile'
+import { EditableProfileCard, fetchProfileData, profileReducer } from 'features/EditableProfileCard'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 
@@ -21,7 +21,7 @@ const ProfilePage: React.FC = () => {
 
   return (
     <div>
-      <ProfileCard />
+      <EditableProfileCard />
     </div>
   )
 }

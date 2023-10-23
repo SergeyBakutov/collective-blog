@@ -25,3 +25,10 @@ export const Light: Story = {
 export const Dark: Story = {
   decorators: [ThemeDecorator('dark')]
 }
+
+export const Readonly: Story = {
+  args: {
+    readonly: true
+  },
+  decorators: [ThemeDecorator('light')]
+}

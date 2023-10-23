@@ -4,10 +4,11 @@ import { classNames } from 'shared/utils/classNames'
 
 import classes from './Input.module.scss'
 
-interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'> {
+interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'> {
   className?: string
   value: string
   label?: string
+  readonly?: boolean
   onChange: (value: string) => void
 }
 
@@ -17,6 +18,7 @@ export const Input: React.FC<IInputProps> = memo((props) => {
     value,
     label,
     type = 'text',
+    readonly = false,
     onChange,
     ...otherProps
   } = props
@@ -27,11 +29,18 @@ export const Input: React.FC<IInputProps> = memo((props) => {
   }
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <div className={classNames(classes.wrapper, { [classes.readonly]: readonly }, [className])}>
       {label && (
         <label className={classes.label} htmlFor={id}>{label}</label>
       )}
-      <input id={id} value={value} type={type} onChange={onChangeHandler} {...otherProps} />
+      <input
+        id={id}
+        value={value}
+        type={type}
+        disabled={readonly}
+        onChange={onChangeHandler}
+        {...otherProps}
+      />
     </div>
   )
 })

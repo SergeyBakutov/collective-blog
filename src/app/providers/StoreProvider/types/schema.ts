@@ -1,10 +1,8 @@
-import { type ICounterStateSchema } from 'entities/Counter'
-import { type IProfileStateSchema } from 'entities/Profile'
 import { type IUserStateSchema } from 'entities/User'
 import { type IAuthStateSchema } from 'features/AuthByUsername'
+import { type IProfileStateSchema } from 'features/EditableProfileCard'
 
 export interface IStateSchema {
-  counter: ICounterStateSchema
   user: IUserStateSchema
 
   // Асинхронные редьюсеры

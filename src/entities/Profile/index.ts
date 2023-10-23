@@ -1,5 +1,2 @@
 export { ProfileCard } from './components/ProfileCard/ProfileCard'
-export { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData'
-export { profileActions, profileReducer } from './model/slice/profileSlice'
 export type { IProfile } from './model/types/profile'
-export type { IProfileStateSchema } from './model/types/schema'

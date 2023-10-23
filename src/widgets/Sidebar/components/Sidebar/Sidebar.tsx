@@ -1,14 +1,16 @@
 import { memo, useState } from 'react'
+import { useSelector } from 'react-redux'
 
+import { getUserAuthData } from 'entities/User'
 import { LangSwitcher } from 'features/LangSwitcher'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { Button } from 'shared/components/Button'
 import { classNames } from 'shared/utils/classNames'
 
-import classes from './Sidebar.module.scss'
-import { sidebarItems } from 'widgets/Sidebar/model/items'
+import { sidebarItems } from '../../model/items'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
 
+import classes from './Sidebar.module.scss'
 interface ISidebarProps {
   className?: string
 }
@@ -16,6 +18,7 @@ interface ISidebarProps {
 export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
   const { className } = props
   const [isCollapsed, setIsCollapsed] = useState(false)
+  const authData = useSelector(getUserAuthData)
 
   const onToggleIsCollapsed = (): void => {
     setIsCollapsed(prev => !prev)
@@ -27,7 +30,7 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
       className={classNames(classes.wrapper, { [classes.collapsed]: isCollapsed }, [className])}
     >
       <div className={classes.links}>
-        {sidebarItems.map((item) =>
+        {sidebarItems.filter((item) => !(item.authOnly && !authData)).map((item) =>
           <SidebarItem key={item.path} item={item} collapsed={isCollapsed} />
         )}
       </div>
