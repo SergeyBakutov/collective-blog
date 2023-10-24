@@ -10,5 +10,12 @@
   "Username": "Username",
   "Avatar (link)": "Avatar (link)",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
-  "Try refreshing the page": "Try refreshing the page"
+  "Try refreshing the page": "Try refreshing the page",
+  "Incorrect firstname": "Incorrect firstname",
+  "Incorrect lastname": "Incorrect lastname",
+  "Incorrect age": "Incorrect age",
+  "Incorrect city": "Incorrect city",
+  "Incorrect username": "Incorrect username",
+  "Incorrect avatar": "Incorrect avatar",
+  "No profile data": "No profile data"
 }

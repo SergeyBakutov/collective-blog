@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
@@ -15,10 +15,12 @@ import { getProfileFormData } from '../model/selectors/getProfileFormData/getPro
 import { getProfileIsLoading } from '../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError'
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly'
+import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { updateProfileData } from '../model/services/updateProfileData/updateProfileData'
 import { profileActions } from '../model/slice/profileSlice'
 
 import classes from './EditableProfileCard.module.scss'
+import { type TValidateError } from '../model/types/validateError'
 
 interface IEditableProfileCardProps {
   className?: string
@@ -32,6 +34,19 @@ export const EditableProfileCard: React.FC<IEditableProfileCardProps> = (props) 
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
   const readonly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateErrors)
+
+  const validateErrorsWithTranslate = useMemo<Record<TValidateError, string>>(() => {
+    return {
+      INCORRECT_FIRSTNAME: t('Incorrect firstname'),
+      INCORRECT_LASTNAME: t('Incorrect lastname'),
+      INCORRECT_AGE: t('Incorrect age'),
+      INCORRECT_CITY: t('Incorrect city'),
+      INCORRECT_USERNAME: t('Incorrect username'),
+      INCORRECT_AVATAR: t('Incorrect avatar'),
+      NO_DATA: t('No profile data')
+    }
+  }, [t])
 
   const onEdit = useCallback(() => {
     dispatch(profileActions.setReadonly(false))
@@ -112,6 +127,13 @@ export const EditableProfileCard: React.FC<IEditableProfileCardProps> = (props) 
             </div>
           )}
       </div>
+      {validateErrors?.length && (
+        <div className={classes.validateErrors}>
+          {validateErrors.map((error) => {
+            return <Text key={error} color="error" description={validateErrorsWithTranslate[error]} />
+          })}
+        </div>
+      )}
       <ProfileCard data={formData} readonly={readonly} onChange={onChangeProfileData} />
     </div>
   )
