@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import AvatarExample from 'shared/assets/avatar-example.jpg'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 
 import { type IProfile } from '../../model/types/profile'
@@ -14,7 +13,7 @@ const profile: IProfile = {
   city: 'Moscow',
   currency: 'RUB',
   username: 'test',
-  avatar: AvatarExample
+  avatar: 'https://phonoteka.org/uploads/posts/2022-09/1663693001_1-phonoteka-org-p-muzhskie-oboi-na-telefon-vkontakte-1.jpg'
 }
 
 const meta = {

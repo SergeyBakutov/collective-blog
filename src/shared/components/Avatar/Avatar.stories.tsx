@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import AvatarExample from 'shared/assets/avatar-example.jpg'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 
 import { Avatar } from './Avatar'
@@ -10,7 +9,7 @@ const meta = {
   component: Avatar,
   tags: ['autodocs'],
   args: {
-    src: AvatarExample
+    src: 'https://phonoteka.org/uploads/posts/2022-09/1663693001_1-phonoteka-org-p-muzhskie-oboi-na-telefon-vkontakte-1.jpg'
   }
 } satisfies Meta<typeof Avatar>
 
