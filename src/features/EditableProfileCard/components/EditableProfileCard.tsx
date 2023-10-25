@@ -18,9 +18,9 @@ import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getPro
 import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { updateProfileData } from '../model/services/updateProfileData/updateProfileData'
 import { profileActions } from '../model/slice/profileSlice'
+import { type TValidateError } from '../model/types/validateError'
 
 import classes from './EditableProfileCard.module.scss'
-import { type TValidateError } from '../model/types/validateError'
 
 interface IEditableProfileCardProps {
   className?: string

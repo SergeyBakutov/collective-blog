@@ -14,8 +14,8 @@ import { CountrySelect } from 'entities/Country'
 interface IProfileCardProps {
   data?: IProfile
   readonly?: boolean
-  onChange?: (field: keyof IProfile, value: string) => void
   className?: string
+  onChange?: (field: keyof IProfile, value: string) => void
 }
 
 export const ProfileCard: React.FC<IProfileCardProps> = (props) => {

@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import AvatarExample from 'shared/assets/avatar-example.jpg'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 
 import { Avatar } from './Avatar'
-import ExampleImg from './example.jpg'
 
 const meta = {
   title: 'shared/Avatar',
   component: Avatar,
   tags: ['autodocs'],
   args: {
-    src: ExampleImg
+    src: AvatarExample
   }
 } satisfies Meta<typeof Avatar>
 

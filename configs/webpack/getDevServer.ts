@@ -1,8 +1,6 @@
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 
-interface TDevServerOptions {
-  port: number
-}
+import { type TDevServerOptions } from './types/devServer'
 
 export function getDevServer(options: TDevServerOptions): DevServerConfiguration {
   const { port } = options

@@ -4,14 +4,10 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-interface TPluginsOptions {
-  htmlTemplatePath: string
-  isDev: boolean
-  apiUrl: string
-}
+import { type TPluginsOptions } from './types/plugins'
 
 export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {
-  const { htmlTemplatePath, isDev, apiUrl } = options
+  const { htmlTemplatePath, isDev, apiUrl, project } = options
   const plugins: webpack.WebpackPluginInstance[] = [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: htmlTemplatePath }),
@@ -21,7 +17,8 @@ export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInsta
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: isDev,
-      __API__: JSON.stringify(apiUrl)
+      __API__: JSON.stringify(apiUrl),
+      __PROJECT__: JSON.stringify(project)
     })
   ]
 

@@ -1,10 +1,8 @@
 import type webpack from 'webpack'
 
-interface TResolversOptions {
-  srcPath: string
-}
+import { type TResolversOptions } from './types/resolvers'
 
-export function getResolvers (options: TResolversOptions): webpack.ResolveOptions {
+export function getResolvers(options: TResolversOptions): webpack.ResolveOptions {
   const { srcPath } = options
 
   return {

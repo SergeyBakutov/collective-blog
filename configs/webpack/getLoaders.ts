@@ -2,11 +2,9 @@ import type webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
 
-interface TLoadersOptions {
-  isDev: boolean
-}
+import { type TLoadersOptions } from './types/loaders'
 
-export function getLoaders (options: TLoadersOptions): webpack.RuleSetRule[] {
+export function getLoaders(options: TLoadersOptions): webpack.RuleSetRule[] {
   const { isDev } = options
 
   const typescriptLoader = {

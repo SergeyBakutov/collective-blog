@@ -1,29 +1,14 @@
 import type webpack from 'webpack'
 
+import { type TConfigOptions } from './types/config'
+
 import { getDevServer } from './getDevServer'
 import { getLoaders } from './getLoaders'
 import { getPlugins } from './getPlugins'
 import { getResolvers } from './getResolvers'
 
-type TMode = 'development' | 'production'
-
-interface TPaths {
-  entry: string
-  output: string
-  htmlTemplate: string
-  src: string
-}
-
-export interface TConfigOptions {
-  mode: TMode
-  paths: TPaths
-  isDev: boolean
-  port: number
-  apiUrl: string
-}
-
 export function getConfig(options: TConfigOptions): webpack.Configuration {
-  const { mode, paths, isDev, port, apiUrl } = options
+  const { mode, paths, isDev, port, apiUrl, project } = options
 
   return {
     mode,
@@ -37,7 +22,8 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
     plugins: getPlugins({
       htmlTemplatePath: paths.htmlTemplate,
       isDev,
-      apiUrl
+      apiUrl,
+      project
     }),
     module: {
       rules: getLoaders({

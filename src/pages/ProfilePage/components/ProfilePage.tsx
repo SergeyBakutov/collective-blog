@@ -14,9 +14,9 @@ const ProfilePage: React.FC = () => {
   useAsyncReducer({ reducers, removeAfterUnmount: true })
 
   useEffect(() => {
-    dispatch(fetchProfileData()).catch(error => {
-      console.log(error)
-    })
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   return (
