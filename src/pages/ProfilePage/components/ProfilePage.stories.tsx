@@ -21,7 +21,6 @@ const meta = {
   title: 'pages/ProfilePage',
   component: ProfilePage,
   tags: ['autodocs']
-
 } satisfies Meta<typeof ProfilePage>
 
 export default meta
