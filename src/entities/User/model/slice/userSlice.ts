@@ -4,7 +4,9 @@ import { type IUserStateSchema } from '../types/schema'
 import { type IUser } from '../types/user'
 import { LOCAL_STORAGE_USER_KEY } from 'shared/constants/localStorage'
 
-const initialState: IUserStateSchema = {}
+const initialState: IUserStateSchema = {
+  _isCheckedAuthData: false
+}
 
 const userSlice = createSlice({
   name: 'user',
@@ -19,6 +21,8 @@ const userSlice = createSlice({
       if (user) {
         state.authData = JSON.parse(user)
       }
+
+      state._isCheckedAuthData = true
     },
     logout(state) {
       state.authData = undefined
