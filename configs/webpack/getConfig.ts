@@ -17,7 +17,8 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
       filename: '[name].[contenthash].js',
       path: paths.output,
       assetModuleFilename: 'assets/[contenthash][ext]',
-      clean: true
+      clean: true,
+      publicPath: '/'
     },
     plugins: getPlugins({
       htmlTemplatePath: paths.htmlTemplate,

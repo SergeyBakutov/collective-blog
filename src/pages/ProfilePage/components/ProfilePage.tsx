@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { memo, useEffect } from 'react'
 
 import { EditableProfileCard, fetchProfileData, profileReducer } from 'features/EditableProfileCard'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
@@ -26,4 +26,4 @@ const ProfilePage: React.FC = () => {
   )
 }
 
-export default ProfilePage
+export default memo(ProfilePage)

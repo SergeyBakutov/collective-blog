@@ -1,6 +1,8 @@
 import { type RouteProps } from 'react-router-dom'
 
 import { AboutPage } from 'pages/AboutPage'
+import { ArticleDetailsPage } from 'pages/ArticleDetailsPage'
+import { ArticlesPage } from 'pages/ArticlesPage'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/NotFoundPage'
 import { ProfilePage } from 'pages/ProfilePage'
@@ -22,6 +24,16 @@ export const routes: TAppRouteProps[] = [
   {
     path: APP_ROUTES.profile,
     element: <ProfilePage />,
+    authOnly: true
+  },
+  {
+    path: APP_ROUTES.articles,
+    element: <ArticlesPage />,
+    authOnly: true
+  },
+  {
+    path: `${APP_ROUTES['article-details']}:id`,
+    element: <ArticleDetailsPage />,
     authOnly: true
   },
   {

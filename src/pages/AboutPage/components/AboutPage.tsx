@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const AboutPage: React.FC = () => {
@@ -8,4 +9,4 @@ const AboutPage: React.FC = () => {
   )
 }
 
-export default AboutPage
+export default memo(AboutPage)
