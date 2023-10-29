@@ -102,3 +102,20 @@ export const AlignRight: Story = {
   },
   decorators: [ThemeDecorator('light')]
 }
+
+export const SizeL: Story = {
+  args: {
+    size: 'l',
+    title: 'Title',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet.'
+  },
+  decorators: [ThemeDecorator('light')]
+}
+
+export const SizeM: Story = {
+  args: {
+    title: 'Title',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eveniet.'
+  },
+  decorators: [ThemeDecorator('light')]
+}

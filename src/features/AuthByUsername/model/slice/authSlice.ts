@@ -25,10 +25,10 @@ const authSlice = createSlice({
       state.isLoading = true
       state.error = undefined
     })
-    builder.addCase(authByUsername.fulfilled, (state, action) => {
+    builder.addCase(authByUsername.fulfilled, (state) => {
       state.isLoading = false
     })
-    builder.addCase(authByUsername.rejected, (state, action) => {
+    builder.addCase(authByUsername.rejected, (state, action: PayloadAction<string | undefined>) => {
       state.isLoading = false
       state.error = action.payload
     })

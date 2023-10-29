@@ -22,7 +22,7 @@ export const AppLink: React.FC<React.PropsWithChildren<IAppLinkProps>> = memo((p
 
   return (
     <Link
-      className={classNames('', {}, [className, classes[color]])}
+      className={classNames(classes.wrapper, {}, [className, classes[color]])}
       {...otherProps}
     >
       {children}

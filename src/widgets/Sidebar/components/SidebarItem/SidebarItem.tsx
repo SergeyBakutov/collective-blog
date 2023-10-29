@@ -1,8 +1,8 @@
-/* eslint-disable react/display-name */
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { AppLink } from 'shared/components/AppLink'
+import { Icon } from 'shared/components/Icon'
 import { classNames } from 'shared/utils/classNames'
 
 import { type ISidebarItem } from '../../model/types/item'
@@ -24,7 +24,7 @@ export const SidebarItem: React.FC<ISidebarItemProps> = memo((props) => {
       color="inverted"
       to={item.path}
     >
-      <item.Icon className={classes.linkIcon} />
+      <Icon color="inverted" Svg={item.Icon} />
       <span>{t(item.text)}</span>
     </AppLink>
   )

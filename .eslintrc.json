@@ -43,7 +43,7 @@
         "react/react-in-jsx-scope": "off",
         "@typescript-eslint/strict-boolean-expressions": "off",
         "react/prop-types": "off",
-        "@typescript-eslint/no-floating-promises": "warn",
+        "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/space-before-function-paren": "off",
         "@typescript-eslint/no-invalid-void-type": "off",

@@ -5,6 +5,10 @@
   border: none;
   appearance: none;
   padding: 8px 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .outline {
