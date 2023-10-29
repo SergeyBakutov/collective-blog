@@ -34,7 +34,8 @@ describe('articleDetailsSlice:', () => {
         state as IArticleDetailsSchema,
         fetchArticleById.fulfilled(article as IArticle, '', 1)))
       .toEqual({
-        data: article
+        data: article,
+        isLoading: false
       })
   })
 })
