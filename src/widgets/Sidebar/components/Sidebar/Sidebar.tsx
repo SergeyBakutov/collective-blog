@@ -7,7 +7,7 @@ import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { Button } from 'shared/components/Button'
 import { classNames } from 'shared/utils/classNames'
 
-import { sidebarItems } from '../../model/items'
+import { getSidebarItems } from '../../model/selectors/getISidebartems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
 
 import classes from './Sidebar.module.scss'
@@ -19,6 +19,7 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
   const { className } = props
   const [isCollapsed, setIsCollapsed] = useState(false)
   const authData = useSelector(getUserAuthData)
+  const sidebarItems = useSelector(getSidebarItems)
 
   const onToggleIsCollapsed = (): void => {
     setIsCollapsed(prev => !prev)
