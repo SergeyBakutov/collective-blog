@@ -109,23 +109,39 @@
       "id": 1,
       "username": "admin",
       "password": "123",
+      "avatar": "https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png",
       "role": "admin"
     },
     {
       "id": 2,
       "username": "user",
       "password": "123",
+      "avatar": "https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296225180472502.png",
       "role": "user"
     }
   ],
-  "profile": {
-    "firstname": "Ivan",
-    "lastname": "Ivanov",
-    "age": 25,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://phonoteka.org/uploads/posts/2022-09/1663693001_1-phonoteka-org-p-muzhskie-oboi-na-telefon-vkontakte-1.jpg"
-  }
+  "profile": [
+    {
+      "id": 1,
+      "firstname": "Ivan",
+      "lastname": "Ivanov",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png"
+    },
+    {
+      "id": 2,
+      "firstname": "Petr",
+      "lastname": "Petrov",
+      "age": 24,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Saint Petersburg",
+      "username": "user",
+      "avatar": "https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296225180472502.png"
+    }
+  ]
 }

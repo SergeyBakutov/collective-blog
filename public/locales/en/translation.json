@@ -14,5 +14,9 @@
   "Authorization": "Authorization",
   "Invalid username or password": "Invalid username or password",
   "Currency": "Currency",
-  "Country": "Country"
+  "Country": "Country",
+  "No comments": "No comments",
+  "Send": "Send",
+  "New comment": "New comment",
+  "An error occurred while sending a comment. Try again.": "An error occurred while sending a comment. Try again."
 }

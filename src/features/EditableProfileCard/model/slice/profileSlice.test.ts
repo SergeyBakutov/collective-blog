@@ -80,7 +80,7 @@ describe('profileSlice:', () => {
       isLoading: false
     }
 
-    expect(profileReducer(profileState as IProfileStateSchema, fetchProfileData.fulfilled(profile, '')))
+    expect(profileReducer(profileState as IProfileStateSchema, fetchProfileData.fulfilled(profile, '', 1)))
       .toEqual({
         data: profile,
         formData: profile,

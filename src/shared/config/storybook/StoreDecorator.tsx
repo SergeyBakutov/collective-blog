@@ -3,13 +3,17 @@ import { type StoryFn } from '@storybook/react'
 
 import { type IStateSchema, StoreProvider } from 'app/providers/StoreProvider'
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
+import { addNewCommentForArticleReducer } from 'features/AddNewCommentForArticle/model/slice/addNewCommentForArticleSlice'
 import { authReducer } from 'features/AuthByUsername/model/slice/authSlice'
 import { profileReducer } from 'features/EditableProfileCard'
+import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slice/articleDetailsCommentsSlice'
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<IStateSchema>> = {
   auth: authReducer,
   profile: profileReducer,
-  articleDetails: articleDetailsReducer
+  articleDetails: articleDetailsReducer,
+  articleDetailsComments: articleDetailsCommentsReducer,
+  addNewCommentForArticle: addNewCommentForArticleReducer
 }
 
 // eslint-disable-next-line react/display-name

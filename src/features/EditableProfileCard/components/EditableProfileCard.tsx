@@ -5,12 +5,14 @@ import { useSelector } from 'react-redux'
 import { type ICountry } from 'entities/Country'
 import { type ICurrency } from 'entities/Currency'
 import { type IProfile, ProfileCard } from 'entities/Profile'
+import { getUserAuthData } from 'entities/User'
 import { Button } from 'shared/components/Button'
 import { Loader } from 'shared/components/Loader'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { classNames } from 'shared/utils/classNames'
 
+import { getProfileData } from '../model/selectors/getProfileData/getProfileData'
 import { getProfileFormData } from '../model/selectors/getProfileFormData/getProfileFormData'
 import { getProfileIsLoading } from '../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError'
@@ -30,11 +32,14 @@ export const EditableProfileCard: React.FC<IEditableProfileCardProps> = (props) 
   const { className } = props
   const { t } = useTranslation('profile')
   const dispatch = useAppDispatch()
+  const authData = useSelector(getUserAuthData)
+  const profileData = useSelector(getProfileData)
   const formData = useSelector(getProfileFormData)
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
   const readonly = useSelector(getProfileReadonly)
   const validateErrors = useSelector(getProfileValidateErrors)
+  const canEdit = authData?.id === profileData?.id
 
   const validateErrorsWithTranslate = useMemo<Record<TValidateError, string>>(() => {
     return {
@@ -116,16 +121,21 @@ export const EditableProfileCard: React.FC<IEditableProfileCardProps> = (props) 
     <div className={classNames(classes.wrapper, { [classes.editing]: !readonly }, [className])}>
       <div className={classes.header}>
         <Text title={t('User profile')} />
-        {readonly
-          ? (
-            <Button color="outline" onClick={onEdit}>{t('Edit')}</Button>
-          )
-          : (
-            <div className={classes.buttons}>
-              <Button color="backgroundInverted" onClick={onCancelEdit}>{t('Cancel')}</Button>
-              <Button color="outline" onClick={onSave}>{t('Save')}</Button>
-            </div>
-          )}
+        {canEdit && (
+          <>
+            {readonly
+              ? (
+                <Button color="outline" onClick={onEdit}>{t('Edit')}</Button>
+              )
+              : (
+                <div className={classes.buttons}>
+                  <Button color="backgroundInverted" onClick={onCancelEdit}>{t('Cancel')}</Button>
+                  <Button color="outline" onClick={onSave}>{t('Save')}</Button>
+                </div>
+              )}
+          </>
+        )}
+
       </div>
       {validateErrors?.length && (
         <div className={classes.validateErrors}>

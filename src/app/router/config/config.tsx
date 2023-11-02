@@ -22,7 +22,7 @@ export const routes: TAppRouteProps[] = [
     element: <AboutPage />
   },
   {
-    path: APP_ROUTES.profile,
+    path: `${APP_ROUTES.profile}:id`,
     element: <ProfilePage />,
     authOnly: true
   },

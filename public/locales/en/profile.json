@@ -17,5 +17,6 @@
   "Incorrect city": "Incorrect city",
   "Incorrect username": "Incorrect username",
   "Incorrect avatar": "Incorrect avatar",
-  "No profile data": "No profile data"
+  "No profile data": "No profile data",
+  "Profile not found": "Profile not found"
 }

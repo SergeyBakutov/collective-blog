@@ -17,5 +17,6 @@
   "Incorrect city": "Некорректный город",
   "Incorrect username": "Некорректное имя пользователя",
   "Incorrect avatar": "Некорректный аватар",
-  "No profile data": "Нет данных профиля"
+  "No profile data": "Нет данных профиля",
+  "Profile not found": "Профиль не найден"
 }

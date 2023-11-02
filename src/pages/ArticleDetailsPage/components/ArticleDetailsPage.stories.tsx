@@ -91,6 +91,13 @@ export const Light: Story = {
   decorators: [ThemeDecorator('light'), StoreDecorator({
     articleDetails: {
       data: article
+    },
+    articleDetailsComments: {
+      ids: [1, 2],
+      entities: {
+        1: { id: 1, text: 'comment 1', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } },
+        2: { id: 2, text: 'comment 2', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } }
+      }
     }
   })]
 }
@@ -99,6 +106,13 @@ export const Dark: Story = {
   decorators: [ThemeDecorator('dark'), StoreDecorator({
     articleDetails: {
       data: article
+    },
+    articleDetailsComments: {
+      ids: [1, 2],
+      entities: {
+        1: { id: 1, text: 'comment 1', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } },
+        2: { id: 2, text: 'comment 2', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } }
+      }
     }
   })]
 }

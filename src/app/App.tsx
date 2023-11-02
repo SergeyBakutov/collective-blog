@@ -25,7 +25,7 @@ export const App: React.FC = () => {
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
       <div className="content">
-        <Sidebar />
+        <Sidebar className="sidebar" />
         {isCheckedAuthData && <AppRouter />}
       </div>
     </div>

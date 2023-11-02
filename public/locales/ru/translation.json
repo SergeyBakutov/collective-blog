@@ -14,5 +14,9 @@
   "Authorization": "Авторизация",
   "Invalid username or password": "Некорректное имя пользователя или пароль",
   "Currency": "Валюта",
-  "Country": "Страна"
+  "Country": "Страна",
+  "No comments": "Нет комментариев",
+  "Send": "Отправить",
+  "New comment": "Новый комментарий",
+  "An error occurred while sending a comment. Try again.": "При отправке комментария возникла ошибка. Попробуйте еще раз."
 }
