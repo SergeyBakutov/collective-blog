@@ -16,6 +16,11 @@ const article: IArticle = {
   type: [
     'it'
   ],
+  user: {
+    id: 1,
+    username: 'Admin',
+    avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png'
+  },
   blocks: [
     {
       id: 1,

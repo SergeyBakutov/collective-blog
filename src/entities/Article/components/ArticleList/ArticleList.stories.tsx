@@ -1,14 +1,10 @@
-/* eslint-disable i18next/no-literal-string */
-import { memo } from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { classNames } from 'shared/utils/classNames'
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 
-import classes from './ArticlesPage.module.scss'
-import { ArticleList, type IArticle } from 'entities/Article'
+import { type IArticle } from '../../model/types/article'
 
-interface IArticlesPageProps {
-  className?: string
-}
+import { ArticleList } from './ArticleList'
 
 const article: IArticle =
 {
@@ -90,14 +86,58 @@ const article: IArticle =
   ]
 }
 
-const ArticlesPage: React.FC<IArticlesPageProps> = (props) => {
-  const { className } = props
+const meta = {
+  title: 'entities/Article/ArticleList',
+  component: ArticleList,
+  tags: ['autodocs'],
+  args: {
+    articles: new Array(16).fill(0).map((_, index) => ({ ...article, id: index }))
+  }
+} satisfies Meta<typeof ArticleList>
 
-  return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
-      <ArticleList view="tile" articles={new Array(16).fill(0).map((_, index) => ({ ...article, id: index }))} />
-    </div>
-  )
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const TileLight: Story = {
+  args: {
+    view: 'tile'
+  },
+  decorators: [ThemeDecorator('light')]
 }
 
-export default memo(ArticlesPage)
+export const TileDark: Story = {
+  args: {
+    view: 'tile'
+  },
+  decorators: [ThemeDecorator('dark')]
+}
+
+export const TileIsLoading: Story = {
+  args: {
+    view: 'tile',
+    isLoading: true
+  },
+  decorators: [ThemeDecorator('light')]
+}
+
+export const ListLight: Story = {
+  args: {
+    view: 'list'
+  },
+  decorators: [ThemeDecorator('light')]
+}
+
+export const ListDark: Story = {
+  args: {
+    view: 'list'
+  },
+  decorators: [ThemeDecorator('dark')]
+}
+
+export const ListIsLoading: Story = {
+  args: {
+    view: 'list',
+    isLoading: true
+  },
+  decorators: [ThemeDecorator('light')]
+}

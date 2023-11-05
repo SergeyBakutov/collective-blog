@@ -1,0 +1,11 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.tile {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}

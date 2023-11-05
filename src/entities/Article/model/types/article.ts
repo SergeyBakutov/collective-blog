@@ -1,3 +1,5 @@
+import { type IUser } from 'entities/User'
+
 type TArticleType = 'it' | 'science' | 'economics'
 
 type TArticleBlockType = 'text' | 'code' | 'image'
@@ -28,6 +30,7 @@ export type TArticleBlock = IArticleTextBlock | IArticleCodeBlock | IArticleImag
 
 export interface IArticle {
   id: number
+  user: IUser
   title: string
   subtitle: string
   img: string
@@ -36,3 +39,5 @@ export interface IArticle {
   type: TArticleType[]
   blocks: TArticleBlock[]
 }
+
+export type TArticlesView = 'list' | 'tile'
