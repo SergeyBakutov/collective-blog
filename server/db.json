@@ -83,6 +83,142 @@
           ]
         }
       ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "React news",
+      "subtitle": "Что нового в React за 2023 год?",
+      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
+      "views": 512,
+      "createdAt": "03.11.2023",
+      "type": [
+        "it"
+      ],
+      "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
+          ]
+        },
+        {
+          "id": 4,
+          "type": "code",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        },
+        {
+          "id": 5,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "image",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": 3,
+          "type": "code",
+          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
+        },
+        {
+          "id": 7,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
+          ]
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! "
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Redux Toolkit news",
+      "subtitle": "Обновления в Redux Toolkit",
+      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
+      "views": 1245,
+      "createdAt": "01.11.2023",
+      "type": [
+        "it"
+      ],
+      "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
+          ]
+        },
+        {
+          "id": 4,
+          "type": "code",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        },
+        {
+          "id": 5,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "image",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": 3,
+          "type": "code",
+          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
+        },
+        {
+          "id": 7,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
+          ]
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! "
+          ]
+        }
+      ]
     }
   ],
   "comments": [
