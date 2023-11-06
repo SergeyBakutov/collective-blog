@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next'
 import { EditableProfileCard, fetchProfileData, profileReducer } from 'features/EditableProfileCard'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
-import { Page } from 'shared/components/Page'
 import { Text } from 'shared/components/Text'
+import { Page } from 'widgets/Page'
 
 const reducers: TReducersList = {
   profile: profileReducer

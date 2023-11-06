@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next'
 
 import { ArticleList, type TArticlesView } from 'entities/Article'
 import { ArticleViewSwitcher } from 'features/ArticleViewSwitcher'
-import { Page } from 'shared/components/Page'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { classNames } from 'shared/utils/classNames'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
+import { Page } from 'widgets/Page'
 
 import { getArticlesError, getArticlesIsLoading, getArticlesView } from '../model/selectors/articlesSelectors'
 import { fetchNextArticles } from '../model/services/fetchNextArticles/fetchNextArticles'

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 import { classNames } from 'shared/utils/classNames'
-import { Page } from 'shared/components/Page'
+import { Page } from 'widgets/Page'
 
 import classes from './NotFoundPage.module.scss'
 
