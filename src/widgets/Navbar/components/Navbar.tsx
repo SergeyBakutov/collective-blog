@@ -35,21 +35,21 @@ export const Navbar: React.FC<INavbarProps> = memo((props) => {
 
   if (authData) {
     return (
-      <div className={classNames(classes.wrapper, {}, [className])}>
+      <header className={classNames(classes.wrapper, {}, [className])}>
         <Button color="clearInverted" onClick={onLogoutClick}>
           {t('Logout')}
         </Button>
-      </div>
+      </header>
     )
   }
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <header className={classNames(classes.wrapper, {}, [className])}>
       <Button color="clearInverted" onClick={onLoginClick}>
         {t('Login')}
       </Button>
       <AuthModal isOpen={isOpenAuthModal} onClose={onCloseAuthModal} />
-    </div>
+    </header>
   )
 })
 

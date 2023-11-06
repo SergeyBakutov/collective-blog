@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { EditableProfileCard, fetchProfileData, profileReducer } from 'features/EditableProfileCard'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
+import { Page } from 'shared/components/Page'
 import { Text } from 'shared/components/Text'
 
 const reducers: TReducersList = {
@@ -25,13 +26,17 @@ const ProfilePage: React.FC = () => {
   }, [dispatch, id])
 
   if (!id && __PROJECT__ !== 'storybook') {
-    return <Text title={t('Profile not found')} />
+    return (
+      <Page>
+        <Text title={t('Profile not found')} />
+      </Page>
+    )
   }
 
   return (
-    <div>
+    <Page>
       <EditableProfileCard />
-    </div>
+    </Page>
   )
 }
 

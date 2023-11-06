@@ -3,13 +3,23 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { type IThunkApiConfig } from 'app/providers/StoreProvider'
 import { type IArticle } from 'entities/Article'
 
-export const fetchArticles = createAsyncThunk<IArticle[], void, IThunkApiConfig<string>>(
+import { getArticlesLimit } from '../../selectors/articlesSelectors'
+
+interface IFetchArticlesProps {
+  page: number
+}
+
+export const fetchArticles = createAsyncThunk<IArticle[], IFetchArticlesProps, IThunkApiConfig<string>>(
   'articles/fetchArticles',
-  async (_, { extra, rejectWithValue }) => {
+  async ({ page }, { extra, rejectWithValue, getState }) => {
+    const limit = getArticlesLimit(getState())
+
     try {
       const response = await extra.api.get<IArticle[]>('/articles', {
         params: {
-          _expand: 'user'
+          _expand: 'user',
+          _page: page,
+          _limit: limit
         }
       })
 

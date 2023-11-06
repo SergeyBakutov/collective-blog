@@ -26,15 +26,15 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
   }
 
   return (
-    <div
+    <aside
       data-testid="sidebar"
       className={classNames(classes.wrapper, { [classes.collapsed]: isCollapsed }, [className])}
     >
-      <div className={classes.links}>
+      <menu className={classes.links}>
         {sidebarItems.filter((item) => !(item.authOnly && !authData)).map((item) =>
           <SidebarItem key={item.path} item={item} collapsed={isCollapsed} />
         )}
-      </div>
+      </menu>
       <Button
         className={classes.collapsedButton}
         data-testid="collapsed-button"
@@ -49,7 +49,7 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
         <ThemeSwitcher />
         <LangSwitcher short={isCollapsed} />
       </div>
-    </div>
+    </aside>
   )
 })
 

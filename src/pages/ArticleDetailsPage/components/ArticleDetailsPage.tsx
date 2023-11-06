@@ -7,9 +7,11 @@ import { ArticleDetails } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { AddNewCommentForArticle } from 'features/AddNewCommentForArticle'
 import { Button } from 'shared/components/Button'
+import { Page } from 'shared/components/Page'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
+import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
 
 import { getArticleDetailsCommentsIsLoading } from '../model/selectors/articleDetailsComments'
@@ -17,7 +19,6 @@ import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArtic
 import { articleDetailsCommentsReducer, articleDetailsCommentsSelectors } from '../model/slice/articleDetailsCommentsSlice'
 
 import classes from './ArticleDetailsPage.module.scss'
-import { APP_ROUTES } from 'shared/router'
 
 interface IArticleDetailsPageProps {
   className?: string
@@ -54,14 +55,14 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
 
   if (!id && __PROJECT__ !== 'storybook') {
     return (
-      <div className={classNames(classes.wrapper, {}, [className])}>
+      <Page className={classNames(classes.wrapper, {}, [className])}>
         {t('Article not found')}
-      </div>
+      </Page>
     )
   }
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <Page className={classNames(classes.wrapper, {}, [className])}>
       <Button color="outline" onClick={onBackToTheList}>
         {t('Back to the list')}
       </Button>
@@ -71,7 +72,7 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
         <AddNewCommentForArticle onSendNewComment={onSendNewComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
       </div>
-    </div>
+    </Page>
   )
 }
 
