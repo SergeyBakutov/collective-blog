@@ -19,7 +19,8 @@ const articlesSlice = createSlice({
     isLoading: false,
     view: 'tile',
     page: 1,
-    hasMore: true
+    hasMore: true,
+    _inited: false
   }),
   reducers: {
     setView: (state, action: PayloadAction<TArticlesView>) => {
@@ -36,6 +37,7 @@ const articlesSlice = createSlice({
         state.view = articleView
       }
       state.limit = articleView === 'list' ? 4 : 12
+      state._inited = true
     }
   },
   extraReducers: (builder) => {

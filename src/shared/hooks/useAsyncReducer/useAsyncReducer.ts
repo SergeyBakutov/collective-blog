@@ -19,9 +19,15 @@ export function useAsyncReducer({ reducers, removeAfterUnmount = false }: IUseAs
   const store = useStore() as IStoreWithReducerManager
 
   useEffect(() => {
+    const mountedReducers = store.reducerManager.getReducerMap()
+
     Object.entries(reducers).forEach(([name, reducer]) => {
-      store.reducerManager.add(name as TStateSchemaKey, reducer)
-      dispatch({ type: `@INIT ${name} reducer` })
+      const mountedReducer = mountedReducers[name as TStateSchemaKey]
+
+      if (!mountedReducer) {
+        store.reducerManager.add(name as TStateSchemaKey, reducer)
+        dispatch({ type: `@INIT ${name} reducer` })
+      }
     })
 
     return () => {

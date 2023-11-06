@@ -11,8 +11,8 @@ import { classNames } from 'shared/utils/classNames'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 
 import { getArticlesError, getArticlesIsLoading, getArticlesView } from '../model/selectors/articlesSelectors'
-import { fetchArticles } from '../model/services/fetchArticles/fetchArticles'
 import { fetchNextArticles } from '../model/services/fetchNextArticles/fetchNextArticles'
+import { initArticles } from '../model/services/initArticles/initArticles'
 import { articlesActions, articlesReducer, articlesSelectors } from '../model/slices/articlesSlice'
 
 import classes from './ArticlesPage.module.scss'
@@ -34,12 +34,11 @@ const ArticlesPage: React.FC<IArticlesPageProps> = (props) => {
   const error = useSelector(getArticlesError)
   const view = useSelector(getArticlesView)
 
-  useAsyncReducer({ reducers, removeAfterUnmount: true })
+  useAsyncReducer({ reducers })
 
   useEffect(() => {
     if (__PROJECT__ !== 'storybook') {
-      dispatch(articlesActions.initState())
-      dispatch(fetchArticles({ page: 1 }))
+      dispatch(initArticles())
     }
   }, [dispatch])
 

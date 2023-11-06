@@ -1,5 +1,4 @@
 import { type ReducersMapObject, configureStore, type Reducer, type AnyAction } from '@reduxjs/toolkit'
-import { type NavigateFunction } from 'react-router-dom'
 
 import { userReducer } from 'entities/User'
 import { $api } from 'shared/api/api'
@@ -9,7 +8,6 @@ import { createReducerManager } from './createReducerManager'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function createStore(
-  navigate: NavigateFunction,
   initialState?: IStateSchema,
   asyncReducers?: ReducersMapObject<IStateSchema>
 ) {
@@ -27,8 +25,7 @@ export function createStore(
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
       thunk: {
         extraArgument: {
-          api: $api,
-          navigate
+          api: $api
         }
       }
     })

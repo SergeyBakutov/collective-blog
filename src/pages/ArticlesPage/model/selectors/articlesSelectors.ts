@@ -11,3 +11,4 @@ export const getArticlesView = createSelector(getArticles, (articles) => article
 export const getArticlesPage = createSelector(getArticles, (articles) => articles?.page ?? 1)
 export const getArticlesLimit = createSelector(getArticles, (articles) => articles?.limit ?? 12)
 export const getArticlesHasMore = createSelector(getArticles, (articles) => articles?.hasMore)
+export const getArticlesInited = createSelector(getArticles, (articles) => articles?._inited)
