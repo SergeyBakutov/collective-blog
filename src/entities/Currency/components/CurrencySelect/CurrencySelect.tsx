@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { classNames } from 'shared/utils/classNames'
@@ -28,10 +27,6 @@ export const CurrencySelect: React.FC<ICurrcencySelectProps> = (props) => {
   } = props
   const { t } = useTranslation()
 
-  const onChangeHandler = useCallback((value: string) => {
-    onChange(value as ICurrency)
-  }, [onChange])
-
   return (
     <Select
       className={classNames('', {}, [className])}
@@ -39,7 +34,7 @@ export const CurrencySelect: React.FC<ICurrcencySelectProps> = (props) => {
       value={value}
       options={options}
       readonly={readonly}
-      onChange={onChangeHandler}
+      onChange={onChange}
     />
   )
 }

@@ -2,13 +2,16 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 
-import { ArticleViewSwitcher } from './ArticleViewSwitcher'
+import { ArticlesViewSwitcher } from './ArticlesViewSwitcher'
 
 const meta = {
-  title: 'features/ArticleViewSwitcher',
-  component: ArticleViewSwitcher,
-  tags: ['autodocs']
-} satisfies Meta<typeof ArticleViewSwitcher>
+  title: 'features/ArticlesViewSwitcher',
+  component: ArticlesViewSwitcher,
+  tags: ['autodocs'],
+  args: {
+    view: 'list'
+  }
+} satisfies Meta<typeof ArticlesViewSwitcher>
 
 export default meta
 type Story = StoryObj<typeof meta>

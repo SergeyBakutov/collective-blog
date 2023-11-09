@@ -1,3 +1,11 @@
 .wrapper {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.sortPlusView {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }

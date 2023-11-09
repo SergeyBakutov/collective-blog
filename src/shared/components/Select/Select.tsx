@@ -4,21 +4,21 @@ import { classNames } from 'shared/utils/classNames'
 
 import classes from './Select.module.scss'
 
-export interface ISelectOption<V = string> {
-  value: V
+export interface ISelectOption<T extends string> {
+  value: T
   content: string
 }
 
-interface ISelectProps {
+interface ISelectProps<T extends string> {
   className?: string
-  value: string
-  options: ISelectOption[]
+  value: T
+  options: Array<ISelectOption<T>>
   label?: string
   readonly?: boolean
-  onChange: (value: string) => void
+  onChange: (value: T) => void
 }
 
-export const Select: React.FC<ISelectProps> = (props) => {
+export const Select = <T extends string>(props: ISelectProps<T>): JSX.Element => {
   const {
     className,
     value,
@@ -29,7 +29,7 @@ export const Select: React.FC<ISelectProps> = (props) => {
   } = props
 
   const onChangehandler = (event: React.ChangeEvent<HTMLSelectElement>): void => {
-    onChange(event.target.value)
+    onChange(event.target.value as T)
   }
 
   const optionList = useMemo(() => {

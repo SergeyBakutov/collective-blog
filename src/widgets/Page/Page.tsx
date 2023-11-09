@@ -9,7 +9,7 @@ import { useInfiniteScroll } from 'shared/hooks/useInfiniteScroll'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Page.module.scss'
-import { useThrottle } from 'shared/hooks/useThrottle.ts'
+import { useThrottle } from 'shared/hooks/useThrottle'
 
 interface IPageProps {
   className?: string
@@ -52,7 +52,7 @@ export const Page: React.FC<React.PropsWithChildren<IPageProps>> = memo((props) 
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef}></div>
+      {onScrollEnd && <div className={classes.trigger} ref={triggerRef}></div>}
     </section>
   )
 })

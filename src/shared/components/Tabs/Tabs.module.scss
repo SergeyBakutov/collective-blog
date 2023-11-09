@@ -1,0 +1,18 @@
+.wrapper {
+	display: flex;
+	gap: 15px;
+}
+
+.tab {
+	cursor: pointer;
+	transition: 0.2s transform;
+
+	&:hover {
+		transform: scale(1.02);
+	}
+}
+
+.selected {
+	pointer-events: none;
+	opacity: 0.7;
+}

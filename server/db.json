@@ -88,10 +88,10 @@
       "id": 2,
       "userId": 1,
       "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
+      "subtitle": "Что нового в React за 2022 год?",
       "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "views": 1743,
+      "createdAt": "03.06.2022",
       "type": [
         "it"
       ],
@@ -154,12 +154,12 @@
     },
     {
       "id": 3,
-      "userId": 1,
+      "userId": 2,
       "title": "Redux Toolkit news",
       "subtitle": "Обновления в Redux Toolkit",
       "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
       "views": 1245,
-      "createdAt": "01.11.2023",
+      "createdAt": "01.11.2021",
       "type": [
         "it"
       ],
@@ -223,11 +223,11 @@
     {
       "id": 4,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.10.2023",
+      "title": "Angular news",
+      "subtitle": "Что нового в Angular за 2022 год?",
+      "img": "https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2020/06/angular.png?fit=1024%2C538&ssl=1",
+      "views": 380,
+      "createdAt": "26.12.2022",
       "type": [
         "it"
       ],
@@ -245,11 +245,11 @@
     {
       "id": 5,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "Vue news",
+      "subtitle": "Что нового в Vue за 2023 год?",
+      "img": "https://segwitz.com/wp-content/uploads/2021/06/vuejs-development-malaysia.jpeg",
+      "views": 505,
+      "createdAt": "015.10.2023",
       "type": [
         "it"
       ],
@@ -266,12 +266,12 @@
     },
     {
       "id": 6,
-      "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
+      "userId": 2,
+      "title": "Node JS news",
+      "subtitle": "Обновления в Node JS",
+      "img": "https://dan-it.com.ua/wp-content/uploads/2018/09/nodejs-ar21.png",
       "views": 1245,
-      "createdAt": "01.11.2023",
+      "createdAt": "01.02.2021",
       "type": [
         "it"
       ],
@@ -289,11 +289,11 @@
     {
       "id": 7,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.10.2023",
+      "title": "Styled Components news",
+      "subtitle": "Что нового в Styled Components за 2020 год?",
+      "img": "https://www.styled-components.com/atom.png",
+      "views": 1606,
+      "createdAt": "25.10.2020",
       "type": [
         "it"
       ],
@@ -311,11 +311,11 @@
     {
       "id": 8,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "ESLint news",
+      "subtitle": "Что нового в ESLint",
+      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--dWcPMxnR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hk083ugohb8gcuv8xt8t.png",
+      "views": 670,
+      "createdAt": "03.05.2023",
       "type": [
         "it"
       ],
@@ -333,11 +333,11 @@
     {
       "id": 9,
       "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
-      "views": 1245,
-      "createdAt": "01.11.2023",
+      "title": "Prettier news",
+      "subtitle": "Обновления в Prettier",
+      "img": "https://lh3.googleusercontent.com/sfHO5MKevLesNw1grlh21j0hgtH5IaMmASI5aVv_-gYyF7dvA96FlS7mdagWM6NDPxfEY2JwkArooEZZPOzXmu01-g=w640-h400-e365-rj-sc0x00ffffff",
+      "views": 344,
+      "createdAt": "01.08.2022",
       "type": [
         "it"
       ],
@@ -355,11 +355,11 @@
     {
       "id": 10,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.10.2023",
+      "title": "Vite news",
+      "subtitle": "Что нового в Vite за 2023 год?",
+      "img": "https://blog.replit.com/images/vite/logo.png",
+      "views": 1105,
+      "createdAt": "22.06.2023",
       "type": [
         "it"
       ],
@@ -377,11 +377,11 @@
     {
       "id": 11,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "Typescript news",
+      "subtitle": "Что нового в Typescript за 2021 год?",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+      "views": 2267,
+      "createdAt": "15.12.2021",
       "type": [
         "it"
       ],
@@ -398,12 +398,12 @@
     },
     {
       "id": 12,
-      "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
-      "views": 1245,
-      "createdAt": "01.11.2023",
+      "userId": 2,
+      "title": "Webpack news",
+      "subtitle": "Обновления в Webpack",
+      "img": "https://media.trytn.dev/library/sites/2/2020/06/webpack.jpg",
+      "views": 2798,
+      "createdAt": "01.09.2022",
       "type": [
         "it"
       ],
@@ -421,11 +421,11 @@
     {
       "id": 13,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "title": "Sass news",
+      "subtitle": "Что нового в Sass",
+      "img": "https://webdesign-master.ru/img/thumbs/@2x/tools/sass/sass.jpg",
       "views": 1022,
-      "createdAt": "26.10.2023",
+      "createdAt": "12.04.2022",
       "type": [
         "it"
       ],
@@ -443,13 +443,13 @@
     {
       "id": 14,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "Бум в экономике",
+      "subtitle": "Что случилось в 2022 году?",
+      "img": "https://www.interfax.ru/ftproot/textphotos/2018/12/28/ec700.jpg",
+      "views": 1402,
+      "createdAt": "10.03.2022",
       "type": [
-        "it"
+        "economics"
       ],
       "blocks": [
         {
@@ -464,14 +464,14 @@
     },
     {
       "id": 15,
-      "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
+      "userId": 2,
+      "title": "Биология (новости)",
+      "subtitle": "Открытия за 2021 год",
+      "img": "https://filearchive.cnews.ru/img/book/2022/05/13/735-7352020_thumb-image-biology-images-png-transparent-.png",
       "views": 1245,
-      "createdAt": "01.11.2023",
+      "createdAt": "30.10.2021",
       "type": [
-        "it"
+        "science"
       ],
       "blocks": [
         {
@@ -487,13 +487,13 @@
     {
       "id": 16,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.10.2023",
+      "title": "Geography (news)",
+      "subtitle": "Что нового в мире?",
+      "img": "https://s9.travelask.ru/system/images/files/001/220/317/wysiwyg_jpg/27_04_16_2.jpg?1541599177",
+      "views": 783,
+      "createdAt": "26.07.2023",
       "type": [
-        "it"
+        "science"
       ],
       "blocks": [
         {

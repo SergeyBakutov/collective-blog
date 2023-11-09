@@ -7,7 +7,7 @@ import { classNames } from 'shared/utils/classNames'
 
 import { viewVariants } from '../model/viewVariants'
 
-import classes from './ArticleViewSwitcher.module.scss'
+import classes from './ArticlesViewSwitcher.module.scss'
 
 interface IArticleViewSwitcherProps {
   className?: string
@@ -15,7 +15,7 @@ interface IArticleViewSwitcherProps {
   onViewClick: (view: TArticlesView) => void
 }
 
-export const ArticleViewSwitcher: React.FC<IArticleViewSwitcherProps> = memo((props) => {
+export const ArticlesViewSwitcher: React.FC<IArticleViewSwitcherProps> = memo((props) => {
   const { className, view, onViewClick } = props
 
   const onButtonClick = useCallback((view: TArticlesView) => () => {
@@ -39,4 +39,4 @@ export const ArticleViewSwitcher: React.FC<IArticleViewSwitcherProps> = memo((pr
   )
 })
 
-ArticleViewSwitcher.displayName = 'ArticleViewSwitcher'
+ArticlesViewSwitcher.displayName = 'ArticlesViewSwitcher'

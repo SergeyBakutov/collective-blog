@@ -1,0 +1,16 @@
+{
+  "Sort by": "Сортировать по",
+  "Order": "Порядок",
+  "Search": "Поиск",
+  "title": "заголовку",
+  "creation date": "дате создания",
+  "number of views": "количеству просмотров",
+  "by asc": "по возрастанию",
+  "by desc": "по убыванию",
+  "all": "Все",
+  "it": "ИТ",
+  "science": "Наука",
+  "economics": "Экономика",
+  "Articles not found": "Статьи не найдены",
+  "Error loading articles. Try to reload the page": "Ошибка при загрузке статей. Попробуйте перезагрузить страницу"
+}

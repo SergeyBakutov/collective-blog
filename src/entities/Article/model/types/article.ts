@@ -1,6 +1,6 @@
 import { type IUser } from 'entities/User'
 
-type TArticleType = 'it' | 'science' | 'economics'
+export type TArticleType = 'all' | 'it' | 'science' | 'economics'
 
 type TArticleBlockType = 'text' | 'code' | 'image'
 
@@ -41,3 +41,4 @@ export interface IArticle {
 }
 
 export type TArticlesView = 'list' | 'tile'
+export type TArticlesSort = 'title' | 'views' | 'createdAt'

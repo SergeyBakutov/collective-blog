@@ -20,7 +20,7 @@ describe('fetchNextArticles', () => {
     await thunk.callThunk()
 
     expect(thunk.dispatch).toHaveBeenCalledTimes(4)
-    expect(fetchArticles).toBeCalledWith({ page: 3 })
+    expect(fetchArticles).toBeCalledWith({})
   })
 
   it('error (fetchArticles not called)', async () => {
@@ -37,6 +37,6 @@ describe('fetchNextArticles', () => {
     await thunk.callThunk()
 
     expect(thunk.dispatch).toHaveBeenCalledTimes(2)
-    expect(fetchArticles).not.toBeCalledWith({ page: 3 })
+    expect(fetchArticles).not.toBeCalledWith({})
   })
 })
