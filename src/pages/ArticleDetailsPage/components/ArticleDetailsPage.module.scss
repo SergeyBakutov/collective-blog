@@ -1,6 +1,7 @@
-.wrapper {
-	// height: 100%;
-	display: block;
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .recommendations, .comments {

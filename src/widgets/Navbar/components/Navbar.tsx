@@ -4,8 +4,11 @@ import { useSelector } from 'react-redux'
 
 import { getUserAuthData, userActions } from 'entities/User'
 import { AuthModal } from 'features/AuthByUsername'
+import { AppLink } from 'shared/components/AppLink'
 import { Button } from 'shared/components/Button'
+import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
+import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
 
 import classes from './Navbar.module.scss'
@@ -36,6 +39,17 @@ export const Navbar: React.FC<INavbarProps> = memo((props) => {
   if (authData) {
     return (
       <header className={classNames(classes.wrapper, {}, [className])}>
+        <div className={classes.titleWithLinks}>
+          <Text color="inverted" title="Almost Habr" />
+
+          <div className={classes.links}>
+            <AppLink to={APP_ROUTES.articleCreate} color="inverted">
+              {t('Create article')}
+            </AppLink>
+          </div>
+
+        </div>
+
         <Button color="clearInverted" onClick={onLogoutClick}>
           {t('Logout')}
         </Button>

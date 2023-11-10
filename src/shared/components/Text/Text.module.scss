@@ -4,13 +4,23 @@
   gap: 10px;
 }
 
-.default {
+.primary {
   .title {
     color: var(--primary-color);
   }
 
   .description {
     color: var(--secondary-color);
+  }
+}
+
+.inverted {
+  .title {
+    color: var(--inverted-primary-color);
+  }
+
+  .description {
+    color: var(--inverted-secondary-color);
   }
 }
 

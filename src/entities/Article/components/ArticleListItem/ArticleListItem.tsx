@@ -55,7 +55,7 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
             <ArticleTextBlock className={classes.textBlock} block={textBlock as IArticleTextBlock} />
           )}
           <div className={classes.footer}>
-            <AppLink to={APP_ROUTES['article-details'] + article.id} target={target}>
+            <AppLink to={APP_ROUTES.articleDetails + article.id} target={target}>
               <Button color="outline">
                 {t('Read more...')}
               </Button>
@@ -69,7 +69,7 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
 
   return (
     <AppLink
-      to={APP_ROUTES['article-details'] + article.id}
+      to={APP_ROUTES.articleDetails + article.id}
       target={target}
       className={classNames('', {}, [className, classes[view]])}
     >

@@ -4,7 +4,7 @@ import { classNames } from 'shared/utils/classNames'
 
 import classes from './Text.module.scss'
 
-type TTextColor = 'default' | 'error'
+type TTextColor = 'primary' | 'error' | 'inverted'
 type TTextAlign = 'center' | 'left' | 'right'
 type TTextSize = 'm' | 'l'
 
@@ -20,7 +20,7 @@ interface ITextProps {
 export const Text: React.FC<ITextProps> = memo((props) => {
   const {
     className,
-    color = 'default',
+    color = 'primary',
     title,
     description,
     align = 'left',
