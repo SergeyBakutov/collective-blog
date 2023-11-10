@@ -3,9 +3,15 @@
 	display: block;
 }
 
-.comments {
+.recommendations, .comments {
 	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+}
+
+.recommendationsList {
+	overflow-y: hidden;
+	overflow-x: auto;
+	flex-wrap: nowrap;
 }

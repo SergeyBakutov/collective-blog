@@ -30,7 +30,7 @@ export const fetchArticles = createAsyncThunk<IArticle[], IFetchArticlesProps, I
           _sort: sort,
           _order: sortOrder,
           q: search,
-          type: type === 'all' ? undefined : type
+          type_like: type === 'all' ? undefined : type
         }
       })
 

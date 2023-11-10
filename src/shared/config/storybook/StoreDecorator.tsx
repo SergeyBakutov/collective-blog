@@ -6,13 +6,13 @@ import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetai
 import { addNewCommentForArticleReducer } from 'features/AddNewCommentForArticle/model/slice/addNewCommentForArticleSlice'
 import { authReducer } from 'features/AuthByUsername/model/slice/authSlice'
 import { profileReducer } from 'features/EditableProfileCard'
-import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slice/articleDetailsCommentsSlice'
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsReducer'
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<IStateSchema>> = {
   auth: authReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
-  articleDetailsComments: articleDetailsCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
   addNewCommentForArticle: addNewCommentForArticleReducer
 }
 

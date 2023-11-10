@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { type HTMLAttributeAnchorTarget, memo, useCallback } from 'react'
 
 import { classNames } from 'shared/utils/classNames'
 
@@ -13,6 +13,7 @@ interface IArticleListProps {
   articles: IArticle[]
   isLoading?: boolean
   view?: TArticlesView
+  target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: TArticlesView): JSX.Element[] => (
@@ -26,12 +27,13 @@ export const ArticleList: React.FC<IArticleListProps> = memo((props) => {
     className,
     articles,
     isLoading = false,
-    view = 'tile'
+    view = 'tile',
+    target = '_self'
   } = props
 
   const renderArticle = useCallback((article: IArticle) => {
-    return <ArticleListItem key={article.id} article={article} view={view} />
-  }, [view])
+    return <ArticleListItem key={article.id} article={article} view={view} target={target} />
+  }, [target, view])
 
   return (
     <div className={classNames('', {}, [className, classes[view]])}>

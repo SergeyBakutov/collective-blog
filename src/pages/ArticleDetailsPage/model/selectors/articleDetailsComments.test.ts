@@ -5,8 +5,10 @@ import { getArticleDetailsCommentsError, getArticleDetailsCommentsIsLoading } fr
 describe('getArticleDetailsCommentsIsLoading:', () => {
   it('should return correct data', () => {
     const state: DeepPartial<IStateSchema> = {
-      articleDetailsComments: {
-        isLoading: true
+      articleDetailsPage: {
+        comments: {
+          isLoading: true
+        }
       }
     }
     expect(getArticleDetailsCommentsIsLoading(state as IStateSchema)).toBeTruthy()
@@ -22,8 +24,10 @@ describe('getArticleDetailsCommentsIsLoading:', () => {
 describe('getArticleDetailsCommentsError:', () => {
   it('should return correct data', () => {
     const state: DeepPartial<IStateSchema> = {
-      articleDetailsComments: {
-        error: 'Error'
+      articleDetailsPage: {
+        comments: {
+          error: 'Error'
+        }
       }
     }
     expect(getArticleDetailsCommentsError(state as IStateSchema)).toBe('Error')

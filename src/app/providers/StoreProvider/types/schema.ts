@@ -4,7 +4,7 @@ import { type IAddNewCommentForArticleSchema } from 'features/AddNewCommentForAr
 import { type IAuthStateSchema } from 'features/AuthByUsername'
 import { type IProfileStateSchema } from 'features/EditableProfileCard'
 import { type IScrollInfoSchema } from 'features/SaveScrollInfo'
-import { type IArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { type IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { type IArticlesSchema } from 'pages/ArticlesPage'
 
 export interface IStateSchema {
@@ -15,7 +15,7 @@ export interface IStateSchema {
   auth?: IAuthStateSchema
   profile?: IProfileStateSchema
   articleDetails?: IArticleDetailsSchema
-  articleDetailsComments?: IArticleDetailsCommentsSchema
+  articleDetailsPage?: IArticleDetailsPageSchema
   addNewCommentForArticle?: IAddNewCommentForArticleSchema
   articles?: IArticlesSchema
 }

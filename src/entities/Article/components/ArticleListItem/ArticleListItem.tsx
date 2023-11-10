@@ -1,6 +1,5 @@
-import { memo, useCallback } from 'react'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
 
 import EyeIcon from 'shared/assets/icons/eye-icon.svg'
 import { Avatar } from 'shared/components/Avatar'
@@ -15,21 +14,18 @@ import { ArticleTextBlock } from '../ArticleTextBlock/ArticleTextBlock'
 
 import classes from './ArticleListItem.module.scss'
 import { APP_ROUTES } from 'shared/router'
+import { AppLink } from 'shared/components/AppLink'
 
 interface IArticleListItemProps {
   className?: string
   article: IArticle
   view: TArticlesView
+  target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => {
-  const { className, article, view } = props
+  const { className, article, view, target } = props
   const { t } = useTranslation()
-  const navigate = useNavigate()
-
-  const onOpenArticle = useCallback(() => {
-    navigate(APP_ROUTES['article-details'] + article.id)
-  }, [article.id, navigate])
 
   const types = <Text className={classes.types} description={article.type.join(', ')} />
   const views = (
@@ -59,9 +55,11 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
             <ArticleTextBlock className={classes.textBlock} block={textBlock as IArticleTextBlock} />
           )}
           <div className={classes.footer}>
-            <Button color="outline" onClick={onOpenArticle}>
-              {t('Read more...')}
-            </Button>
+            <AppLink to={APP_ROUTES['article-details'] + article.id} target={target}>
+              <Button color="outline">
+                {t('Read more...')}
+              </Button>
+            </AppLink>
             {views}
           </div>
         </Card>
@@ -70,8 +68,12 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
   }
 
   return (
-    <div className={classNames('', {}, [className, classes[view]])}>
-      <Card onClick={onOpenArticle}>
+    <AppLink
+      to={APP_ROUTES['article-details'] + article.id}
+      target={target}
+      className={classNames('', {}, [className, classes[view]])}
+    >
+      <Card >
         <div className={classes.imageWrapper}>
           <img className={classes.image} src={article.img} alt={article.title} />
           <Text className={classes.date} description={article.createdAt} />
@@ -82,7 +84,7 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
         </div>
         <Text className={classes.title} description={article.title} />
       </Card>
-    </div>
+    </AppLink>
   )
 })
 

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { ArticleDetails } from 'entities/Article'
+import { ArticleDetails, ArticleList } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { AddNewCommentForArticle } from 'features/AddNewCommentForArticle'
 import { Button } from 'shared/components/Button'
@@ -16,16 +16,20 @@ import { Page } from 'widgets/Page'
 
 import { getArticleDetailsCommentsIsLoading } from '../model/selectors/articleDetailsComments'
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import { articleDetailsCommentsReducer, articleDetailsCommentsSelectors } from '../model/slice/articleDetailsCommentsSlice'
+import { fetchRecommendations } from '../model/services/fetchRecommendations/fetchRecommendations'
+import { articleDetailsCommentsSelectors } from '../model/slices/articleDetailsCommentsSlice'
+import { articleDetailsRecommendationsSelectors } from '../model/slices/articleDetailsRecommendationsSlice'
+import { articleDetailsPageReducer } from '../model/slices/articleDetailsReducer'
 
 import classes from './ArticleDetailsPage.module.scss'
+import { getArticleDetailsRecommendationsIsLoading } from '../model/selectors/articleDetailsRecommendations'
 
 interface IArticleDetailsPageProps {
   className?: string
 }
 
 const reducers: TReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer
+  articleDetailsPage: articleDetailsPageReducer
 }
 
 const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
@@ -34,6 +38,8 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
   const { t } = useTranslation('article-details')
   const comments = useSelector(articleDetailsCommentsSelectors.selectAll)
   const commentsIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
+  const recommendations = useSelector(articleDetailsRecommendationsSelectors.selectAll)
+  const recommendationsIsLoading = useSelector(getArticleDetailsRecommendationsIsLoading)
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
@@ -42,6 +48,7 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
   useEffect(() => {
     if (__PROJECT__ !== 'storybook') {
       dispatch(fetchCommentsByArticleId(Number(id)))
+      dispatch(fetchRecommendations())
     }
   }, [dispatch, id])
 
@@ -67,6 +74,15 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
         {t('Back to the list')}
       </Button>
       <ArticleDetails id={id ?? '1'} />
+      <div className={classes.recommendations}>
+        <Text title={t('Recommendations')} />
+        <ArticleList
+          className={classes.recommendationsList}
+          articles={recommendations}
+          isLoading={recommendationsIsLoading}
+          target="_blank"
+        />
+      </div>
       <div className={classes.comments}>
         <Text title={t('Comments')} />
         <AddNewCommentForArticle onSendNewComment={onSendNewComment} />

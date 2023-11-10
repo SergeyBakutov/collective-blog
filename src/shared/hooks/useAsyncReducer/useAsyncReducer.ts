@@ -2,11 +2,11 @@ import { useEffect } from 'react'
 import { useStore } from 'react-redux'
 import { type Reducer } from '@reduxjs/toolkit'
 
-import { type TStateSchemaKey, type IStoreWithReducerManager } from 'app/providers/StoreProvider'
+import { type TStateSchemaKey, type IStoreWithReducerManager, type IStateSchema } from 'app/providers/StoreProvider'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 
 export type TReducersList = {
-  [name in TStateSchemaKey]?: Reducer
+  [name in TStateSchemaKey]?: Reducer<NonNullable<IStateSchema[name]>>
 }
 
 interface IUseAsyncReducerProps {
