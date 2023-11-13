@@ -5,6 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { type IComment } from '../../model/types/comment'
 
 import { CommentList } from './CommentList'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 const comments: IComment[] = [
   {
@@ -31,6 +32,9 @@ const meta = {
   title: 'entities/Comment/CommentList',
   component: CommentList,
   tags: ['autodocs'],
+  decorators: [
+    RouterDecorator({})
+  ],
   args: {
     comments
   }

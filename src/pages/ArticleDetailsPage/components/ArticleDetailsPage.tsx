@@ -35,7 +35,7 @@ const reducers: TReducersList = {
 
 const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
   const { className } = props
-  const { id } = useParams<{ id: string }>()
+  const { id = '' } = useParams<{ id: string }>()
   const { t } = useTranslation('article-details')
   const comments = useSelector(articleDetailsCommentsSelectors.selectAll)
   const commentsIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
@@ -66,14 +66,6 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
     dispatch(fetchCommentsByArticleId(Number(id)))
   }, [dispatch, id])
 
-  if (!id && __PROJECT__ !== 'storybook') {
-    return (
-      <Page className={classNames('', {}, [className])}>
-        {t('Article not found')}
-      </Page>
-    )
-  }
-
   return (
     <Page className={classNames('', {}, [className])}>
       <div className={classes.header}>
@@ -87,7 +79,7 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
         )}
       </div>
 
-      <ArticleDetails id={id ?? '1'} />
+      <ArticleDetails id={id} />
       <div className={classes.recommendations}>
         <Text title={t('Recommendations')} />
         <ArticleList

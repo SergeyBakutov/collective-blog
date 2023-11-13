@@ -7,10 +7,12 @@ import { addNewCommentForArticleReducer } from 'features/AddNewCommentForArticle
 import { authReducer } from 'features/AuthByUsername/model/slice/authSlice'
 import { profileReducer } from 'features/EditableProfileCard'
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsReducer'
+import { articlesReducer } from 'pages/ArticlesPage/model/slices/articlesSlice'
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<IStateSchema>> = {
   auth: authReducer,
   profile: profileReducer,
+  articles: articlesReducer,
   articleDetails: articleDetailsReducer,
   articleDetailsPage: articleDetailsPageReducer,
   addNewCommentForArticle: addNewCommentForArticleReducer

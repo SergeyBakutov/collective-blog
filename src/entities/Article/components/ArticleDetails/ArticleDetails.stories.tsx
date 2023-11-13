@@ -104,13 +104,13 @@ export const Light: Story = {
   })]
 }
 
-// export const Dark: Story = {
-//   decorators: [ThemeDecorator('dark'), StoreDecorator({
-//     articleDetails: {
-//       data: article
-//     }
-//   })]
-// }
+export const Dark: Story = {
+  decorators: [ThemeDecorator('dark'), StoreDecorator({
+    articleDetails: {
+      data: article
+    }
+  })]
+}
 
 export const IsLoading: Story = {
   decorators: [ThemeDecorator('light'), StoreDecorator({

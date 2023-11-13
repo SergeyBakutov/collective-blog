@@ -1,10 +1,13 @@
 import { type StoryFn } from '@storybook/react'
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter, Routes, type MemoryRouterProps, Route } from 'react-router-dom'
 
-export const RouterDecorator = (Story: StoryFn): JSX.Element => {
+// eslint-disable-next-line react/display-name
+export const RouterDecorator = (props: MemoryRouterProps, routePathForStory?: string) => (Story: StoryFn): JSX.Element => {
   return (
-    <BrowserRouter>
-      <Story />
-    </BrowserRouter>
+    <MemoryRouter {...props}>
+      <Routes>
+        <Route path={routePathForStory ?? '*'} element={<Story />} />
+      </Routes>
+    </MemoryRouter>
   )
 }

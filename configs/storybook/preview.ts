@@ -1,7 +1,6 @@
 import type { Preview } from '@storybook/react'
 
 import { I18nDecorator } from 'shared/config/storybook/I18nDecorator'
-import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import '../../src/app/styles/index.scss'
 
@@ -16,7 +15,6 @@ const preview: Preview = {
     }
   },
   decorators: [
-    RouterDecorator,
     I18nDecorator
   ]
 }

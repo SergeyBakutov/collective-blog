@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { type IArticle } from 'entities/Article'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
+import { APP_ROUTES } from 'shared/router'
 
 import ArticleDetailsPage from './ArticleDetailsPage'
 
@@ -86,38 +88,45 @@ const article: IArticle = {
 const meta = {
   title: 'pages/ArticleDetailsPage',
   component: ArticleDetailsPage,
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  decorators: [
+    RouterDecorator(
+      { initialEntries: ['/articles/1'] },
+      `${APP_ROUTES.articleDetails}:id`
+    ),
+    StoreDecorator({
+      articleDetails: {
+        data: article
+      },
+      articleDetailsPage: {
+        comments: {
+          ids: [1, 2],
+          entities: {
+            1: { id: 1, text: 'comment 1', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } },
+            2: { id: 2, text: 'comment 2', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } }
+          }
+        },
+        recommendations: {
+          ids: [1, 2, 3, 4],
+          entities: {
+            1: { ...article, id: 1 },
+            2: { ...article, id: 2 },
+            3: { ...article, id: 3 },
+            4: { ...article, id: 4 }
+          }
+        }
+      }
+    })
+  ]
 } satisfies Meta<typeof ArticleDetailsPage>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Light: Story = {
-  decorators: [ThemeDecorator('light'), StoreDecorator({
-    articleDetails: {
-      data: article
-    },
-    articleDetailsComments: {
-      ids: [1, 2],
-      entities: {
-        1: { id: 1, text: 'comment 1', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } },
-        2: { id: 2, text: 'comment 2', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } }
-      }
-    }
-  })]
+  decorators: [ThemeDecorator('light')]
 }
 
-// export const Dark: Story = {
-//   decorators: [ThemeDecorator('dark'), StoreDecorator({
-//     articleDetails: {
-//       data: article
-//     },
-//     articleDetailsComments: {
-//       ids: [1, 2],
-//       entities: {
-//         1: { id: 1, text: 'comment 1', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } },
-//         2: { id: 2, text: 'comment 2', user: { id: 1, username: 'admin', avatar: 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png' } }
-//       }
-//     }
-//   })]
-// }
+export const Dark: Story = {
+  decorators: [ThemeDecorator('dark')]
+}

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import { type IArticle } from '../../model/types/article'
 
@@ -90,6 +91,9 @@ const meta = {
   title: 'entities/Article/ArticleListItem',
   component: ArticleListItem,
   tags: ['autodocs'],
+  decorators: [
+    RouterDecorator({})
+  ],
   args: {
     article
   }

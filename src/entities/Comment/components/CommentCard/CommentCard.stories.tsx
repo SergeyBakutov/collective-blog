@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import { CommentCard } from './CommentCard'
 
@@ -8,6 +9,9 @@ const meta = {
   title: 'entities/Comment/CommentCard',
   component: CommentCard,
   tags: ['autodocs'],
+  decorators: [
+    RouterDecorator({})
+  ],
   args: {
     comment: {
       id: 1,

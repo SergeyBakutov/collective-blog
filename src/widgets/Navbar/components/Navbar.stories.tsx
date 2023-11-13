@@ -1,13 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import { Navbar } from './Navbar'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
 
 const meta = {
   title: 'widgets/Navbar',
   component: Navbar,
+  decorators: [
+    RouterDecorator({})
+  ],
   tags: ['autodocs']
 } satisfies Meta<typeof Navbar>
 

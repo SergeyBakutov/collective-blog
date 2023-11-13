@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import { AppLink } from './AppLink'
 
@@ -8,6 +9,9 @@ const meta = {
   title: 'shared/AppLink',
   component: AppLink,
   tags: ['autodocs'],
+  decorators: [
+    RouterDecorator({})
+  ],
   args: {
     to: '/',
     children: 'AppLink'

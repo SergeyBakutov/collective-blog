@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { type IProfile } from 'entities/Profile'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
+import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import ProfilePage from './ProfilePage'
 
@@ -20,24 +21,24 @@ const profile: IProfile = {
 const meta = {
   title: 'pages/ProfilePage',
   component: ProfilePage,
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  decorators: [
+    RouterDecorator({}),
+    StoreDecorator({
+      profile: {
+        formData: profile
+      }
+    })
+  ]
 } satisfies Meta<typeof ProfilePage>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Light: Story = {
-  decorators: [ThemeDecorator('light'), StoreDecorator({
-    profile: {
-      formData: profile
-    }
-  })]
+  decorators: [ThemeDecorator('light')]
 }
 
 export const Dark: Story = {
-  decorators: [ThemeDecorator('dark'), StoreDecorator({
-    profile: {
-      formData: profile
-    }
-  })]
+  decorators: [ThemeDecorator('dark')]
 }

@@ -59,7 +59,7 @@ export const Navbar: React.FC<INavbarProps> = memo((props) => {
 
   return (
     <header className={classNames(classes.wrapper, {}, [className])}>
-      <Button color="clearInverted" onClick={onLoginClick}>
+      <Button className={classes.loginButton} color="clearInverted" onClick={onLoginClick}>
         {t('Login')}
       </Button>
       <AuthModal isOpen={isOpenAuthModal} onClose={onCloseAuthModal} />

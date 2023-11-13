@@ -55,14 +55,18 @@ const ArticlesPage: React.FC<IArticlesPageProps> = (props) => {
   }, [dispatch, searchParams])
 
   const fetchData = useCallback(() => {
-    dispatch(articlesActions.setPage(1))
-    dispatch(fetchArticles({ replace: true }))
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(articlesActions.setPage(1))
+      dispatch(fetchArticles({ replace: true }))
+    }
   }, [dispatch])
 
   const debouncedFetchData = useDebounce(fetchData, 500)
 
   const onLoadNextPart = useCallback(() => {
-    dispatch(fetchNextArticles())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchNextArticles())
+    }
   }, [dispatch])
 
   const onViewClick = useCallback((view: TArticlesView) => {
