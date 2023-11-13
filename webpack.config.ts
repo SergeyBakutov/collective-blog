@@ -16,7 +16,9 @@ export default (env: TEnvVariables): Configuration => {
       entry: path.resolve(__dirname, 'src', 'index.tsx'),
       output: path.resolve(__dirname, 'build'),
       htmlTemplate: path.resolve(__dirname, 'public', 'index.html'),
-      src: path.resolve(__dirname, 'src')
+      src: path.resolve(__dirname, 'src'),
+      localesFrom: path.resolve(__dirname, 'public', 'locales'),
+      localesTo: path.resolve(__dirname, 'build', 'locales')
     },
     isDev,
     port: PORT,

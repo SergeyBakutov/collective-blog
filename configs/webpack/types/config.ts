@@ -5,6 +5,8 @@ interface TPaths {
   output: string
   htmlTemplate: string
   src: string
+  localesFrom: string
+  localesTo: string
 }
 
 export interface TConfigOptions {

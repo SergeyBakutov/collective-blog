@@ -22,6 +22,8 @@ export function getConfig(options: TConfigOptions): webpack.Configuration {
     },
     plugins: getPlugins({
       htmlTemplatePath: paths.htmlTemplate,
+      localesFromPath: paths.localesFrom,
+      localesToPath: paths.localesTo,
       isDev,
       apiUrl,
       project

@@ -27,7 +27,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
             "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
@@ -62,7 +62,7 @@
         {
           "id": 7,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
             "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
@@ -77,7 +77,7 @@
         {
           "id": 9,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
           ]
@@ -99,55 +99,9 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
-          ]
-        },
-        {
-          "id": 4,
-          "type": "code",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": 5,
-          "type": "text",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
-          ]
-        },
-        {
-          "id": 2,
-          "type": "image",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": 3,
-          "type": "code",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": 7,
-          "type": "text",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
-          ]
-        },
-        {
-          "id": 8,
-          "type": "image",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": 9,
-          "type": "text",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! "
           ]
         }
       ]
@@ -167,55 +121,9 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
-          ]
-        },
-        {
-          "id": 4,
-          "type": "code",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": 5,
-          "type": "text",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
-          ]
-        },
-        {
-          "id": 2,
-          "type": "image",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": 3,
-          "type": "code",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": 7,
-          "type": "text",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
-          ]
-        },
-        {
-          "id": 8,
-          "type": "image",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": 9,
-          "type": "text",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! "
           ]
         }
       ]
@@ -235,7 +143,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -257,7 +165,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -279,7 +187,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -301,7 +209,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -323,7 +231,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -345,7 +253,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -357,7 +265,7 @@
       "userId": 1,
       "title": "Vite news",
       "subtitle": "Что нового в Vite за 2023 год?",
-      "img": "https://blog.replit.com/images/vite/logo.png",
+      "img": "https://cdn.cleancommit.io/blog/2023/02/Vite-logo.jpg",
       "views": 1105,
       "createdAt": "22.06.2023",
       "type": [
@@ -367,7 +275,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -389,7 +297,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -411,7 +319,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -433,7 +341,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -455,7 +363,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -477,7 +385,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -499,7 +407,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -509,11 +417,11 @@
     {
       "id": 17,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "Python news",
+      "subtitle": "Что нового в React за 2021 год?",
+      "img": "https://www.hocktraining.com/home/getpicturethumbnail/830",
+      "views": 782,
+      "createdAt": "24.07.2021",
       "type": [
         "it"
       ],
@@ -521,7 +429,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -531,11 +439,11 @@
     {
       "id": 18,
       "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
-      "views": 1245,
-      "createdAt": "01.11.2023",
+      "title": "Java news",
+      "subtitle": "Обновления в Java",
+      "img": "https://s0.rbk.ru/v6_top_pics/media/img/1/60/756533742439601.jpg",
+      "views": 2456,
+      "createdAt": "19.04.2022",
       "type": [
         "it"
       ],
@@ -543,7 +451,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -553,11 +461,11 @@
     {
       "id": 19,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.10.2023",
+      "title": "Swift news",
+      "subtitle": "Что нового в Swift за 2023 год?",
+      "img": "https://developer.apple.com/swift/images/swift-og.png",
+      "views": 1309,
+      "createdAt": "30.11.2023",
       "type": [
         "it"
       ],
@@ -565,7 +473,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -575,11 +483,11 @@
     {
       "id": 20,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "C# news",
+      "subtitle": "Что нового в C# за 2022 год?",
+      "img": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/7e/d2/86/7ed286dd-96ca-b0e2-d1b0-21c09146154b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png",
+      "views": 892,
+      "createdAt": "31.08.2022",
       "type": [
         "it"
       ],
@@ -587,7 +495,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -597,11 +505,11 @@
     {
       "id": 21,
       "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
-      "views": 1245,
-      "createdAt": "01.11.2023",
+      "title": "Docker news",
+      "subtitle": "Обновления в Docker",
+      "img": "https://serverspace.by/wp-content/uploads/2020/06/43_do-1.png",
+      "views": 1305,
+      "createdAt": "24.06.2023",
       "type": [
         "it"
       ],
@@ -609,7 +517,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -619,10 +527,10 @@
     {
       "id": 22,
       "userId": 1,
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
+      "title": "Kotlin news",
+      "subtitle": "Что нового в Kotlin за 2022 год?",
+      "img": "https://habrastorage.org/getpro/habr/upload_files/c34/4c5/9f8/c344c59f81efa338f5dd4324a8411696.jpeg",
+      "views": 792,
       "createdAt": "26.10.2023",
       "type": [
         "it"
@@ -631,7 +539,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -641,11 +549,11 @@
     {
       "id": 23,
       "userId": 1,
-      "title": "React news",
-      "subtitle": "Что нового в React за 2023 год?",
-      "img": "https://habrastorage.org/getpro/habr/upload_files/d4f/a46/db5/d4fa46db5c8dd0bdf0457900653dc1c7.jpeg",
-      "views": 512,
-      "createdAt": "03.11.2023",
+      "title": "Svelte news",
+      "subtitle": "Что нового в Svelte за 2021 год?",
+      "img": "https://codemonk.in/blog/content/images/2022/03/Svelte-Feature-Image.png",
+      "views": 456,
+      "createdAt": "09.09.2021",
       "type": [
         "it"
       ],
@@ -653,7 +561,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
@@ -663,11 +571,11 @@
     {
       "id": 24,
       "userId": 1,
-      "title": "Redux Toolkit news",
-      "subtitle": "Обновления в Redux Toolkit",
-      "img": "https://cdn.hashnode.com/res/hashnode/image/upload/v1626366102185/9lUF4ajJG.png",
-      "views": 1245,
-      "createdAt": "01.11.2023",
+      "title": "Jest news",
+      "subtitle": "Обновления в Jest",
+      "img": "https://jestjs.io/ru/img/opengraph.png",
+      "views": 1876,
+      "createdAt": "23.02.2023",
       "type": [
         "it"
       ],
@@ -675,7 +583,7 @@
         {
           "id": 1,
           "type": "text",
-          "title": "Заголовок этого блока",
+          "title": "Заголовок",
           "paragraphs": [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsam, recusandae accusantium molestias quaerat at inventore, repellendus modi nulla voluptatum illo unde sequi tenetur, odit repudiandae vero. Vitae nulla quos non cupiditate ratione commodi architecto autem perspiciatis maxime dolorem et rerum, ullam, cumque blanditiis! Beatae, possimus dolorem reprehenderit nobis hic commodi totam consectetur corporis numquam magnam accusantium in porro recusandae repellendus illo esse dolore laborum maiores natus ea reiciendis ab! Nostrum adipisci quasi nisi itaque ab voluptatum doloremque. Maiores in dolorem veniam fugiat saepe aliquid tenetur, beatae error impedit, explicabo officiis accusantium. Eveniet velit, veritatis voluptates porro expedita molestias ipsam?"
           ]
