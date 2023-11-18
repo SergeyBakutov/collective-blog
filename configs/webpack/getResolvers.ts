@@ -1,5 +1,4 @@
 import type webpack from 'webpack'
-
 import { type TResolversOptions } from './types/resolvers'
 
 export function getResolvers(options: TResolversOptions): webpack.ResolveOptions {

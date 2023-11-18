@@ -1,6 +1,5 @@
 import { addNewCommentForArticle } from '../services/addNewCommentForArticle/addNewCommentForArticle'
 import { type IAddNewCommentForArticleSchema } from '../types/schema'
-
 import { addNewCommentForArticleActions, addNewCommentForArticleReducer } from './addNewCommentForArticleSlice'
 
 describe('addNewCommentForArticleSlice:', () => {

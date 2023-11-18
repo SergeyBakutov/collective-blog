@@ -1,8 +1,7 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
-
+import { LOCAL_STORAGE_USER_KEY } from 'shared/constants/localStorage'
 import { type IUserStateSchema } from '../types/schema'
 import { type IUser } from '../types/user'
-import { LOCAL_STORAGE_USER_KEY } from 'shared/constants/localStorage'
 
 const initialState: IUserStateSchema = {
   _isCheckedAuthData: false

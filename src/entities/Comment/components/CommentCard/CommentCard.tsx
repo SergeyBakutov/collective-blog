@@ -1,13 +1,10 @@
 import { memo } from 'react'
-
 import { AppLink } from 'shared/components/AppLink'
 import { Avatar } from 'shared/components/Avatar'
 import { Text } from 'shared/components/Text'
 import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
-
 import { type IComment } from '../../model/types/comment'
-
 import classes from './CommentCard.module.scss'
 
 interface ICommentCardProps {

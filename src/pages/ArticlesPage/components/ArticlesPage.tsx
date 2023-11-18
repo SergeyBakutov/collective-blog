@@ -1,27 +1,24 @@
 import { memo, useCallback, useEffect } from 'react'
-import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-
-import { ArticleList, type TArticleType, type TArticlesSort, type TArticlesView } from 'entities/Article'
+import { Page } from 'widgets/Page'
 import { ArticlesSearch } from 'features/ArticlesSearch'
 import { ArticlesSort } from 'features/ArticlesSort'
 import { ArticlesTabs } from 'features/ArticlesTabs'
 import { ArticlesViewSwitcher } from 'features/ArticlesViewSwitcher'
+import { ArticleList, type TArticleType, type TArticlesSort, type TArticlesView } from 'entities/Article'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 import { useDebounce } from 'shared/hooks/useDebounce'
 import { type TSortOrder } from 'shared/types/sortOrder'
 import { classNames } from 'shared/utils/classNames'
-import { Page } from 'widgets/Page'
-
 import { getArticlesError, getArticlesType, getArticlesIsLoading, getArticlesSearch, getArticlesSort, getArticlesSortOrder, getArticlesView } from '../model/selectors/articlesSelectors'
 import { fetchArticles } from '../model/services/fetchArticles/fetchArticles'
 import { fetchNextArticles } from '../model/services/fetchNextArticles/fetchNextArticles'
 import { initArticles } from '../model/services/initArticles/initArticles'
 import { articlesActions, articlesReducer, articlesSelectors } from '../model/slices/articlesSlice'
-
 import classes from './ArticlesPage.module.scss'
 
 interface IArticlesPageProps {

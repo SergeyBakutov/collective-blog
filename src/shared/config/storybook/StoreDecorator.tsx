@@ -1,13 +1,14 @@
+/* eslint-disable @conarti/feature-sliced/public-api */
+/* eslint-disable @conarti/feature-sliced/layers-slices */
 import { type ReducersMapObject } from '@reduxjs/toolkit'
 import { type StoryFn } from '@storybook/react'
-
 import { type IStateSchema, StoreProvider } from 'app/providers/StoreProvider'
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsReducer'
+import { articlesReducer } from 'pages/ArticlesPage/model/slices/articlesSlice'
 import { addNewCommentForArticleReducer } from 'features/AddNewCommentForArticle/model/slice/addNewCommentForArticleSlice'
 import { authReducer } from 'features/AuthByUsername/model/slice/authSlice'
 import { profileReducer } from 'features/EditableProfileCard'
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsReducer'
-import { articlesReducer } from 'pages/ArticlesPage/model/slices/articlesSlice'
+import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<IStateSchema>> = {
   auth: authReducer,

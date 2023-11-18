@@ -1,10 +1,9 @@
-import webpack from 'webpack'
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import CopyPlugin from 'copy-webpack-plugin'
-
 import { type TPluginsOptions } from './types/plugins'
 
 export function getPlugins(options: TPluginsOptions): webpack.WebpackPluginInstance[] {

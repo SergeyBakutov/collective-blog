@@ -1,8 +1,6 @@
 import { type PayloadAction, createEntityAdapter, createSlice } from '@reduxjs/toolkit'
-
 import { type IStateSchema } from 'app/providers/StoreProvider'
 import { type IComment } from 'entities/Comment'
-
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { type IArticleDetailsCommentsSchema } from '../types/articleDetailsCommentsSchema'
 

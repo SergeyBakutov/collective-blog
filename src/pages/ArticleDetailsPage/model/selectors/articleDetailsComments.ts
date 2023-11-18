@@ -1,7 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { type IArticleDetailsCommentsSchema } from '../types/articleDetailsCommentsSchema'
 
 const getArticleDetailsCommentsState = (state: IStateSchema): IArticleDetailsCommentsSchema | undefined => state.articleDetailsPage?.comments

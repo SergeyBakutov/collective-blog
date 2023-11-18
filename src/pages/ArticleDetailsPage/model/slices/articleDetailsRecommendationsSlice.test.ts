@@ -1,8 +1,6 @@
 import { type IArticle } from 'entities/Article'
-
 import { fetchRecommendations } from '../services/fetchRecommendations/fetchRecommendations'
 import { type IArticleDetailsRecommendationsSchema } from '../types/articleDetailsRecommendationsSchema'
-
 import { articleDetailsRecommendationsReducer } from './articleDetailsRecommendationsSlice'
 
 const articles: IArticle[] = [

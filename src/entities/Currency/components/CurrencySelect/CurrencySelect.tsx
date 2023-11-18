@@ -1,8 +1,6 @@
 import { useTranslation } from 'react-i18next'
-
-import { classNames } from 'shared/utils/classNames'
 import { type ISelectOption, Select } from 'shared/components/Select'
-
+import { classNames } from 'shared/utils/classNames'
 import { type ICurrency } from '../../model/types/currency'
 
 interface ICurrcencySelectProps {

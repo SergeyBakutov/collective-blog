@@ -1,7 +1,5 @@
 import { TestAsyncThunk } from 'shared/utils/tests'
-
 import { type IArticle } from '../../types/article'
-
 import { fetchArticleById } from './fetchArticleById'
 
 describe('fetchArticleById', () => {

@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getProfileFormData } from './getProfileFormData'
 
 describe('getProfileFormData:', () => {

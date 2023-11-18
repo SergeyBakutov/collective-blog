@@ -1,12 +1,11 @@
 import { memo, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
+import { useParams } from 'react-router-dom'
+import { Page } from 'widgets/Page'
 import { EditableProfileCard, fetchProfileData, profileReducer } from 'features/EditableProfileCard'
+import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
-import { Text } from 'shared/components/Text'
-import { Page } from 'widgets/Page'
 
 const reducers: TReducersList = {
   profile: profileReducer

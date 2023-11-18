@@ -5,9 +5,8 @@ import {
   type AnyAction,
   type Reducer
 } from '@reduxjs/toolkit'
-
-import { type TStateSchemaKey, type IStateSchema } from '../types/schema'
 import { type IReducerManager } from '../types/reducerManager'
+import { type TStateSchemaKey, type IStateSchema } from '../types/schema'
 
 export function createReducerManager(
   initialReducers: ReducersMapObject<IStateSchema>

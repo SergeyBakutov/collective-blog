@@ -1,6 +1,5 @@
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { type IArticleDetailsCommentsSchema } from '../types/articleDetailsCommentsSchema'
-
 import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice'
 
 describe('articleDetailsCommentsSlice:', () => {

@@ -1,9 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit'
-
 import { type IStateSchema } from 'app/providers/StoreProvider'
 import { type TArticlesView, type TArticleType, type TArticlesSort } from 'entities/Article'
 import { type TSortOrder } from 'shared/types/sortOrder'
-
 import { type IArticlesSchema } from '../types/articlesSchema'
 
 const getArticles = (state: IStateSchema): IArticlesSchema | undefined => state.articles

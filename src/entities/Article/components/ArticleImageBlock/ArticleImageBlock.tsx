@@ -1,10 +1,7 @@
 import { memo } from 'react'
-
 import { Text } from 'shared/components/Text'
 import { classNames } from 'shared/utils/classNames'
-
 import { type IArticleImageBlock } from '../../model/types/article'
-
 import classes from './ArticleImageBlock.module.scss'
 
 interface IArticleImageBlockProps {

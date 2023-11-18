@@ -1,12 +1,9 @@
 import { type HTMLAttributeAnchorTarget, memo, useCallback } from 'react'
-
 import { classNames } from 'shared/utils/classNames'
-
 import { type TArticlesView, type IArticle } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
-
-import classes from './ArticleList.module.scss'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
+import classes from './ArticleList.module.scss'
 
 interface IArticleListProps {
   className?: string

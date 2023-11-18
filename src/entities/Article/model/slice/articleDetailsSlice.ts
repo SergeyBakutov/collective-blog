@@ -1,8 +1,7 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
-
-import { type IArticleDetailsSchema } from '../types/schema'
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById'
 import { type IArticle } from '../types/article'
+import { type IArticleDetailsSchema } from '../types/schema'
 
 const initialState: IArticleDetailsSchema = {
   isLoading: false,

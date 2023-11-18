@@ -1,7 +1,6 @@
 import { useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
 import CalendarIcon from 'shared/assets/icons/calendar-icon.svg'
 import EyeIcon from 'shared/assets/icons/eye-icon.svg'
 import { Avatar } from 'shared/components/Avatar'
@@ -11,16 +10,13 @@ import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 import { classNames } from 'shared/utils/classNames'
-
 import { getArticleDetailsIsLoading, getArticleDetailsError, getArticleDetailsData } from '../../model/selectors/articleDetailsSelectors'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { type TArticleBlock } from '../../model/types/article'
-
-import { ArticleTextBlock } from '../ArticleTextBlock/ArticleTextBlock'
 import { ArticleCodeBlock } from '../ArticleCodeBlock/ArticleCodeBlock'
 import { ArticleImageBlock } from '../ArticleImageBlock/ArticleImageBlock'
-
+import { ArticleTextBlock } from '../ArticleTextBlock/ArticleTextBlock'
 import classes from './ArticleDetails.module.scss'
 
 interface IArticleDetailsProps {

@@ -1,5 +1,4 @@
 import { type IProfile } from 'entities/Profile'
-
 import { type TValidateError } from '../../types/validateError'
 
 export const validateProfileData = (profile?: IProfile): TValidateError[] => {

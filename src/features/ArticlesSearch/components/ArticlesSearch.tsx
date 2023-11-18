@@ -1,10 +1,8 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-
 import { Card } from 'shared/components/Card'
 import { Input } from 'shared/components/Input'
 import { classNames } from 'shared/utils/classNames'
-
 import classes from './ArticlesSearch.module.scss'
 
 interface IArticlesSearchProps {

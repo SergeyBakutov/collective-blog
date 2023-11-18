@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
-
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { type IArticle } from '../../model/types/article'
-
 import { ArticleList } from './ArticleList'
 
 const article: IArticle =

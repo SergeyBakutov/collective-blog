@@ -1,11 +1,11 @@
-import { type IArticleDetailsSchema } from 'entities/Article'
-import { type IUserStateSchema } from 'entities/User'
+import { type IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
+import { type IArticlesSchema } from 'pages/ArticlesPage'
 import { type IAddNewCommentForArticleSchema } from 'features/AddNewCommentForArticle'
 import { type IAuthStateSchema } from 'features/AuthByUsername'
 import { type IProfileStateSchema } from 'features/EditableProfileCard'
 import { type IScrollInfoSchema } from 'features/SaveScrollInfo'
-import { type IArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
-import { type IArticlesSchema } from 'pages/ArticlesPage'
+import { type IArticleDetailsSchema } from 'entities/Article'
+import { type IUserStateSchema } from 'entities/User'
 
 export interface IStateSchema {
   user: IUserStateSchema

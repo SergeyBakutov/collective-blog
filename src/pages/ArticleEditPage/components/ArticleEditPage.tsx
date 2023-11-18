@@ -1,9 +1,8 @@
 /* eslint-disable i18next/no-literal-string */
-import { classNames } from 'shared/utils/classNames'
-import { Page } from 'widgets/Page'
-
-import classes from './ArticleEditPage.module.scss'
 import { useParams } from 'react-router-dom'
+import { Page } from 'widgets/Page'
+import { classNames } from 'shared/utils/classNames'
+import classes from './ArticleEditPage.module.scss'
 
 interface IArticleEditPageProps {
   className?: string

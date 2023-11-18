@@ -1,11 +1,8 @@
 import { Suspense } from 'react'
-
 import { Loader } from 'shared/components/Loader'
 import { Modal } from 'shared/components/Modal'
 import { classNames } from 'shared/utils/classNames'
-
 import { AuthFormLazy as AuthForm } from '../AuthForm/AuthForm.lazy'
-
 import classes from './AuthModal.module.scss'
 
 interface IAuthModalProps {

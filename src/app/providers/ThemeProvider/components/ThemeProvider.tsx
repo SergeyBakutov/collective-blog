@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-
 import { LOCAL_STORAGE_THEME_KEY } from 'shared/constants/localStorage'
 import { type TTheme, ThemeContext } from 'shared/hooks/useTheme'
 

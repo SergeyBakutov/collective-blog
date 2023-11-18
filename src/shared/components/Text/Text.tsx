@@ -1,7 +1,5 @@
 import { memo } from 'react'
-
-import { classNames } from 'shared/utils/classNames'
-
+import { classNames } from '../../utils/classNames'
 import classes from './Text.module.scss'
 
 type TTextColor = 'primary' | 'error' | 'inverted'

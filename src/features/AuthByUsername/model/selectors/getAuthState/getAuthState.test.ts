@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getAuthState } from './getAuthState'
 
 describe('getAuthState:', () => {

@@ -1,7 +1,6 @@
-import type webpack from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
-
+import type webpack from 'webpack'
 import { type TLoadersOptions } from './types/loaders'
 
 export function getLoaders(options: TLoadersOptions): webpack.RuleSetRule[] {

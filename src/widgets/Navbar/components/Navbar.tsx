@@ -1,16 +1,14 @@
 import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
-import { getUserAuthData, userActions } from 'entities/User'
 import { AuthModal } from 'features/AuthByUsername'
+import { getUserAuthData, userActions } from 'entities/User'
 import { AppLink } from 'shared/components/AppLink'
 import { Button } from 'shared/components/Button'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
-
 import classes from './Navbar.module.scss'
 
 interface INavbarProps {

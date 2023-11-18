@@ -1,5 +1,4 @@
 import { type RouteProps } from 'react-router-dom'
-
 import { AboutPage } from 'pages/AboutPage'
 import { ArticleDetailsPage } from 'pages/ArticleDetailsPage'
 import { ArticleEditPage } from 'pages/ArticleEditPage'

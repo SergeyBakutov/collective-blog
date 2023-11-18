@@ -1,5 +1,4 @@
 import { type IProfile } from 'entities/Profile'
-
 import { type TValidateError } from './validateError'
 
 export interface IProfileStateSchema {

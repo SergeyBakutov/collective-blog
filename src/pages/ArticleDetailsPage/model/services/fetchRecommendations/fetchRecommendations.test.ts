@@ -1,6 +1,5 @@
 import { type IArticle } from 'entities/Article'
 import { TestAsyncThunk } from 'shared/utils/tests'
-
 import { fetchRecommendations } from './fetchRecommendations'
 
 const articles: IArticle[] = [

@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getArticlesError, getArticlesHasMore, getArticlesInited, getArticlesIsLoading, getArticlesLimit, getArticlesPage, getArticlesSearch, getArticlesSort, getArticlesSortOrder, getArticlesType, getArticlesView } from './articlesSelectors'
 
 describe('getArticlesIsLoading:', () => {

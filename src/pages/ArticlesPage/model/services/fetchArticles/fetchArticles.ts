@@ -1,10 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-
 import { type IThunkApiConfig } from 'app/providers/StoreProvider'
 import { type IArticle } from 'entities/Article'
-
-import { getArticlesLimit, getArticlesPage, getArticlesSearch, getArticlesSort, getArticlesSortOrder, getArticlesType } from '../../selectors/articlesSelectors'
 import { addQueryParams } from 'shared/utils/addQueryParams'
+import { getArticlesLimit, getArticlesPage, getArticlesSearch, getArticlesSort, getArticlesSortOrder, getArticlesType } from '../../selectors/articlesSelectors'
 
 interface IFetchArticlesProps {
   replace?: boolean

@@ -1,12 +1,9 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-
 import { AppLink } from 'shared/components/AppLink'
 import { Icon } from 'shared/components/Icon'
 import { classNames } from 'shared/utils/classNames'
-
 import { type ISidebarItem } from '../../model/types/item'
-
 import classes from './SidebarItem.module.scss'
 
 interface ISidebarItemProps {

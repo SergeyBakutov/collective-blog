@@ -1,6 +1,5 @@
 import { Loader } from 'shared/components/Loader'
 import { classNames } from 'shared/utils/classNames'
-
 import classes from './PageLoader.module.scss'
 
 interface IPageLoaderProps {

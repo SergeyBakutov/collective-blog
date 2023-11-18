@@ -1,8 +1,6 @@
 import { useCallback } from 'react'
-
-import { Card } from 'shared/components/Card'
-import { classNames } from 'shared/utils/classNames'
-
+import { classNames } from '../../utils/classNames'
+import { Card } from '../Card'
 import classes from './Tabs.module.scss'
 
 export interface ITabItem<T extends string> {

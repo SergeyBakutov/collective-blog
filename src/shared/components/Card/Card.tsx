@@ -1,5 +1,4 @@
-import { classNames } from 'shared/utils/classNames'
-
+import { classNames } from '../../utils/classNames'
 import classes from './Card.module.scss'
 
 interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {

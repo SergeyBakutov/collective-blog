@@ -1,5 +1,4 @@
 import type { Preview } from '@storybook/react'
-
 import { I18nDecorator } from 'shared/config/storybook/I18nDecorator'
 
 import '../../src/app/styles/index.scss'

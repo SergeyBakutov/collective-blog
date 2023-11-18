@@ -1,20 +1,17 @@
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { useTranslation } from 'react-i18next'
-
 import EyeIcon from 'shared/assets/icons/eye-icon.svg'
+import { AppLink } from 'shared/components/AppLink'
 import { Avatar } from 'shared/components/Avatar'
 import { Button } from 'shared/components/Button'
 import { Card } from 'shared/components/Card'
 import { Icon } from 'shared/components/Icon'
 import { Text } from 'shared/components/Text'
+import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
-
 import { type TArticlesView, type IArticle, type IArticleTextBlock } from '../../model/types/article'
 import { ArticleTextBlock } from '../ArticleTextBlock/ArticleTextBlock'
-
 import classes from './ArticleListItem.module.scss'
-import { APP_ROUTES } from 'shared/router'
-import { AppLink } from 'shared/components/AppLink'
 
 interface IArticleListItemProps {
   className?: string

@@ -1,12 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-
 import { type IThunkApiConfig } from 'app/providers/StoreProvider'
 import { type TArticleType, type TArticlesSort } from 'entities/Article'
 import { type TSortOrder } from 'shared/types/sortOrder'
-
 import { getArticlesInited } from '../../selectors/articlesSelectors'
 import { articlesActions } from '../../slices/articlesSlice'
-
 import { fetchArticles } from '../fetchArticles/fetchArticles'
 
 export const initArticles = createAsyncThunk<void, URLSearchParams, IThunkApiConfig<void>>(

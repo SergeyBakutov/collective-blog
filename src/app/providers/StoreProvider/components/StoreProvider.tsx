@@ -1,6 +1,5 @@
-import { Provider } from 'react-redux'
 import { type ReducersMapObject } from '@reduxjs/toolkit'
-
+import { Provider } from 'react-redux'
 import { createStore } from '../config/store'
 import { type IStateSchema } from '../types/schema'
 

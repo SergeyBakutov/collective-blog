@@ -1,14 +1,11 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-
+import { Skeleton } from 'shared/components/Skeleton'
 import { Text } from 'shared/components/Text'
 import { classNames } from 'shared/utils/classNames'
-
 import { type IComment } from '../../model/types/comment'
 import { CommentCard } from '../CommentCard/CommentCard'
-
 import classes from './CommentList.module.scss'
-import { Skeleton } from 'shared/components/Skeleton'
 
 interface ICommentListProps {
   className?: string

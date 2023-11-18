@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getAddNewCommentForArticleError, getAddNewCommentForArticleIsLoading, getAddNewCommentForArticleText } from './addNewCommentForArticleSelectors'
 
 describe('getAddNewCommentForArticleText:', () => {

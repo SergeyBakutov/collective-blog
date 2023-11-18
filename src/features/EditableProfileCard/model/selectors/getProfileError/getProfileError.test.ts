@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getProfileError } from './getProfileError'
 
 describe('getProfileError:', () => {

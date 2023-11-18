@@ -1,7 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { type IArticleDetailsSchema } from '../types/schema'
 
 const getArticleDetailsState = (state: IStateSchema): IArticleDetailsSchema | undefined => state?.articleDetails

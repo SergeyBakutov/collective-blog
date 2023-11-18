@@ -1,10 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-
 import { type IThunkApiConfig } from 'app/providers/StoreProvider'
-
 import { getArticlesHasMore, getArticlesIsLoading, getArticlesPage } from '../../selectors/articlesSelectors'
 import { articlesActions } from '../../slices/articlesSlice'
-
 import { fetchArticles } from '../fetchArticles/fetchArticles'
 
 export const fetchNextArticles = createAsyncThunk<void, void, IThunkApiConfig<void>>(

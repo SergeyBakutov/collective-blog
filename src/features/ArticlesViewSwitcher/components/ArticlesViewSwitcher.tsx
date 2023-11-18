@@ -1,12 +1,9 @@
 import React, { memo, useCallback } from 'react'
-
 import { type TArticlesView } from 'entities/Article'
 import { Button } from 'shared/components/Button'
 import { Icon } from 'shared/components/Icon'
 import { classNames } from 'shared/utils/classNames'
-
 import { viewVariants } from '../model/viewVariants'
-
 import classes from './ArticlesViewSwitcher.module.scss'
 
 interface IArticleViewSwitcherProps {

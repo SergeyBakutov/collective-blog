@@ -1,8 +1,7 @@
 import path from 'path'
 import type { Configuration } from 'webpack'
-
-import { type TEnvVariables } from './configs/webpack/types/envVariables'
 import { getConfig } from './configs/webpack/getConfig'
+import { type TEnvVariables } from './configs/webpack/types/envVariables'
 
 export default (env: TEnvVariables): Configuration => {
   const mode = env.mode || 'development'

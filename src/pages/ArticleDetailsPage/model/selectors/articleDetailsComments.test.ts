@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getArticleDetailsCommentsError, getArticleDetailsCommentsIsLoading } from './articleDetailsComments'
 
 describe('getArticleDetailsCommentsIsLoading:', () => {

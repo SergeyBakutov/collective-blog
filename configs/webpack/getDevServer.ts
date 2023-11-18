@@ -1,5 +1,4 @@
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
-
 import { type TDevServerOptions } from './types/devServer'
 
 export function getDevServer(options: TDevServerOptions): DevServerConfiguration {

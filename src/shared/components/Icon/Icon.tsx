@@ -1,7 +1,5 @@
 import { memo } from 'react'
-
-import { classNames } from 'shared/utils/classNames'
-
+import { classNames } from '../../utils/classNames'
 import classes from './Icon.module.scss'
 
 interface IIconProps {

@@ -1,11 +1,9 @@
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-
 import { type TArticlesSort } from 'entities/Article'
-import { classNames } from 'shared/utils/classNames'
 import { type ISelectOption, Select } from 'shared/components/Select'
 import { type TSortOrder } from 'shared/types/sortOrder'
-
+import { classNames } from 'shared/utils/classNames'
 import classes from './ArticlesSort.module.scss'
 
 interface IArticlesSortProps {

@@ -1,11 +1,8 @@
 import { memo } from 'react'
-
 import { Card } from 'shared/components/Card'
 import { Skeleton } from 'shared/components/Skeleton'
 import { classNames } from 'shared/utils/classNames'
-
 import { type TArticlesView } from '../../model/types/article'
-
 import classes from './ArticleListItem.module.scss'
 
 interface IArticleListItemSkeletonProps {

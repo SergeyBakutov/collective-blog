@@ -1,7 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { type IScrollInfoSchema } from '../types/schema'
 
 const getScrollInfo = (state: IStateSchema): IScrollInfoSchema => state.scrollInfo

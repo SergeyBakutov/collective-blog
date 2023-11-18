@@ -1,5 +1,4 @@
 import { type IStateSchema } from 'app/providers/StoreProvider'
-
 import { getProfileIsLoading } from './getProfileIsLoading'
 
 describe('getProfileIsLoading:', () => {

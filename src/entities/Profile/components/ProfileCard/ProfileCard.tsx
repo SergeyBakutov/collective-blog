@@ -1,15 +1,13 @@
+/* eslint-disable @conarti/feature-sliced/layers-slices */
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-
+import { CountrySelect } from 'entities/Country'
 import { CurrencySelect } from 'entities/Currency'
 import { Avatar } from 'shared/components/Avatar'
 import { Input } from 'shared/components/Input'
 import { classNames } from 'shared/utils/classNames'
-
 import { type IProfile } from '../../model/types/profile'
-
 import classes from './ProfileCard.module.scss'
-import { CountrySelect } from 'entities/Country'
 
 interface IProfileCardProps {
   data?: IProfile

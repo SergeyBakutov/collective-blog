@@ -1,5 +1,4 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
-
 import { type IScrollInfoSchema } from '../types/schema'
 
 const initialState: IScrollInfoSchema = {

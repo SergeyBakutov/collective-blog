@@ -1,21 +1,18 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
 import { Button } from 'shared/components/Button'
 import { Input } from 'shared/components/Input'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 import { classNames } from 'shared/utils/classNames'
-
 import { getAuthError } from '../../model/selectors/getAuthError/getAuthError'
 import { getAuthIsLoading } from '../../model/selectors/getAuthIsLoading/getAuthIsLoading'
-import { getAuthUsername } from '../../model/selectors/getAuthUsername/getAuthUsername'
 import { getAuthPassword } from '../../model/selectors/getAuthPassword/getAuthPassword'
+import { getAuthUsername } from '../../model/selectors/getAuthUsername/getAuthUsername'
 import { authByUsername } from '../../model/services/authByUsername/authByUsername'
 import { authActions, authReducer } from '../../model/slice/authSlice'
-
 import classes from './AuthForm.module.scss'
 
 interface IAuthFormProps {

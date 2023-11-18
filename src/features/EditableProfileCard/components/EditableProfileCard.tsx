@@ -1,7 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
 import { type ICountry } from 'entities/Country'
 import { type ICurrency } from 'entities/Currency'
 import { type IProfile, ProfileCard } from 'entities/Profile'
@@ -11,17 +10,15 @@ import { Loader } from 'shared/components/Loader'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { classNames } from 'shared/utils/classNames'
-
 import { getProfileData } from '../model/selectors/getProfileData/getProfileData'
+import { getProfileError } from '../model/selectors/getProfileError/getProfileError'
 import { getProfileFormData } from '../model/selectors/getProfileFormData/getProfileFormData'
 import { getProfileIsLoading } from '../model/selectors/getProfileIsLoading/getProfileIsLoading'
-import { getProfileError } from '../model/selectors/getProfileError/getProfileError'
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly'
 import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { updateProfileData } from '../model/services/updateProfileData/updateProfileData'
 import { profileActions } from '../model/slice/profileSlice'
 import { type TValidateError } from '../model/types/validateError'
-
 import classes from './EditableProfileCard.module.scss'
 
 interface IEditableProfileCardProps {

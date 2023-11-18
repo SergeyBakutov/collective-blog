@@ -1,7 +1,5 @@
 import { useMemo } from 'react'
-
-import { classNames } from 'shared/utils/classNames'
-
+import { classNames } from '../../utils/classNames'
 import classes from './Avatar.module.scss'
 
 interface IAvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {

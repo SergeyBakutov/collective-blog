@@ -1,15 +1,12 @@
 import { memo, useState } from 'react'
 import { useSelector } from 'react-redux'
-
-import { getUserAuthData } from 'entities/User'
 import { LangSwitcher } from 'features/LangSwitcher'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
+import { getUserAuthData } from 'entities/User'
 import { Button } from 'shared/components/Button'
 import { classNames } from 'shared/utils/classNames'
-
 import { getSidebarItems } from '../../model/selectors/getISidebartems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
-
 import classes from './Sidebar.module.scss'
 interface ISidebarProps {
   className?: string

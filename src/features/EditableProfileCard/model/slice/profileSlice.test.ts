@@ -1,8 +1,7 @@
 import { type IProfile } from 'entities/Profile'
-
+import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData'
 import { type IProfileStateSchema } from '../types/schema'
 import { profileActions, profileReducer } from './profileSlice'
-import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData'
 
 const profile: IProfile = {
   firstname: 'Ivan',

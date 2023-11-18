@@ -1,5 +1,4 @@
 import { type IAuthStateSchema } from '../types/schema'
-
 import { authActions, authReducer } from './authSlice'
 
 describe('authSlice:', () => {

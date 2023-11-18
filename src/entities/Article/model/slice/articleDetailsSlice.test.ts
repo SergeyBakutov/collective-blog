@@ -1,7 +1,6 @@
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById'
 import { type IArticle } from '../types/article'
 import { type IArticleDetailsSchema } from '../types/schema'
-
 import { articleDetailsReducer } from './articleDetailsSlice'
 
 describe('articleDetailsSlice:', () => {

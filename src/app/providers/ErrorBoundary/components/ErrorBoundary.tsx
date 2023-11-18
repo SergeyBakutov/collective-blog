@@ -1,5 +1,4 @@
 import { Component, Suspense, type ErrorInfo, type ReactNode } from 'react'
-
 import { UnexpectedError } from 'widgets/UnexpectedError'
 
 interface Props {

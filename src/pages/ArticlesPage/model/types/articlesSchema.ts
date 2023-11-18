@@ -1,5 +1,4 @@
 import { type EntityState } from '@reduxjs/toolkit'
-
 import { type TArticlesView, type IArticle, type TArticlesSort, type TArticleType } from 'entities/Article'
 import { type TSortOrder } from 'shared/types/sortOrder'
 

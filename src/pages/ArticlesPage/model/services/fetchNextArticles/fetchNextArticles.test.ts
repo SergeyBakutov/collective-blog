@@ -1,7 +1,6 @@
 import { TestAsyncThunk } from 'shared/utils/tests'
-
-import { fetchNextArticles } from './fetchNextArticles'
 import { fetchArticles } from '../fetchArticles/fetchArticles'
+import { fetchNextArticles } from './fetchNextArticles'
 
 jest.mock('../fetchArticles/fetchArticles')
 

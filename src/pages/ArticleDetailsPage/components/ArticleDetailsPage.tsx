@@ -1,19 +1,17 @@
 import { memo, useCallback, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
+import { useNavigate, useParams } from 'react-router-dom'
+import { Page } from 'widgets/Page'
+import { AddNewCommentForArticle } from 'features/AddNewCommentForArticle'
 import { ArticleDetails, ArticleList } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
-import { AddNewCommentForArticle } from 'features/AddNewCommentForArticle'
 import { Button } from 'shared/components/Button'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
 import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
-import { Page } from 'widgets/Page'
-
 import { getArticleDetailsCommentsIsLoading } from '../model/selectors/articleDetailsComments'
 import { getCanEditArticle } from '../model/selectors/articleDetailsPage'
 import { getArticleDetailsRecommendationsIsLoading } from '../model/selectors/articleDetailsRecommendations'
@@ -22,7 +20,6 @@ import { fetchRecommendations } from '../model/services/fetchRecommendations/fet
 import { articleDetailsCommentsSelectors } from '../model/slices/articleDetailsCommentsSlice'
 import { articleDetailsRecommendationsSelectors } from '../model/slices/articleDetailsRecommendationsSlice'
 import { articleDetailsPageReducer } from '../model/slices/articleDetailsReducer'
-
 import classes from './ArticleDetailsPage.module.scss'
 
 interface IArticleDetailsPageProps {

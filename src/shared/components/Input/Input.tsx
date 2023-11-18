@@ -1,7 +1,5 @@
 import { memo } from 'react'
-
-import { classNames } from 'shared/utils/classNames'
-
+import { classNames } from '../../utils/classNames'
 import classes from './Input.module.scss'
 
 interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'> {

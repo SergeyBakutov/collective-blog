@@ -1,6 +1,5 @@
 import { type StoryFn } from '@storybook/react'
-
-import { type TTheme } from 'shared/hooks/useTheme'
+import { type TTheme } from '../../hooks/useTheme'
 
 interface IThemeDecoratorOptions {
   backgroundInverted?: boolean

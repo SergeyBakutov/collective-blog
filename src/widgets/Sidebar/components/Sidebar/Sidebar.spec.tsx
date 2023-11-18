@@ -1,7 +1,5 @@
 import { fireEvent } from '@testing-library/react'
-
 import { renderComponent } from 'shared/utils/tests'
-
 import { Sidebar } from './Sidebar'
 
 describe('Sidebar:', () => {

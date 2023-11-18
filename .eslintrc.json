@@ -8,7 +8,8 @@
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
         "plugin:i18next/recommended",
-        "plugin:storybook/recommended"
+        "plugin:storybook/recommended",
+        "plugin:@conarti/feature-sliced/recommended"
     ],
     "overrides": [
         {

@@ -1,8 +1,7 @@
 import { type IArticle } from 'entities/Article'
-import { TestAsyncThunk } from 'shared/utils/tests'
-
-import { fetchArticles } from './fetchArticles'
 import { addQueryParams } from 'shared/utils/addQueryParams'
+import { TestAsyncThunk } from 'shared/utils/tests'
+import { fetchArticles } from './fetchArticles'
 
 const articles: IArticle[] = [
   {

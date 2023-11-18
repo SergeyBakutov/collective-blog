@@ -1,6 +1,5 @@
 import { type IProfile } from 'entities/Profile'
 import { TestAsyncThunk } from 'shared/utils/tests'
-
 import { fetchProfileData } from './fetchProfileData'
 
 describe('fetchProfileData:', () => {

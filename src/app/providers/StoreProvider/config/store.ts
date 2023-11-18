@@ -1,9 +1,7 @@
 import { type ReducersMapObject, configureStore, type Reducer, type AnyAction } from '@reduxjs/toolkit'
-
-import { userReducer } from 'entities/User'
 import { scrollInfoReducer } from 'features/SaveScrollInfo'
+import { userReducer } from 'entities/User'
 import { $api } from 'shared/api/api'
-
 import { type IStateSchema } from '../types/schema'
 import { createReducerManager } from './createReducerManager'
 

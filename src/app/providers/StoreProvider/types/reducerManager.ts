@@ -4,7 +4,6 @@ import {
   type AnyAction,
   type Reducer
 } from '@reduxjs/toolkit'
-
 import { type IStateSchema, type TStateSchemaKey } from './schema'
 
 export interface IReducerManager {

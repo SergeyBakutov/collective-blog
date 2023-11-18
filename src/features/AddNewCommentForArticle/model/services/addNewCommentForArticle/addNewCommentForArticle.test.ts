@@ -1,6 +1,5 @@
 import { type IComment } from 'entities/Comment'
 import { TestAsyncThunk } from 'shared/utils/tests'
-
 import { addNewCommentForArticle } from './addNewCommentForArticle'
 
 describe('addNewCommentForArticle:', () => {

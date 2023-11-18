@@ -1,11 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
-
-import { type IComment } from '../../model/types/comment'
-
-import { CommentList } from './CommentList'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
+import { type IComment } from '../../model/types/comment'
+import { CommentList } from './CommentList'
 
 const comments: IComment[] = [
   {

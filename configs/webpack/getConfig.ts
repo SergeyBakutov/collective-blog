@@ -1,11 +1,9 @@
 import type webpack from 'webpack'
-
-import { type TConfigOptions } from './types/config'
-
 import { getDevServer } from './getDevServer'
 import { getLoaders } from './getLoaders'
 import { getPlugins } from './getPlugins'
 import { getResolvers } from './getResolvers'
+import { type TConfigOptions } from './types/config'
 
 export function getConfig(options: TConfigOptions): webpack.Configuration {
   const { mode, paths, isDev, port, apiUrl, project } = options

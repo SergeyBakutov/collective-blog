@@ -1,15 +1,13 @@
 import { memo, useLayoutEffect, useRef } from 'react'
-import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
+import { useLocation } from 'react-router-dom'
 import { type IStateSchema } from 'app/providers/StoreProvider'
 import { getScrollInfoPositionByPath, scrollInfoActions } from 'features/SaveScrollInfo'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { useInfiniteScroll } from 'shared/hooks/useInfiniteScroll'
-import { classNames } from 'shared/utils/classNames'
-
-import classes from './Page.module.scss'
 import { useThrottle } from 'shared/hooks/useThrottle'
+import { classNames } from 'shared/utils/classNames'
+import classes from './Page.module.scss'
 
 interface IPageProps {
   className?: string

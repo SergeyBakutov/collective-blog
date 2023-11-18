@@ -1,7 +1,6 @@
 import { userActions } from 'entities/User'
-
-import { authByUsername } from './authByUsername'
 import { TestAsyncThunk } from 'shared/utils/tests'
+import { authByUsername } from './authByUsername'
 
 describe('authByUsername:', () => {
   it('fulfilled', async () => {

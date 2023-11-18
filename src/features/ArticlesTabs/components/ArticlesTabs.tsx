@@ -1,10 +1,8 @@
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-
 import { type TArticleType } from 'entities/Article'
 import { type ITabItem, Tabs } from 'shared/components/Tabs'
 import { classNames } from 'shared/utils/classNames'
-
 import classes from './ArticlesTabs.module.scss'
 
 interface IArticlesTabsProps {

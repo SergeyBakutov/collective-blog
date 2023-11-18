@@ -1,10 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-
 import { type IThunkApiConfig } from 'app/providers/StoreProvider'
 import { getArticleDetailsData } from 'entities/Article'
 import { type IComment } from 'entities/Comment'
 import { getUserAuthData } from 'entities/User'
-
 import { getAddNewCommentForArticleText } from '../../selectors/addNewCommentForArticleSelectors'
 
 export const addNewCommentForArticle = createAsyncThunk<IComment, void, IThunkApiConfig<string>>(

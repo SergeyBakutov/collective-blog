@@ -1,7 +1,6 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
-
-import { type IAddNewCommentForArticleSchema } from '../types/schema'
 import { addNewCommentForArticle } from '../services/addNewCommentForArticle/addNewCommentForArticle'
+import { type IAddNewCommentForArticleSchema } from '../types/schema'
 
 const initialState: IAddNewCommentForArticleSchema = {
   text: '',

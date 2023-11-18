@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
 import { type IProfile } from 'entities/Profile'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator'
-
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { EditableProfileCard } from './EditableProfileCard'
 
 const profile: IProfile = {
