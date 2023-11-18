@@ -5,6 +5,7 @@ import { CountrySelect } from 'entities/Country'
 import { CurrencySelect } from 'entities/Currency'
 import { Avatar } from 'shared/components/Avatar'
 import { Input } from 'shared/components/Input'
+import { VStack } from 'shared/components/Stack'
 import { classNames } from 'shared/utils/classNames'
 import { type IProfile } from '../../model/types/profile'
 import classes from './ProfileCard.module.scss'
@@ -54,7 +55,7 @@ export const ProfileCard: React.FC<IProfileCardProps> = (props) => {
   }, [onChange])
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <VStack className={classNames('', {}, [className])} gap="12" fullWidth>
       <Avatar src={data?.avatar} className={classes.avatar} />
       <Input
         value={data?.firstname ?? ''}
@@ -102,6 +103,6 @@ export const ProfileCard: React.FC<IProfileCardProps> = (props) => {
         readonly={readonly}
         onChange={onChangeAvatar}
       />
-    </div>
+    </VStack>
   )
 }

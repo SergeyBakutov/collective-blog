@@ -1,11 +1,9 @@
 .wrapper {
+  width: 100%;
   padding: 10px;
   border: 1px solid var(--primary-color);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px ;
+.comment {
+  margin-top: 10px;
 }

@@ -116,7 +116,8 @@ export const TileDark: Story = {
 export const TileIsLoading: Story = {
   args: {
     view: 'tile',
-    isLoading: true
+    isLoading: true,
+    articles: []
   },
   decorators: [ThemeDecorator('light')]
 }
@@ -138,7 +139,8 @@ export const ListDark: Story = {
 export const ListIsLoading: Story = {
   args: {
     view: 'list',
-    isLoading: true
+    isLoading: true,
+    articles: []
   },
   decorators: [ThemeDecorator('light')]
 }

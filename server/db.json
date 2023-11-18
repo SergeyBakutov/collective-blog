@@ -615,6 +615,12 @@
       "articleId": 6,
       "userId": 2,
       "id": 4
+    },
+    {
+      "text": "123",
+      "articleId": 18,
+      "userId": 1,
+      "id": 5
     }
   ],
   "users": [

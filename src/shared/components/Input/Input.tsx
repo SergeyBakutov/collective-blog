@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import { classNames } from '../../utils/classNames'
+import { VStack } from '../Stack'
 import classes from './Input.module.scss'
 
 interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'> {
@@ -27,11 +28,15 @@ export const Input: React.FC<IInputProps> = memo((props) => {
   }
 
   return (
-    <div className={classNames(classes.wrapper, { [classes.readonly]: readonly }, [className])}>
+    <VStack
+      className={classNames('', { [classes.readonly]: readonly }, [className])}
+      fullWidth
+    >
       {label && (
         <label className={classes.label} htmlFor={id}>{label}</label>
       )}
       <input
+        className={classes.input}
         id={id}
         value={value}
         type={type}
@@ -39,7 +44,7 @@ export const Input: React.FC<IInputProps> = memo((props) => {
         onChange={onChangeHandler}
         {...otherProps}
       />
-    </div>
+    </VStack>
   )
 })
 

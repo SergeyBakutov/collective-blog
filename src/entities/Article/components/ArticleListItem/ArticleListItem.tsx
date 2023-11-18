@@ -6,6 +6,7 @@ import { Avatar } from 'shared/components/Avatar'
 import { Button } from 'shared/components/Button'
 import { Card } from 'shared/components/Card'
 import { Icon } from 'shared/components/Icon'
+import { HStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
@@ -38,27 +39,27 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
     return (
       <div className={classNames('', {}, [className, classes[view]])}>
         <Card>
-          <div className={classes.header}>
-            <div className={classes.userInfo}>
+          <HStack alignItems="center" justifyContent="spaceBetween">
+            <HStack alignItems="center" gap="8">
               <Avatar src={article.user.avatar} size={30} />
               <Text description={article.user.username} />
-            </div>
+            </HStack>
             <Text description={article.createdAt} />
-          </div>
+          </HStack>
           <Text className={classes.title} title={article.title} />
           {types}
           <img className={classes.image} src={article.img} alt={article.title} />
           {textBlock && (
             <ArticleTextBlock className={classes.textBlock} block={textBlock as IArticleTextBlock} />
           )}
-          <div className={classes.footer}>
+          <HStack alignItems="center">
             <AppLink to={APP_ROUTES.articleDetails + article.id} target={target}>
               <Button color="outline">
                 {t('Read more...')}
               </Button>
             </AppLink>
             {views}
-          </div>
+          </HStack>
         </Card>
       </div>
     )
@@ -70,15 +71,15 @@ export const ArticleListItem: React.FC<IArticleListItemProps> = memo((props) => 
       target={target}
       className={classNames('', {}, [className, classes[view]])}
     >
-      <Card >
+      <Card>
         <div className={classes.imageWrapper}>
           <img className={classes.image} src={article.img} alt={article.title} />
           <Text className={classes.date} description={article.createdAt} />
         </div>
-        <div className={classes.info}>
+        <HStack className={classes.info} alignItems="center">
           {types}
           {views}
-        </div>
+        </HStack>
         <Text className={classes.title} description={article.title} />
       </Card>
     </AppLink>

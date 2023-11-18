@@ -2,9 +2,9 @@ import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { type TArticlesSort } from 'entities/Article'
 import { type ISelectOption, Select } from 'shared/components/Select'
+import { HStack } from 'shared/components/Stack'
 import { type TSortOrder } from 'shared/types/sortOrder'
 import { classNames } from 'shared/utils/classNames'
-import classes from './ArticlesSort.module.scss'
 
 interface IArticlesSortProps {
   className?: string
@@ -30,7 +30,7 @@ export const ArticlesSort: React.FC<IArticlesSortProps> = memo((props) => {
   ]), [t])
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <HStack className={classNames('', {}, [className])} gap="20">
       <Select
         label={t('Sort by')}
         value={sort}
@@ -43,7 +43,7 @@ export const ArticlesSort: React.FC<IArticlesSortProps> = memo((props) => {
         options={orderOptions}
         onChange={onChangeSortOrder}
       />
-    </div>
+    </HStack>
   )
 })
 

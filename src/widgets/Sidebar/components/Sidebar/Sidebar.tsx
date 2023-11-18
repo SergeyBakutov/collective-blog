@@ -4,6 +4,7 @@ import { LangSwitcher } from 'features/LangSwitcher'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { getUserAuthData } from 'entities/User'
 import { Button } from 'shared/components/Button'
+import { HStack } from 'shared/components/Stack'
 import { classNames } from 'shared/utils/classNames'
 import { getSidebarItems } from '../../model/selectors/getISidebartems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
@@ -42,10 +43,10 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
       >
         {isCollapsed ? '>' : '<'}
       </Button>
-      <div className={classes.switchers}>
+      <HStack justifyContent="center" gap="20">
         <ThemeSwitcher />
         <LangSwitcher short={isCollapsed} />
-      </div>
+      </HStack>
     </aside>
   )
 })

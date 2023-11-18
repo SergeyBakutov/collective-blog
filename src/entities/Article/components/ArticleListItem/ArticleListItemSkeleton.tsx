@@ -1,6 +1,7 @@
 import { memo } from 'react'
 import { Card } from 'shared/components/Card'
 import { Skeleton } from 'shared/components/Skeleton'
+import { HStack } from 'shared/components/Stack'
 import { classNames } from 'shared/utils/classNames'
 import { type TArticlesView } from '../../model/types/article'
 import classes from './ArticleListItem.module.scss'
@@ -25,22 +26,22 @@ export const ArticleListItemSkeleton: React.FC<IArticleListItemSkeletonProps> = 
     return (
       <div className={classNames('', {}, [className, classes[view]])}>
         <Card>
-          <div className={classes.header}>
-            <div className={classes.userInfo}>
+          <HStack alignItems="center" justifyContent="spaceBetween">
+            <HStack alignItems="center" gap="8">
               <Skeleton width={30} height={30} borderRadius={'50%'} />
               <Skeleton width={50} height={24} />
-            </div>
+            </HStack>
             <Skeleton width={100} height={24} />
-          </div>
+          </HStack>
           <Skeleton className={classes.title} width={300} height={32} />
           <Skeleton className={classes.types} width={110} height={24} />
 
           <Skeleton className={classes.image} height={250} />
           <Skeleton className={classes.textBlock} width={'100%'} height={200} />
-          <div className={classes.footer}>
+          <HStack alignItems="center">
             <Skeleton width={150} height={24} />
             {views}
-          </div>
+          </HStack>
         </Card>
       </div>
     )
@@ -52,10 +53,10 @@ export const ArticleListItemSkeleton: React.FC<IArticleListItemSkeletonProps> = 
         <div className={classes.imageWrapper}>
           <Skeleton width={200} height={200} />
         </div>
-        <div className={classes.info}>
+        <HStack className={classes.info} alignItems="center">
           {types}
           {views}
-        </div>
+        </HStack>
         <Skeleton className={classes.title} width={160} height={24} />
       </Card>
     </div>

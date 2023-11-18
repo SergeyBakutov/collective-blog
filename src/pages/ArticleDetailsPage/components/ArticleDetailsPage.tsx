@@ -7,6 +7,7 @@ import { AddNewCommentForArticle } from 'features/AddNewCommentForArticle'
 import { ArticleDetails, ArticleList } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
 import { Button } from 'shared/components/Button'
+import { HStack, VStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
@@ -65,7 +66,7 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
 
   return (
     <Page className={classNames('', {}, [className])}>
-      <div className={classes.header}>
+      <HStack alignItems="center" justifyContent="spaceBetween">
         <Button color="outline" onClick={onBackToTheList}>
           {t('Back to the list')}
         </Button>
@@ -74,10 +75,10 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
             {t('Edit')}
           </Button>
         )}
-      </div>
+      </HStack>
 
       <ArticleDetails id={id} />
-      <div className={classes.recommendations}>
+      <VStack className={classes.recommendations} gap="12" fullWidth>
         <Text title={t('Recommendations')} />
         <ArticleList
           className={classes.recommendationsList}
@@ -85,12 +86,12 @@ const ArticleDetailsPage: React.FC<IArticleDetailsPageProps> = (props) => {
           isLoading={recommendationsIsLoading}
           target="_blank"
         />
-      </div>
-      <div className={classes.comments}>
+      </VStack>
+      <VStack className={classes.comments} gap="12">
         <Text title={t('Comments')} />
         <AddNewCommentForArticle onSendNewComment={onSendNewComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
-      </div>
+      </VStack>
     </Page>
   )
 }

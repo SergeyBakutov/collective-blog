@@ -1,9 +1,9 @@
 import { type HTMLAttributeAnchorTarget, memo, useCallback } from 'react'
+import { HStack, VStack } from 'shared/components/Stack'
 import { classNames } from 'shared/utils/classNames'
 import { type TArticlesView, type IArticle } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
-import classes from './ArticleList.module.scss'
 
 interface IArticleListProps {
   className?: string
@@ -32,13 +32,24 @@ export const ArticleList: React.FC<IArticleListProps> = memo((props) => {
     return <ArticleListItem key={article.id} article={article} view={view} target={target} />
   }, [target, view])
 
+  if (view === 'list') {
+    return (
+      <VStack className={classNames('', {}, [className])} gap="32">
+        {articles.length
+          ? articles.map(renderArticle)
+          : null}
+        {isLoading && getSkeletons(view)}
+      </VStack>
+    )
+  }
+
   return (
-    <div className={classNames('', {}, [className, classes[view]])}>
+    <HStack className={classNames('', {}, [className])} gap="32" wrap="wrap">
       {articles.length
         ? articles.map(renderArticle)
         : null}
       {isLoading && getSkeletons(view)}
-    </div>
+    </HStack>
   )
 })
 

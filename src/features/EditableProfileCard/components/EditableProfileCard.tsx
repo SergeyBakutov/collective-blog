@@ -7,6 +7,7 @@ import { type IProfile, ProfileCard } from 'entities/Profile'
 import { getUserAuthData } from 'entities/User'
 import { Button } from 'shared/components/Button'
 import { Loader } from 'shared/components/Loader'
+import { HStack, VStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { classNames } from 'shared/utils/classNames'
@@ -95,28 +96,36 @@ export const EditableProfileCard: React.FC<IEditableProfileCardProps> = (props) 
 
   if (isLoading) {
     return (
-      <div className={classNames(classes.wrapper, {}, [className, classes.loading])}>
+      <VStack
+        className={classNames(classes.wrapper, {}, [className, classes.loading])}
+        alignItems="center"
+        justifyContent="center"
+      >
         <Loader />
-      </div>
+      </VStack>
     )
   }
 
   if (error) {
     return (
-      <div className={classNames(classes.wrapper, {}, [className, classes.error])}>
+      <VStack
+        className={classNames(classes.wrapper, {}, [className, classes.error])}
+        alignItems="center"
+        justifyContent="center"
+      >
         <Text
           color="error"
           title={t('An error occurred while loading the profile')}
           description={t('Try refreshing the page')}
           align="center"
         />
-      </div>
+      </VStack>
     )
   }
 
   return (
-    <div className={classNames(classes.wrapper, { [classes.editing]: !readonly }, [className])}>
-      <div className={classes.header}>
+    <VStack className={classNames(classes.wrapper, { [classes.editing]: !readonly }, [className])} gap="12">
+      <HStack alignItems="center" justifyContent="spaceBetween" fullWidth>
         <Text title={t('User profile')} />
         {canEdit && (
           <>
@@ -125,23 +134,22 @@ export const EditableProfileCard: React.FC<IEditableProfileCardProps> = (props) 
                 <Button color="outline" onClick={onEdit}>{t('Edit')}</Button>
               )
               : (
-                <div className={classes.buttons}>
+                <HStack gap="12">
                   <Button color="backgroundInverted" onClick={onCancelEdit}>{t('Cancel')}</Button>
                   <Button color="outline" onClick={onSave}>{t('Save')}</Button>
-                </div>
+                </HStack>
               )}
           </>
         )}
-
-      </div>
+      </HStack>
       {validateErrors?.length && (
-        <div className={classes.validateErrors}>
+        <VStack gap="4">
           {validateErrors.map((error) => {
             return <Text key={error} color="error" description={validateErrorsWithTranslate[error]} />
           })}
-        </div>
+        </VStack>
       )}
       <ProfileCard data={formData} readonly={readonly} onChange={onChangeProfileData} />
-    </div>
+    </VStack>
   )
 }

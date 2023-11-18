@@ -2,6 +2,7 @@ import React, { memo, useCallback } from 'react'
 import { type TArticlesView } from 'entities/Article'
 import { Button } from 'shared/components/Button'
 import { Icon } from 'shared/components/Icon'
+import { HStack } from 'shared/components/Stack'
 import { classNames } from 'shared/utils/classNames'
 import { viewVariants } from '../model/viewVariants'
 import classes from './ArticlesViewSwitcher.module.scss'
@@ -20,7 +21,7 @@ export const ArticlesViewSwitcher: React.FC<IArticleViewSwitcherProps> = memo((p
   }, [onViewClick])
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <HStack className={classNames(classes.wrapper, {}, [className])} gap="4">
       {viewVariants.map((viewVariant) => (
         <React.Fragment key={viewVariant.view}>
           <Button
@@ -32,7 +33,7 @@ export const ArticlesViewSwitcher: React.FC<IArticleViewSwitcherProps> = memo((p
           </Button>
         </React.Fragment>
       ))}
-    </div>
+    </HStack>
   )
 })
 

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { getUserIsCheckedAuthData, userActions } from 'entities/User'
+import { HStack } from 'shared/components/Stack'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { useTheme } from 'shared/hooks/useTheme'
 import { classNames } from 'shared/utils/classNames'
@@ -22,10 +23,10 @@ export const App: React.FC = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <div className="content">
+      <HStack>
         <Sidebar className="sidebar" />
         {isCheckedAuthData && <AppRouter />}
-      </div>
+      </HStack>
     </div>
   )
 }

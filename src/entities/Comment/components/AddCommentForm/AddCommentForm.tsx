@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/components/Button'
 import { Input } from 'shared/components/Input'
+import { VStack } from 'shared/components/Stack'
 import { classNames } from 'shared/utils/classNames'
 import classes from './AddCommentForm.module.scss'
 
@@ -24,7 +25,7 @@ export const AddCommentForm: React.FC<IAddCommentFormProps> = memo((props) => {
   const { t } = useTranslation()
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <VStack className={classNames(classes.wrapper, {}, [className])} gap="12">
       <Input
         label={t('New comment')}
         value={text}
@@ -39,7 +40,7 @@ export const AddCommentForm: React.FC<IAddCommentFormProps> = memo((props) => {
       >
         {t('Send')}
       </Button>
-    </div>
+    </VStack>
   )
 })
 

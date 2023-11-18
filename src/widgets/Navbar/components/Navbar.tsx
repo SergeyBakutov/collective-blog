@@ -5,6 +5,7 @@ import { AuthModal } from 'features/AuthByUsername'
 import { getUserAuthData, userActions } from 'entities/User'
 import { AppLink } from 'shared/components/AppLink'
 import { Button } from 'shared/components/Button'
+import { HStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { APP_ROUTES } from 'shared/router'
@@ -37,16 +38,16 @@ export const Navbar: React.FC<INavbarProps> = memo((props) => {
   if (authData) {
     return (
       <header className={classNames(classes.wrapper, {}, [className])}>
-        <div className={classes.titleWithLinks}>
+        <HStack className={classes.titleWithLinks}>
           <Text color="inverted" title="Almost Habr" />
 
-          <div className={classes.links}>
+          <HStack alignItems="center" gap="12">
             <AppLink to={APP_ROUTES.articleCreate} color="inverted">
               {t('Create article')}
             </AppLink>
-          </div>
+          </HStack>
 
-        </div>
+        </HStack>
 
         <Button color="clearInverted" onClick={onLogoutClick}>
           {t('Logout')}

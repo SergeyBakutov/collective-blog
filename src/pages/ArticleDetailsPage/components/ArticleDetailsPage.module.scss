@@ -1,17 +1,9 @@
-.header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
 .recommendations, .comments {
 	margin-top: 15px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
 }
 
 .recommendationsList {
+	width: 100%;
 	overflow-y: hidden;
 	overflow-x: auto;
 	flex-wrap: nowrap;

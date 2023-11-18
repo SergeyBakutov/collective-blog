@@ -2,7 +2,6 @@
 import { useParams } from 'react-router-dom'
 import { Page } from 'widgets/Page'
 import { classNames } from 'shared/utils/classNames'
-import classes from './ArticleEditPage.module.scss'
 
 interface IArticleEditPageProps {
   className?: string
@@ -14,7 +13,7 @@ const ArticleEditPage: React.FC<IArticleEditPageProps> = (props) => {
   const isEdit = Boolean(id)
 
   return (
-    <Page className={classNames(classes.wrapper, {}, [className])}>
+    <Page className={classNames('', {}, [className])}>
       {isEdit ? `Редактирование статьи с ID = ${id}` : 'Создание новой статьи '}
     </Page>
   )

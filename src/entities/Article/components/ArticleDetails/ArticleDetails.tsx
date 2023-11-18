@@ -6,6 +6,7 @@ import EyeIcon from 'shared/assets/icons/eye-icon.svg'
 import { Avatar } from 'shared/components/Avatar'
 import { Icon } from 'shared/components/Icon'
 import { Skeleton } from 'shared/components/Skeleton'
+import { HStack, VStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
@@ -59,51 +60,55 @@ export const ArticleDetails: React.FC<IArticleDetailsProps> = (props) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(classes.wrapper, {}, [className])}>
+      <VStack className={classNames('', {}, [className])} gap="12">
         <Skeleton className={classes.avatar} width={200} height={200} borderRadius="50%" />
         <Skeleton width={300} height={40} />
         <Skeleton width={600} height={32} />
-        <div className={classes.articleInfo}>
+        <HStack alignItems="center" gap="4">
           <Skeleton width={20} height={20} borderRadius="50%" />
           <Skeleton width={100} height={24} />
-        </div>
-        <div className={classes.articleInfo}>
+        </HStack>
+        <HStack alignItems="center" gap="4">
           <Skeleton width={20} height={20} borderRadius="50%" />
           <Skeleton width={150} height={24} />
-        </div>
-        <div className={classes.blocks}>
+        </HStack>
+        <VStack gap="16" fullWidth>
           <Skeleton width="100%" height={200} />
           <Skeleton width="100%" height={200} />
           <Skeleton width="100%" height={200} />
           <Skeleton width="100%" height={200} />
-        </div>
-      </div>
+        </VStack>
+      </VStack>
     )
   }
 
   if (error) {
     return (
-      <div className={classNames(classes.wrapper, {}, [className, classes.error])}>
+      <VStack
+        className={classNames('', {}, [className])} gap="12"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Text color="error" title={t('An error occurred while loading the article')} align="center" />
-      </div>
+      </VStack>
     )
   }
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <VStack className={classNames('', {}, [className])} gap="12">
       <Avatar className={classes.avatar} src={article?.img} alt={article?.title} size={200} />
       <Text size="l" title={article?.title} description={article?.subtitle} />
-      <div className={classes.articleInfo}>
+      <HStack alignItems="center" gap="4">
         <Icon Svg={EyeIcon} />
         <Text description={String(article?.views)} />
-      </div>
-      <div className={classes.articleInfo}>
+      </HStack>
+      <HStack alignItems="center" gap="4">
         <Icon Svg={CalendarIcon} />
         <Text description={article?.createdAt} />
-      </div>
-      <div className={classes.blocks}>
+      </HStack>
+      <VStack gap="16" fullWidth>
         {article?.blocks.map(renderBlock)}
-      </div>
-    </div>
+      </VStack>
+    </VStack>
   )
 }

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { Button } from 'shared/components/Button'
 import { Input } from 'shared/components/Input'
+import { VStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
@@ -55,7 +56,7 @@ const AuthForm: React.FC<IAuthFormProps> = (props) => {
   }, [dispatch, onSuccessAuth, password, username])
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <VStack className={classNames(classes.wrapper, {}, [className])} gap="16">
       <Text title={t('Authorization')} />
       {error && <Text color="error" description={t('Invalid username or password')} />}
       <Input
@@ -76,7 +77,7 @@ const AuthForm: React.FC<IAuthFormProps> = (props) => {
       >
         {t('Login')}
       </Button>
-    </div>
+    </VStack>
   )
 }
 

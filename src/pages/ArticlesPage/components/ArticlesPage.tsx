@@ -8,6 +8,7 @@ import { ArticlesSort } from 'features/ArticlesSort'
 import { ArticlesTabs } from 'features/ArticlesTabs'
 import { ArticlesViewSwitcher } from 'features/ArticlesViewSwitcher'
 import { ArticleList, type TArticleType, type TArticlesSort, type TArticlesView } from 'entities/Article'
+import { HStack, VStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { useAppDispatch } from 'shared/hooks/useAppDispatch'
 import { type TReducersList, useAsyncReducer } from 'shared/hooks/useAsyncReducer'
@@ -19,7 +20,6 @@ import { fetchArticles } from '../model/services/fetchArticles/fetchArticles'
 import { fetchNextArticles } from '../model/services/fetchNextArticles/fetchNextArticles'
 import { initArticles } from '../model/services/initArticles/initArticles'
 import { articlesActions, articlesReducer, articlesSelectors } from '../model/slices/articlesSlice'
-import classes from './ArticlesPage.module.scss'
 
 interface IArticlesPageProps {
   className?: string
@@ -92,7 +92,7 @@ const ArticlesPage: React.FC<IArticlesPageProps> = (props) => {
 
   if (error) {
     return (
-      <Page className={classNames(classes.wrapper, {}, [className])}>
+      <Page className={classNames('', {}, [className])}>
         <Text color="error" title={t('Error loading articles. Try to reload the page')} align="center" />
       </Page>
     )
@@ -100,27 +100,29 @@ const ArticlesPage: React.FC<IArticlesPageProps> = (props) => {
 
   return (
     <Page
-      className={classNames(classes.wrapper, {}, [className])}
+      className={classNames('', {}, [className])}
       onScrollEnd={onLoadNextPart}
     >
-      <div className={classes.sortPlusView}>
-        <ArticlesSort
-          sort={sort}
-          sortOrder={sortOrder}
-          onChangeSort={onChangeSort}
-          onChangeSortOrder={onChangeSortOrder}
-        />
-        <ArticlesViewSwitcher view={view} onViewClick={onViewClick} />
-      </div>
+      <VStack gap="20" fullWidth>
+        <HStack alignItems="center" justifyContent="spaceBetween" fullWidth>
+          <ArticlesSort
+            sort={sort}
+            sortOrder={sortOrder}
+            onChangeSort={onChangeSort}
+            onChangeSortOrder={onChangeSortOrder}
+          />
+          <ArticlesViewSwitcher view={view} onViewClick={onViewClick} />
+        </HStack>
 
-      <ArticlesSearch search={search} onChangeSearch={onChangeSearch} />
+        <ArticlesSearch search={search} onChangeSearch={onChangeSearch} />
 
-      <ArticlesTabs type={type} onChangeType={onChangeType} />
-      <ArticleList view={view} isLoading={isLoading} articles={articles} />
+        <ArticlesTabs type={type} onChangeType={onChangeType} />
+        <ArticleList view={view} isLoading={isLoading} articles={articles} />
 
-      {!isLoading && !articles.length && !error && (
-        <Text title={t('Articles not found')} align="center" />
-      )}
+        {!isLoading && !articles.length && !error && (
+          <Text title={t('Articles not found')} align="center" />
+        )}
+      </VStack>
     </Page>
   )
 }

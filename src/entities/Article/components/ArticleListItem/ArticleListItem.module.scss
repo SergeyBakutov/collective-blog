@@ -29,8 +29,6 @@
 
 	.info {
 		margin-top: 8px;
-		display: flex;
-		align-items: center;
 	}
 
 	.types {
@@ -66,18 +64,7 @@
 } 
 
 .list {
-	.header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.userInfo {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-	}
-
+	width: 100%;
 
 	.title {
 		margin-top: 8px;
@@ -95,11 +82,6 @@
 		max-height: 200px;
 		overflow-y: hidden;
 		margin-bottom: 16px;
-	}
-
-	.footer {
-		display: flex;
-		align-items: center;
 	}
 
 	.views {

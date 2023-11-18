@@ -1,6 +1,7 @@
 import { memo } from 'react'
 import { AppLink } from 'shared/components/AppLink'
 import { Avatar } from 'shared/components/Avatar'
+import { HStack } from 'shared/components/Stack'
 import { Text } from 'shared/components/Text'
 import { APP_ROUTES } from 'shared/router'
 import { classNames } from 'shared/utils/classNames'
@@ -17,11 +18,13 @@ export const CommentCard: React.FC<ICommentCardProps> = memo((props) => {
 
   return (
     <div className={classNames(classes.wrapper, {}, [className])}>
-      <AppLink to={`${APP_ROUTES.profile}${comment.user.id}`} className={classes.header}>
-        {comment.user.avatar && <Avatar size={30} src={comment.user.avatar} />}
-        <Text title={comment.user.username} />
+      <AppLink to={`${APP_ROUTES.profile}${comment.user.id}`}>
+        <HStack alignItems="center" gap="12">
+          {comment.user.avatar && <Avatar size={30} src={comment.user.avatar} />}
+          <Text title={comment.user.username} />
+        </HStack>
       </AppLink>
-      <Text description={comment.text} />
+      <Text className={classes.comment} description={comment.text} />
     </div>
   )
 })
