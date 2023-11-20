@@ -44,14 +44,14 @@ export const Page: React.FC<React.PropsWithChildren<IPageProps>> = memo((props) 
   }, 500)
 
   return (
-    <section
+    <main
       className={classNames(classes.wrapper, {}, [className])}
       ref={wrapperRef}
       onScroll={onScroll}
     >
       {children}
       {onScrollEnd && <div className={classes.trigger} ref={triggerRef}></div>}
-    </section>
+    </main>
   )
 })
 

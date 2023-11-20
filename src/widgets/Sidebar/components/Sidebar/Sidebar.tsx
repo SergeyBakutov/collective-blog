@@ -28,11 +28,11 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
       data-testid="sidebar"
       className={classNames(classes.wrapper, { [classes.collapsed]: isCollapsed }, [className])}
     >
-      <menu className={classes.links}>
+      <nav className={classes.links}>
         {sidebarItems.filter((item) => !(item.authOnly && !authData)).map((item) =>
           <SidebarItem key={item.path} item={item} collapsed={isCollapsed} />
         )}
-      </menu>
+      </nav>
       <Button
         className={classes.collapsedButton}
         data-testid="collapsed-button"
