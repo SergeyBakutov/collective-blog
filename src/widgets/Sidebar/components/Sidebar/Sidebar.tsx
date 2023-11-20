@@ -43,7 +43,7 @@ export const Sidebar: React.FC<ISidebarProps> = memo((props) => {
       >
         {isCollapsed ? '>' : '<'}
       </Button>
-      <HStack justifyContent="center" gap="20">
+      <HStack alignItems="center" justifyContent="center" gap="20">
         <ThemeSwitcher />
         <LangSwitcher short={isCollapsed} />
       </HStack>

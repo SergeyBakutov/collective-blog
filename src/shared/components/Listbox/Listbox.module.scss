@@ -1,0 +1,49 @@
+.wrapper {
+	position: relative;
+
+	&.readonly {
+		opacity: 0.75;
+	}
+}
+
+.label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.button {
+	padding: 4px 8px;
+	border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+	background: none;
+	cursor: pointer;
+
+	&:disabled {
+		cursor: auto;
+	}
+
+	&:not([disabled]):hover {
+    opacity: 0.8;
+  }
+}
+
+.options {
+	position: absolute;
+	z-index: 10000;
+	background-color: var(--listbox-background-color);
+	border-radius: 10px;
+}
+
+.option {
+	padding: 6px 12px;
+	cursor: pointer;
+
+	&.active {
+		backdrop-filter: grayscale(100%);
+	}
+
+	&.selected {
+		cursor: auto;
+		backdrop-filter: grayscale(100%);
+	}
+}

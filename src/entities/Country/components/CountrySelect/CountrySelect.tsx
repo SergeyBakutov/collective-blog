@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { type ISelectOption, Select } from 'shared/components/Select'
+import { type IListboxOption, Listbox } from 'shared/components/Listbox'
 import { classNames } from 'shared/utils/classNames'
 import { type ICountry } from '../../model/types/country'
 
@@ -10,7 +10,7 @@ interface ICountrySelectProps {
   onChange: (value: ICountry) => void
 }
 
-const options: Array<ISelectOption<ICountry>> = [
+const options: Array<IListboxOption<ICountry>> = [
   { value: 'Russia', content: 'Russia' },
   { value: 'Belarus', content: 'Belarus' },
   { value: 'Kazakhstan', content: 'Kazakhstan' }
@@ -26,7 +26,7 @@ export const CountrySelect: React.FC<ICountrySelectProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <Select
+    <Listbox
       className={classNames('', {}, [className])}
       label={t('Country')}
       value={value}

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { type ISelectOption, Select } from 'shared/components/Select'
+import { type IListboxOption, Listbox } from 'shared/components/Listbox'
 import { classNames } from 'shared/utils/classNames'
 import { type ICurrency } from '../../model/types/currency'
 
@@ -10,7 +10,7 @@ interface ICurrcencySelectProps {
   onChange: (value: ICurrency) => void
 }
 
-const options: Array<ISelectOption<ICurrency>> = [
+const options: Array<IListboxOption<ICurrency>> = [
   { value: 'RUB', content: 'RUB' },
   { value: 'EUR', content: 'EUR' },
   { value: 'USD', content: 'USD' }
@@ -26,7 +26,7 @@ export const CurrencySelect: React.FC<ICurrcencySelectProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <Select
+    <Listbox
       className={classNames('', {}, [className])}
       label={t('Currency')}
       value={value}
